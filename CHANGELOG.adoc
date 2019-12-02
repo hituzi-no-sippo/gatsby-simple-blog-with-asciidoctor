@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.1.0
-:revdate: 2019-12-02T10:53:32+0900
-:revremark: Add log of change package.json
+:revnumber: v1.2.0
+:revdate: 2019-12-02T10:56:58+0900
+:revremark: Add log of add my copyright
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -42,6 +42,10 @@ ifndef::env-github[:icons: font]
 :issues-url: {repository-url}/issues
 
 == 0.0.1 (2019-12-02)
+
+=== Docs
+
+* Add my copyright in LICENSE. (close link:{issues-url}/9[#9])
 
 === Chore
 
