@@ -1,0 +1,80 @@
+= Change Log
+:author-name: hitsuji no shippo
+:!author-email:
+:author: {author-name}
+:!email: {author-email}
+:revnumber: v1.0.0
+:revdate: 2019-12-02T10:40:51+0900
+:revremark: First Edition
+:doctype: article
+:description: gatsby-simple-blog-with-asciidoctor Change Log
+:title:
+:title-separtor: :
+:showtitle:
+:!sectnums:
+:sectids:
+:toc: auto
+:sectlinks:
+:sectanchors:
+:idprefix:
+:idseparator: -
+:xrefstyle: full
+:!example-caption:
+:!figure-caption:
+:!table-caption:
+:!listing-caption:
+ifdef::env-github[]
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[:icons: font]
+// Copyright
+:copyright-template: Copyright (c) 2019
+:copyright: {copyright-template} {author-name}
+// Page Attributes
+:page-creation-date: 2019-12-02T10:40:51+0900
+// Variables
+:github-url: https://github.com
+:repository-url: {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
+:issues-url: {repository-url}/issues
+
+== 0.0.0 (2019-12-02)
+
+=== Docs
+
+* Add Gatsbyjs copyright in LICENSE. (close link:{issues-url}/2[#2])
+
+=== Chore
+
+:thundermiracle-gatsby-simple-blog-url: {github-url}/thundermiracle/gatsby-simple-blog
+* Clone link:{thundermiracle-gatsby-simple-blog-url}[
+  thundermiracle/gatsby-simple-blog]. (close link:{issues-url}/1[#1])
++
+--
+:thundermiracle-gatsby-simple-blog-commit-id: d8537730b37fb08a2171a29ac9c5be3d6458b0bc
+[horizontal]
+repository url:: {thundermiracle-gatsby-simple-blog-url}.git
+commit id     :: link:{thundermiracle-gatsby-simple-blog-url}/commit/{thundermiracle-gatsby-simple-blog-commit-id}[
+                      {thundermiracle-gatsby-simple-blog-commit-id}]
+--
+
+
+== Copyright
+
+=== LICENSE
+
+This document is licensed under
+link:https://creativecommons.org/publicdomain/zero/1.0/[
+CC0 1.0].
+
+
+{copyright-template} link:https://hitsuji-no-shippo.com[{author-name}]
+
+////
+Asciidoc Copyright
+This asciidoc code is licensed under CC0 1.0
+https://creativecommons.org/publicdomain/zero/1.0/
+////
