@@ -63,7 +63,9 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
     "gatsby-plugin-eslint": "^2.0.5",
+    "husky": "^3.1.0",
     "jest": "^24.9.0",
+    "lint-staged": "^9.5.0",
     "prettier": "^1.18.2"
   },
   "homepage": "https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor",
@@ -92,5 +94,15 @@
     "eslint": "eslint .",
     "jest": "jest",
     "test": "cross-env NODE_ENV=test yarn run eslint && cross-env NODE_ENV=test yarn run jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "cross-env NODE_ENV=test yarn run jest --testPathPattern=''"
+    ]
   }
 }
