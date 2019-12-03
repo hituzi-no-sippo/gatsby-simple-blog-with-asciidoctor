@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.2.0
-:revdate: 2019-12-02T10:56:58+0900
-:revremark: Add log of add my copyright
+:revnumber: v1.3.0
+:revdate: 2019-12-03T19:17:01+0900
+:revremark: Add log of chnage and convert README
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -41,11 +41,25 @@ ifndef::env-github[:icons: font]
 :repository-url: {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.0.1 (2019-12-02)
+== 0.0.1 (2019-12-03)
 
 === Docs
 
 * Add my copyright in LICENSE. (close link:{issues-url}/9[#9])
+* Change README. (close link:{issues-url}/5[#5])
++
+--
+.Change items
+* `thundermiracle/gatsby-simple-blog` to
+  `hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor`
+
+.Delete items
+* Status icons
+* Sample pages section
+--
++
+* Convert README from markdown to asciidoc (close link:{issues-url}/6[#6])
+
 
 === Chore
 

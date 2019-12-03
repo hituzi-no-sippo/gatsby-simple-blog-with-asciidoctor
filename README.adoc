@@ -1,0 +1,139 @@
+= gatsby-simple-blog-with-asciidoctor
+:author-name: hitsuji no shippo
+:!author-email:
+:author: {author-name}
+:!email: {author-email}
+:revnumber: v1.0.0
+:revdate: 2019-12-03T15:47:28+0900
+:revremark: First Edition
+:doctype: article
+:description: gatsby-simple-blog-with-asciidoctor README
+:title:
+:title-separtor: :
+:showtitle:
+:!sectnums:
+:sectids:
+:toc: preamble
+:sectlinks:
+:sectanchors:
+:idprefix:
+:idseparator: -
+:xrefstyle: full
+:!example-caption:
+:!figure-caption:
+:!table-caption:
+:!listing-caption:
+ifdef::env-github[]
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[:icons: font]
+// Copyright
+:copyright-template: Copyright (c) 2019
+:copyright: {copyright-template} {author-name}
+// Page Attributes
+:page-creation-date: 2019-12-03T15:47:28+0900
+// Variables
+
+== Description
+
+A gatsbyjs starter forked from gatsby-starter-blog and applied overreacted
+lookings, with tags and breadcrumbs, eslint, relative posts, disqus, i18n,
+eslint supported.
+
+== How to use
+
+[source, bash]
+----
+npm install -g gatsby-cli
+
+gatsby new my-blog-folder https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
+----
+
+== How to deploy by Circle-CI in Medium.com
+
+link:https://medium.com/@thundermiracle/deploy-static-sites-to-netlify-by-circle-ci-ab51a0b59b73?source=friends_link&sk=095db82e2f8e8ef91d03a171f217e340[
+Medium.com -- Deploy Static Sites to Netlify by Circle-CI]
+
+== Configuration
+
+All configurable values are here: `./config/index.js`
+
+== i18n
+
+. Add [lang].js to config/locales folder
+. Modify supportedLanguages in config/index.js
+. Set site.lang in config/index.js as default language
+. add [filename].[lang].md to content/blog and enjoy!
+
+== Features
+:screenshots-dir: ./screenshots
+
+* i18n
++
+--
+Display multiple language. (Only be shown when supportedLanguages > 1)
+
+image::{screenshots-dir}/i18n.png[i18n]
+
+Display language link in every post.
+(You can disable it in config/index.js by displayTranslations: false)
+
+image::{screenshots-dir}/translations.png[translations]
+--
++
+* overreacted design
++
+--
+link:https://overreacted.io/[
+overreacted.io] lookings
+
+image::{screenshots-dir}/top.png[top--light]
+image::{screenshots-dir}/top-dark.png[top--dark]
+--
++
+* Tags
++
+--
+Display articles in same tag.
+
+image::{screenshots-dir}/tag.png[tag]
+
+image::{screenshots-dir}/alltags.png[alltags]
+--
++
+* Breadcrumbs
++
+--
+Display breadcrumbs in header part.
+
+image::{screenshots-dir}/post.png[post]
+--
++
+* Relative posts
++
+--
+Display previous and next posts in same tag in footer part.
+
+image::{screenshots-dir}/relative-posts.png[relative-posts]
+--
++
+* Disqus
++
+--
+Use disqus.com to enable comment.
+
+image::{screenshots-dir}/disqus.png[disqus]
+--
++
+* eslint +
+  Enable eslint for better coding experience.
+* module resolver +
+  Enable babel-module-resolver to prevent relative path hell
+
+== LICENSE
+
+This project is licensed under the terms of the link:/LICENSE[MIT license].
