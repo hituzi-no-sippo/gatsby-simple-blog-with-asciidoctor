@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.0.0
-:revdate: 2019-12-02T10:40:51+0900
-:revremark: First Edition
+:revnumber: v1.5.0
+:revdate: 2019-12-03T23:02:46+0900
+:revremark: Add log of unify line feed code to line feed
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -40,6 +40,51 @@ ifndef::env-github[:icons: font]
 :github-url: https://github.com
 :repository-url: {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
+
+== 0.0.1 (2019-12-03)
+
+=== Refactor
+
+* Add processing to run test in npm scripts at commit.
+  (close link:{issues-url}/8[#8])
+
+=== Style
+
+* Unify line feed code to line feed. (close link:{issues-url}/10[#10])
+
+
+=== Docs
+
+* Add my copyright in LICENSE. (close link:{issues-url}/9[#9])
+* Change README. (close link:{issues-url}/5[#5])
++
+--
+.Change items
+* `thundermiracle/gatsby-simple-blog` to
+  `hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor`
+
+.Delete items
+* Status icons
+* Sample pages section
+--
++
+* Convert README from markdown to asciidoc (close link:{issues-url}/6[#6])
+
+
+=== Chore
+
+* Change package.json. (close link:{issues-url}/3[#3])
++
+--
+.Change itmes
+* package name
+* author
+* description
+* version
+* urls
+--
++
+
 
 == 0.0.0 (2019-12-02)
 
