@@ -25,4 +25,8 @@ Oh, and here's a great quote from this Wikipedia on
 > ([view authors](https://en.wikipedia.org/w/index.php?title=Salted_duck_egg&action=history)).
 
 > ![Chinese Salty Egg](./salty_egg.jpg)
-> [Kguirnela at English Wikipedia [CC BY-SA 3.0 ]](http://creativecommons.org/licenses/by-sa/3.0/)
+> [Kguirnela at English Wikipedia [CC BY-SA 3.0]](http://creativecommons.org/licenses/by-sa/3.0/)
+
+## LICENSE
+
+This document is licensed under [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/).
