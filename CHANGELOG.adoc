@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.5.0
-:revdate: 2019-12-03T23:02:46+0900
-:revremark: Add log of unify line feed code to line feed
+:revnumber: v1.6.0
+:revdate: 2019-12-06T13:00:20+0900
+:revremark: Add log of attach attribution to image
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -41,7 +41,7 @@ ifndef::env-github[:icons: font]
 :repository-url: {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.0.1 (2019-12-03)
+== 0.0.1 (2019-12-06)
 
 === Refactor
 
@@ -69,6 +69,8 @@ ifndef::env-github[:icons: font]
 --
 +
 * Convert README from markdown to asciidoc (close link:{issues-url}/6[#6])
+* Attach attribution to image. (close link:{issues-url}/13[#13])
+
 
 
 === Chore
