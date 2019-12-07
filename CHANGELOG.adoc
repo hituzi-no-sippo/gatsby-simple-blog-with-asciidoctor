@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.16.0
-:revdate: 2019-12-08T00:00:23+0900
-:revremark: Add log of change profile picture
+:revnumber: v1.17.0
+:revdate: 2019-12-08T07:09:26+0900
+:revremark: Add log of add description in my-second-post.ja.js
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -62,6 +62,10 @@ ifndef::env-github[:icons: font]
 +
 * Make footer link with value of config. (close link:{issues-url}/19[#19])
 * profile icon. (close link:{issues-url}/22[#22])
+
+=== Docs
+
+* Add description in my-second-post.ja.js. (close link:{issues-url}/26[#26])
 
 
 == 0.0.1 (2019-12-07)
