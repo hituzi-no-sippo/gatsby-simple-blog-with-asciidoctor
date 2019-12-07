@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.1.0
-:revdate: 2019-12-07T20:19:20+0900
-:revremark: Add Change links to SNS profile section
+:revnumber: v1.2.0
+:revdate: 2019-12-07T20:40:26+0900
+:revremark: Add language icon license
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -140,4 +140,13 @@ image::{screenshots-dir}/disqus.png[disqus]
 
 == LICENSE
 
+=== This project
+
 This project is licensed under the terms of the link:/LICENSE[MIT license].
+
+=== Used materials
+:cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[CC0 1.0]
+
+link:http://www.evericons.com[
+Language icon] (used in `src/components/LangButton/IconLanguage.js`) is
+licensed under {cc0-10-link}.
