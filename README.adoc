@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.2.0
+:revnumber: v1.3.0
 :revdate: 2019-12-07T20:40:26+0900
-:revremark: Add language icon license
+:revremark: Add make footer link with value of config
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -43,6 +43,11 @@ ifndef::env-github[:icons: font]
 === Change links to SNS profile
 
 From icon to text
+
+=== Make footer link with value of config
+
+Used `site.repository` in `config/index.js`
+
 
 == Description
 

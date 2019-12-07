@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.14.0
-:revdate: 2019-12-07T23:30:18+0900
-:revremark: Add log of change title author description in gatsby config
+:revnumber: v1.15.0
+:revdate: 2019-12-07T23:54:37+0900
+:revremark: Add log of change to make footer link with value of config
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -60,6 +60,7 @@ ifndef::env-github[:icons: font]
 * github id
 --
 +
+* Make footer link with value of config. (close link:{issues-url}/19[#19])
 
 
 == 0.0.1 (2019-12-07)
