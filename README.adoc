@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.0.0
-:revdate: 2019-12-03T15:47:28+0900
-:revremark: First Edition
+:revnumber: v1.1.0
+:revdate: 2019-12-07T20:19:20+0900
+:revremark: Add Change links to SNS profile section
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -37,6 +37,12 @@ ifndef::env-github[:icons: font]
 // Page Attributes
 :page-creation-date: 2019-12-03T15:47:28+0900
 // Variables
+
+== Diffrences from link:https://github.com/thundermiracle/gatsby-simple-blog[thundermiracle/gatsby-simple-blog]
+
+=== Change links to SNS profile
+
+From icon to text
 
 == Description
 
@@ -76,8 +82,6 @@ All configurable values are here: `./config/index.js`
 +
 --
 Display multiple language. (Only be shown when supportedLanguages > 1)
-
-image::{screenshots-dir}/i18n.png[i18n]
 
 Display language link in every post.
 (You can disable it in config/index.js by displayTranslations: false)
