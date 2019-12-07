@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.12.0
-:revdate: 2019-12-07T22:39:57+0900
-:revremark: Add log of change language icon
+:revnumber: v1.13.0
+:revdate: 2019-12-07T23:04:53+0900
+:revremark: Add log of change supported language chinese to japanese
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -49,6 +49,7 @@ ifndef::env-github[:icons: font]
 
 * Links to SNS profile from icon to text. (close link:{issues-url}/17[#17])
 * Language icon. (close link:{issues-url}/18[#18])
+* Supported language chinese to japanese. (close link:{issues-url}/20[#20])
 
 
 == 0.0.1 (2019-12-07)

@@ -16,7 +16,7 @@ const site = {
 
 const supportedLanguages = {
   en: 'English',
-  'zh-hans': '简体中文',
+  'ja': '日本語',
 };
 
 module.exports = {
