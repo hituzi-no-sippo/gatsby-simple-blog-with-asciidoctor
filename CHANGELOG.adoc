@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.9.0
-:revdate: 2019-12-07T08:10:08+0900
-:revremark: Add log of add license section in Hello World article
+:revnumber: v1.10.0
+:revdate: 2019-12-07T22:35:59+0900
+:revremark: Add log of change text in my second post article
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -72,7 +72,8 @@ ifndef::env-github[:icons: font]
 * Assign attribution to salted duck egg image. (close link:{issues-url}/13[#13])
 * Assign attribution to salted duck egg. (close link:{issues-url}/14[#14])
 * Delete hi-folks article. (close link:{issues-url}/15[#15])
-* add license section in Hello World article. (close link:{issues-url}/16[#16])
+* Add license section in Hello World article. (close link:{issues-url}/16[#16])
+* change text in my second post article. (close link:{issues-url}/23[#23])
 
 === Chore
 
