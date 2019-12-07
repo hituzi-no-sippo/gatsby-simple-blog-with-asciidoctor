@@ -5,6 +5,7 @@ const {
   author,
   description,
   siteUrl,
+  repository,
   twitter = '',
   github = '',
   medium = '',
@@ -22,6 +23,7 @@ module.exports = {
     author,
     description,
     siteUrl,
+    repository,
     social: {
       twitter,
       github,

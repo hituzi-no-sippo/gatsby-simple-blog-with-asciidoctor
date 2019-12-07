@@ -1,11 +1,15 @@
 const site = {
   pathPrefix: '/gatsby-simple-blog',
   title: 'Gatsby Starter Blog',
-  author: 'Kyle Mathews',
-  description: 'A starter blog demonstrating what Gatsby can do.',
+  author: 'hitsji no shippo',
+  description: 'A starter blog with asciidoctor.',
   siteUrl: 'https://gatsby-starter-blog-demo.netlify.com/',
-  twitter: 'kylemathews',
-  github: 'thundermiracle',
+  repository: {
+    url: 'https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor',
+    name: 'gatsby-simple-blog-with-asciidoctor',
+  },
+  twitter: 'hns_equal_st',
+  github: 'hitsuji-no-shippo',
   medium: 'thundermiracle',
   facebook: 'thundermiracle',
   disqusShortName: 'gatsby-simple-blog',
@@ -16,7 +20,7 @@ const site = {
 
 const supportedLanguages = {
   en: 'English',
-  'zh-hans': '简体中文',
+  'ja': '日本語',
 };
 
 module.exports = {

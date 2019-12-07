@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.0.0
-:revdate: 2019-12-03T15:47:28+0900
-:revremark: First Edition
+:revnumber: v1.4.0
+:revdate: 2019-12-08T00:11:20+0900
+:revremark: Add profile picture license
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -37,6 +37,17 @@ ifndef::env-github[:icons: font]
 // Page Attributes
 :page-creation-date: 2019-12-03T15:47:28+0900
 // Variables
+
+== Diffrences from link:https://github.com/thundermiracle/gatsby-simple-blog[thundermiracle/gatsby-simple-blog]
+
+=== Change links to SNS profile
+
+From icon to text
+
+=== Make footer link with value of config
+
+Used `site.repository` in `config/index.js`
+
 
 == Description
 
@@ -76,8 +87,6 @@ All configurable values are here: `./config/index.js`
 +
 --
 Display multiple language. (Only be shown when supportedLanguages > 1)
-
-image::{screenshots-dir}/i18n.png[i18n]
 
 Display language link in every post.
 (You can disable it in config/index.js by displayTranslations: false)
@@ -136,4 +145,17 @@ image::{screenshots-dir}/disqus.png[disqus]
 
 == LICENSE
 
+=== This project
+
 This project is licensed under the terms of the link:/LICENSE[MIT license].
+
+=== Used materials
+:cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[CC0 1.0]
+
+link:https://visualhunt.com/photo2/170504/[
+Profile picture] (used in `src/components/LangButton/IconLanguage.js`) is
+licensed under {cc0-10-link}.
+
+link:http://www.evericons.com[
+Language icon] (`content/assets/profile-pic.jpg`) is
+licensed under {cc0-10-link}.

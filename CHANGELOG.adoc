@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.10.0
-:revdate: 2019-12-07T22:35:59+0900
-:revremark: Add log of change text in my second post article
+:revnumber: v1.17.0
+:revdate: 2019-12-08T07:09:26+0900
+:revremark: Add log of add description in my-second-post.ja.js
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -40,6 +40,33 @@ ifndef::env-github[:icons: font]
 :github-url: https://github.com
 :repository-url: {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
+
+== 0.1.0 (2019-12-08)
+
+=== Features
+
+==== Change
+
+* Links to SNS profile from icon to text. (close link:{issues-url}/17[#17])
+* Language icon. (close link:{issues-url}/18[#18])
+* Supported language chinese to japanese. (close link:{issues-url}/20[#20])
+* Change gatsby config. (close link:{issues-url}/21[#21])
++
+--
+.Items
+* Author
+* Description
+* twitter id
+* github id
+--
++
+* Make footer link with value of config. (close link:{issues-url}/19[#19])
+* profile icon. (close link:{issues-url}/22[#22])
+
+=== Docs
+
+* Add description in my-second-post.ja.js. (close link:{issues-url}/26[#26])
+
 
 == 0.0.1 (2019-12-07)
 

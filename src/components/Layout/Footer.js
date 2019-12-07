@@ -1,8 +1,28 @@
 import React from 'react';
 
+import { graphql, useStaticQuery } from 'gatsby';
 import { rhythm } from 'utils/typography';
 
 function Footer() {
+  const {
+    site: {
+      siteMetadata: { repository },
+    },
+  } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            repository {
+              url
+              name
+            }
+          }
+        }
+      }
+    `,
+  );
+
   return (
     <footer
       style={{
@@ -14,11 +34,11 @@ function Footer() {
       <p>
         Made of{' '}
         <a
-          href="https://github.com/thundermiracle/gatsby-simple-blog"
+          href={repository.url}
           target="_blank"
           rel="noopener noreferrer"
         >
-          gatsby-simple-blog
+          {repository.name}
         </a>
       </p>
     </footer>

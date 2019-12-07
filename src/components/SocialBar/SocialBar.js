@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
-import { Github, Twitter, Facebook, Medium } from '../icons';
+import LinkToSNSProfile from './LinkToSNSProfile';
 
 function SocialBar() {
   return (
@@ -18,10 +18,22 @@ function SocialBar() {
               margin: 'auto',
             }}
           >
-            {facebook && <Facebook username={facebook} />}
-            {twitter && <Twitter username={twitter} />}
-            {github && <Github username={github} />}
-            {medium && <Medium username={medium} />}
+            <LinkToSNSProfile
+              userId={facebook}
+              url='https://facebook.com/'
+              displayText='Facebook' />
+            <LinkToSNSProfile
+              userId={twitter}
+              url='https://twitter.com/'
+              displayText='Twitter' />
+            <LinkToSNSProfile
+              userId={github}
+              url='https://github.com/'
+              displayText='GitHub' />
+            <LinkToSNSProfile
+              userId={medium}
+              url='https://medium.com/@'
+              displayText='Medium' />
           </div>
         );
       }}
