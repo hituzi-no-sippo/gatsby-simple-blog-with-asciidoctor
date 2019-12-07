@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.3.0
-:revdate: 2019-12-07T20:40:26+0900
-:revremark: Add make footer link with value of config
+:revnumber: v1.4.0
+:revdate: 2019-12-08T00:11:20+0900
+:revremark: Add profile picture license
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -152,6 +152,10 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
 === Used materials
 :cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[CC0 1.0]
 
+link:https://visualhunt.com/photo2/170504/[
+Profile picture] (used in `src/components/LangButton/IconLanguage.js`) is
+licensed under {cc0-10-link}.
+
 link:http://www.evericons.com[
-Language icon] (used in `src/components/LangButton/IconLanguage.js`) is
+Language icon] (`content/assets/profile-pic.jpg`) is
 licensed under {cc0-10-link}.
