@@ -1,4 +1,0 @@
-* Tableの最大項目数は5個なので分ける
-* fieldsの変更
-* 他にREADMEが抜けていないか
-* theme変更時のREADME追加。なぜ、dark onlyなのか理由も書く
