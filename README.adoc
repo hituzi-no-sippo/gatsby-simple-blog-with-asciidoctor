@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.4.0
-:revdate: 2019-12-08T00:11:20+0900
-:revremark: Add profile picture license
+:revnumber: v1.5.0
+:revdate: 2019-12-08T13:07:01+0900
+:revremark: Fix materials used section
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -149,13 +149,22 @@ image::{screenshots-dir}/disqus.png[disqus]
 
 This project is licensed under the terms of the link:/LICENSE[MIT license].
 
-=== Used materials
+=== Materials used
+
 :cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[CC0 1.0]
+[cols=3, options="headers, autowidth"]
+|===
+|Material
+|LICENSE
+|path
 
-link:https://visualhunt.com/photo2/170504/[
-Profile picture] (used in `src/components/LangButton/IconLanguage.js`) is
-licensed under {cc0-10-link}.
+|link:https://visualhunt.com/photo2/170504/[
+      Profile picture]
+|{cc0-10-link}
+|`content/assets/profile-pic.jpg`
 
-link:http://www.evericons.com[
-Language icon] (`content/assets/profile-pic.jpg`) is
-licensed under {cc0-10-link}.
+|link:http://www.evericons.com[
+      Language icon]
+|{cc0-10-link}
+|`src/components/LangButton/IconLanguage.js`
+|===
