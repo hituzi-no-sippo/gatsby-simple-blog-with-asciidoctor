@@ -85,6 +85,23 @@ article[class=content] {
     font-size: 1.0625rem;
   }
 
+  ul.checklist {
+    list-style-type: none;
+    margin-left: 0.625em;
+    li > p:first-child {
+      > .fa-square-o:first-child,
+      > .fa-check-square-o:first-child {
+        width: 1.25em;
+        font-size: 0.8em;
+        position: relative;
+        bottom: 0.125em;
+      }
+      > input[type="checkbox"]:first-child {
+        margin-right: 0.25em;
+      }
+    }
+  }
+
   .admonitionblock {
     > table {
       border-collapse: separate;
