@@ -4,8 +4,8 @@
 :author: {author-name}
 :!email: {author-email}
 :revnumber: v1.7.0
-:revdate: 2019-12-08T13:29:07+0900
-:revremark: Add license of music material in Materials used section
+:revdate: 2019-12-09T23:49:30+0900
+:revremark: Add section that change element of blog entry section
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -266,6 +266,12 @@ From icon to text
 === Make footer link with value of config
 
 Used `site.repository` in `config/index.js`
+
+=== Change element of blog entry
+
+Change to
+link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article[
+`article`]
 
 
 == Description
