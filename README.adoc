@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.6.0
-:revdate: 2019-12-08T13:16:24+0900
-:revremark: Add section that change to create article from markdown to asciidoc
+:revnumber: v1.7.0
+:revdate: 2019-12-08T13:29:07+0900
+:revremark: Add license of music material in Materials used section
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -371,6 +371,7 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
 === Materials used
 
 :cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[CC0 1.0]
+:dova-s-url: https://dova-s.jp
 [cols=3, options="headers, autowidth"]
 |===
 |Material
@@ -386,4 +387,10 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
       Language icon]
 |{cc0-10-link}
 |`src/components/LangButton/IconLanguage.js`
+
+|link:{dova-s-url}/bgm/play5513.html[
+      Moon La]
+|link:{dova-s-url}/_contents/license/[
+      SOUND LICENSE]
+|`static/audios/moon_la.mp3`
 |===

@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.20.0
-:revdate: 2019-12-08T13:17:59+0900
-:revremark: Add log that fix links to translations article
+:revnumber: v1.21.0
+:revdate: 2019-12-08T21:36:05+0900
+:revremark: Add log that add asciidoc examples article
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -50,6 +50,10 @@ ifndef::env-github[:icons: font]
 === Fix
 
 * Links to translations article. (close link:{issues-url}/30[#30])
+
+=== Docs
+
+* Add asciidoc examples article. (close link:{issues-url}/29[#29])
 
 
 == 0.1.0 (2019-12-08)
