@@ -24,6 +24,24 @@
  THE SOFTWARE.
  */
 article[class=content] {
+  ul,
+  ol,
+  dl {
+    list-style-position: outside;
+  }
+
+  ul,
+  ol {
+    margin-left: 1.5em;
+
+    li {
+      ul,
+      ol {
+        margin-left: 1.25em;
+      }
+    }
+  }
+
   .admonitionblock {
     > table {
       border-collapse: separate;
@@ -94,5 +112,13 @@ article[class=content] {
         }
       }
     }
+  }
+
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+    direction: ltr;
   }
 }
