@@ -195,12 +195,12 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
 
 exports.onCreateNode = ({ node, actions }) => {
   if (R.path(['internal', 'type'], node) === 'Asciidoc') {
-    const { createNodeField } = actions;
-
-    createNodeField({
+    actions.createNodeField({
       node,
       name: 'directoryName',
-      value: path.basename(path.dirname(node.fileAbsolutePath)),
+      value: node.relativeFullPath.slice(
+        0, node.relativeFullPath.lastIndexOf(`/`)
+      )
     });
   }
 };
