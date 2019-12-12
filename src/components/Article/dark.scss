@@ -307,45 +307,6 @@ body.dark article[class=content] {
     max-width: 100%;
   }
 
-  /* table of Contents sidebar */
-  #toctitle {
-    color: #222222;
-  }
-
-  #toc ul {
-    display: inline;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  #toc li {
-    display: block;
-  }
-
-  #toc a {
-    background-color: rgb(55, 90, 127);
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  #toc li a:hover {
-    background-color: rgb(40, 65, 91);
-    text-decoration: none;
-  }
-
-  #toc:after {
-    content: " ";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-  }
-
   @media all and (max-width: 600px) {
     table {
       width: 55vw!important;
