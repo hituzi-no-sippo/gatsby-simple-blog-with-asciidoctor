@@ -307,6 +307,11 @@ body.dark article[class=content] {
     max-width: 100%;
   }
 
+  .sidebarblock{
+    border-color: #464545;
+    background: #4d4d4d;
+  }
+
   @media all and (max-width: 600px) {
     table {
       width: 55vw!important;

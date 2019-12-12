@@ -222,6 +222,32 @@ article[class=content] {
     }
   }
 
+  .sidebarblock {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dbdbd6;
+    margin-bottom: 1.25em;
+    padding: 1.25em;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    > :first-child {
+      margin-top: 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
+    }
+    > .content > .title {
+      margin-top: 0;
+      text-align: center;
+    }
+    p,
+    dt,
+    td.content,
+    {
+      font-size: 1em;
+    }
+  }
+
   dl,
   dt,
   dd,
@@ -229,13 +255,15 @@ article[class=content] {
   ol,
   li,
   #toctitle,
+  .sidebarblock > .content > .title,
   td {
     margin: 0;
     padding: 0;
     direction: ltr;
   }
 
-  #toctitle {
+  #toctitle,
+  .sidebarblock > .content > .title, {
     line-height: 1.2;
     word-spacing: -0.05em;
     font-weight: 300;
@@ -246,10 +274,28 @@ article[class=content] {
     line-height: 1.0125em;
   }
 
+  .sidebarblock > .content > :last-child > :last-child,
+  .sidebarblock > .content .olist > ol > li:last-child > :last-child,
+  .sidebarblock > .content .ulist > ul > li:last-child > :last-child,
+  .sidebarblock > .content .qlist > ol > li:last-child > :last-child {
+    margin-bottom: 0;
+  }
+
   @media screen and (min-width: 768px) {
+    #toctitle,
+    .sidebarblock > .content > .title, {
+      line-height: 1.2;
+    }
     #toctitle {
       line-height: 1.2;
-      font-size: 1.375em;
+    }
+    #toctitle,
+    .sidebarblock > .content > .title, {
+      line-height: 1.2;
+    }
+    #toctitle,
+    .sidebarblock > .content > .title {
+      font-size: 1.6875em;
     }
 
     #toc.toc2 {
