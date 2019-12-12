@@ -4,8 +4,8 @@
 :author: {author-name}
 :!email: {author-email}
 :revnumber: v1.7.0
-:revdate: 2019-12-09T23:49:30+0900
-:revremark: Add section that change element of blog entry section
+:revdate: 2019-12-10T16:26:38+0900
+:revremark: Add section that add asciidoc support to css
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -257,6 +257,16 @@ link:https://github.com/angeloocana/gatsby-plugin-i18n/tree/master/packages/gats
 gatsby-plugin-i18n] doesn't support asciidoc. Therefore,it was changed to
 link:https://github.com/hitsuji-no-shippo/gatsby-plugin-i18n/tree/master/packages/gatsby-plugin-i18n[
 @hitsuji_no_shippo/gatsby-plugin-i18n] that supports Asciidoc.
+
+
+=== Add asciidoc support to css
+
+.Based CSS
+[horizontal]
+light:: link:https://github.com/asciidoctor/asciidoctor/blob/12fb0b68859a890f5aadf8c871996ced824a558c/data/stylesheets/asciidoctor-default.css[
+             asciidoctor-default^]
+dark::  link:https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/css/boot-darkly.css[
+             boot-darkly^]
 
 
 === Change links to SNS profile

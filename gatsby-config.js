@@ -35,6 +35,7 @@ module.exports = {
     langsEntries: toPairs(supportedLanguages),
   },
   plugins: [
+    'gatsby-plugin-sass',
     'gatsby-plugin-eslint',
     {
       resolve: `gatsby-source-filesystem`,
