@@ -1,4 +1,4 @@
-import './Tag.css';
+import './Tag.scss'
 
 import React from 'react';
 import PropTypes from 'prop-types';
