@@ -42,6 +42,49 @@ article[class=content] {
     }
   }
 
+  .hdlist > table,
+  .colist > table {
+    width: auto;
+    border:0;
+    background:none;
+  }
+  .hdlist > table > tbody > tr,
+  .colist > table > tbody > tr {
+    background:none
+  }
+  td.hdlist1 {
+    font-weight: bold;
+    padding-bottom: 1.25em;
+  }
+  td.hdlist1, td.hdlist2 {
+    vertical-align: middle;
+    padding: 0 .625em;
+  }
+  dl dt {
+    margin-bottom: 0.3125em;
+    font-weight: bold;
+  }
+  dl dd {
+    margin-bottom: 1.25em;
+  }
+  dl dd {
+    margin-left: 1.125em;
+  }
+  dl dd:last-child,
+  dl dd:last-child > :last-child {
+    margin-bottom: 0;
+  }
+  .unstyled dl dt {
+    font-weight: 400;
+    font-style: normal;
+  }
+  dt {
+    text-rendering: optimizeLegibility;
+  }
+  dt {
+    font-size: 1.0625rem;
+  }
+
   .admonitionblock {
     > table {
       border-collapse: separate;
@@ -114,9 +157,13 @@ article[class=content] {
     }
   }
 
+  dl,
+  dt,
+  dd,
   ul,
   ol,
-  li {
+  li,
+  td {
     margin: 0;
     padding: 0;
     direction: ltr;
