@@ -292,14 +292,8 @@ body.light article[class=content] {
   ul,
   ol,
   li,
-  h1,
-  h2,
-  h3,
   #toctitle,
   .sidebarblock > .content > .title,
-  h4,
-  h5,
-  h6,
   pre,
   form,
   p,
@@ -335,15 +329,8 @@ body.light article[class=content] {
     line-height: 1.35;
     font-style: italic;
   }
-  h1,
-  h2,
-  h3,
   #toctitle,
-  .sidebarblock > .content > .title,
-  h4,
-  h5,
-  h6 {
-    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+  .sidebarblock > .content > .title, {
     font-weight: 300;
     font-style: normal;
     color: #ba3925;
@@ -363,24 +350,6 @@ body.light article[class=content] {
     font-size: 60%;
     color: #e99b8f;
     line-height: 0;
-  }
-  h1 {
-    font-size: 2.125em;
-  }
-  h2 {
-    font-size: 1.6875em;
-  }
-  h3,
-  #toctitle,
-  .sidebarblock > .content > .title {
-    font-size: 1.375em;
-  }
-  h4,
-  h5 {
-    font-size: 1.125em;
-  }
-  h6 {
-    font-size: 1em;
   }
   hr {
     border: solid #dddddf;
@@ -487,29 +456,13 @@ body.light article[class=content] {
     color: rgba(0, 0, 0, 0.85);
   }
   @media screen and (min-width: 768px) {
-    h1,
-    h2,
-    h3,
     #toctitle,
-    .sidebarblock > .content > .title,
-    h4,
-    h5,
-    h6 {
+    .sidebarblock > .content > .title, {
       line-height: 1.2;
     }
-    h1 {
-      font-size: 2.75em;
-    }
-    h2 {
-      font-size: 2.3125em;
-    }
-    h3,
     #toctitle,
     .sidebarblock > .content > .title {
       font-size: 1.6875em;
-    }
-    h4 {
-      font-size: 1.4375em;
     }
   }
   table {
@@ -548,14 +501,8 @@ body.light article[class=content] {
     display: table-cell;
     line-height: 1.6;
   }
-  h1,
-  h2,
-  h3,
   #toctitle,
-  .sidebarblock > .content > .title,
-  h4,
-  h5,
-  h6 {
+  .sidebarblock > .content > .title, {
     line-height: 1.2;
     word-spacing: -0.05em;
   }
@@ -1865,8 +1812,6 @@ body.light article[class=content] {
   div.footnote {
     text-rendering: optimizeLegibility;
   }
-  h1,
-  h2,
   p,
   td.content,
   span.alt {
