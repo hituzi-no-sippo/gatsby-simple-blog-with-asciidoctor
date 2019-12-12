@@ -312,6 +312,11 @@ body.dark article[class=content] {
     background: #4d4d4d;
   }
 
+  .exampleblock > .content {
+    border-color: #464545;
+    background: #7d7d7d;
+  }
+
   @media all and (max-width: 600px) {
     table {
       width: 55vw!important;

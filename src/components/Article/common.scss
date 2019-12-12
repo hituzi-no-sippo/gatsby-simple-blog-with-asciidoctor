@@ -248,6 +248,27 @@ article[class=content] {
     }
   }
 
+  .exampleblock > .content {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e6e6e6;
+    margin-bottom: 1.25em;
+    padding: 1.25em;
+    background: #fff;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: #fffef7;
+    border-color: #e0e0dc;
+    -webkit-box-shadow: 0 1px 4px #e0e0dc;
+    box-shadow: 0 1px 4px #e0e0dc;
+    > :first-child {
+      margin-top: 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
   dl,
   dt,
   dd,
@@ -274,6 +295,10 @@ article[class=content] {
     line-height: 1.0125em;
   }
 
+  .exampleblock > .content > :last-child > :last-child,
+  .exampleblock > .content .olist > ol > li:last-child > :last-child,
+  .exampleblock > .content .ulist > ul > li:last-child > :last-child,
+  .exampleblock > .content .qlist > ol > li:last-child > :last-child,
   .sidebarblock > .content > :last-child > :last-child,
   .sidebarblock > .content .olist > ol > li:last-child > :last-child,
   .sidebarblock > .content .ulist > ul > li:last-child > :last-child,
