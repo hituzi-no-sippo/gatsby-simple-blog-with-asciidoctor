@@ -4,8 +4,8 @@
 :author: {author-name}
 :!email: {author-email}
 :revnumber: v1.7.0
-:revdate: 2019-12-10T16:26:38+0900
-:revremark: Add section that add asciidoc support to css
+:revdate: 2019-12-11T14:55:44+0900
+:revremark: Add Admonition icons license
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -387,6 +387,7 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
 === Materials used
 
 :cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[CC0 1.0]
+:font-awesome-github-repo-url: https://github.com/FortAwesome/Font-Awesome
 :dova-s-url: https://dova-s.jp
 [cols=3, options="headers, autowidth"]
 |===
@@ -403,6 +404,13 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
       Language icon]
 |{cc0-10-link}
 |`src/components/LangButton/IconLanguage.js`
+
+|link:{font-awesome-github-repo-url}[
+      Admonition icon]
+|link:{font-awesome-github-repo-url}/#license[
+      CC BY 4.0 License]
+|link:{font-awesome-github-repo-url}[
+      FortAwesome/Font-Awesome]
 
 |link:{dova-s-url}/bgm/play5513.html[
       Moon La]
