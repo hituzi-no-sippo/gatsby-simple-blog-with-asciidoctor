@@ -84,10 +84,10 @@ body.dark article[class=content] {
     font-style: italic;
   }
   blockquote {
+    color: #767575;
     padding: 10.5px 21px;
     margin: 0 0 21px;
     font-size: 18.75px;
-    border-left: 5px solid #464545;
   }
   blockquote p:last-child,
   blockquote ul:last-child,
@@ -128,13 +128,6 @@ body.dark article[class=content] {
     display: block;
     font-style: normal;
     line-height: 1.42857143;
-    color: #999999;
-  }
-  .attribution:before,
-  blockquote footer:before,
-  blockquote small:before,
-  blockquote .small:before {
-    content: '\2014 \00A0';
   }
 
   /* unordered list */
