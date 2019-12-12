@@ -443,6 +443,48 @@ article[class=content] {
     letter-spacing: -0.025em;
   }
 
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  #toctitle,
+  .sidebarblock > .content > .title {
+    > a.anchor {
+      position: absolute;
+      z-index: 1001;
+      width: 1.5ex;
+      margin-left: -1.5ex;
+      display: block;
+      text-decoration: none !important;
+      visibility: hidden;
+      text-align: center;
+      font-weight: 400;
+      &:before {
+        content: "\00A7";
+        font-size: 0.85em;
+        display: block;
+        padding-top: 0.1em;
+      }
+    }
+  }
+  h2:hover > a.anchor,
+  h2 > a.anchor:hover,
+  h3:hover > a.anchor,
+  #toctitle:hover > a.anchor,
+  .sidebarblock > .content > .title:hover > a.anchor,
+  h3 > a.anchor:hover,
+  #toctitle > a.anchor:hover,
+  .sidebarblock > .content > .title > a.anchor:hover,
+  h4:hover > a.anchor,
+  h4 > a.anchor:hover,
+  h5:hover > a.anchor,
+  h5 > a.anchor:hover,
+  h6:hover > a.anchor,
+  h6 > a.anchor:hover {
+    visibility: visible;
+  }
+
   @media screen and (min-width: 768px) {
     #toctitle,
     .sidebarblock > .content > .title, {
