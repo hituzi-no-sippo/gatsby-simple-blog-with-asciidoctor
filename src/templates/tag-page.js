@@ -14,7 +14,7 @@ import { formatMessage } from 'utils/i18n';
 
 const TagPageTemplate = ({ pageContext, data, location }) => {
   const { tag } = pageContext;
-  const { edges, totalCount } = data.allMarkdownRemark;
+  const { edges, totalCount } = data.allAsciidoc;
   const siteTitle = data.site.siteMetadata.title;
 
   const { lang, homeLink } = useLang();
@@ -31,14 +31,14 @@ const TagPageTemplate = ({ pageContext, data, location }) => {
       <h1>{tagHeader}</h1>
       <main>
         {edges.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug;
+          const title = node.document.title || node.fields.slug;
           return (
             <PostAbbrev
               key={node.fields.slug}
               base={homeLink}
               lang={lang}
               slug={node.fields.slug}
-              date={node.frontmatter.date}
+              date={node.revision.date}
               timeToRead={node.timeToRead}
               title={title}
             />
@@ -58,12 +58,12 @@ TagPageTemplate.propTypes = {
     tag: PropTypes.string.isRequired,
   }).isRequired,
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allAsciidoc: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
-            frontmatter: PropTypes.shape({
+            document: PropTypes.shape({
               title: PropTypes.string.isRequired,
             }),
             fields: PropTypes.shape({
@@ -87,21 +87,23 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
+    allAsciidoc(
       limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } }, fields: { langKey: { eq: $langKey } } }
+      sort: { fields: [revision___date], order: DESC }
+      filter: { pageAttributes: { tags: { in: [$tag] } }, fields: { langKey: { eq: $langKey } } }
     ) {
       totalCount
       edges {
         node {
-          timeToRead
+        timeToRead
           fields {
             slug
             langKey
           }
-          frontmatter {
+          document {
             title
+          }
+          revision {
             date(formatString: "MMMM DD, YYYY")
           }
         }

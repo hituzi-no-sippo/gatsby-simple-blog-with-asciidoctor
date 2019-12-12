@@ -51,33 +51,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-autolink-headers`,
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-          {
-            resolve: 'gatsby-remark-external-links',
-            options: {
-              target: '_blank',
-            },
-          },
-        ],
-      },
+      resolve: `@hitsuji_no_shippo/gatsby-transformer-asciidoc`,
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -109,11 +83,14 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-i18n',
+      resolve: '@hitsuji_no_shippo/gatsby-plugin-i18n',
       options: {
         langKeyDefault: lang,
         useLangKeyLayout: false,
         pagesPaths: ['/content/blog/'],
+        lightweightMarkup: {
+          language: "Asciidoc",
+        }
       },
     },
   ],

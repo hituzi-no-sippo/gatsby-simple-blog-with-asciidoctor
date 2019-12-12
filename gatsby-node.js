@@ -62,9 +62,9 @@ function PageMaker(createPage) {
         const { previous, next } = getPreviousNextNode(postsInSameLang, indexInSameLang);
 
         // posts in same tags
-        const postTags = post.node.frontmatter.tags;
+        const postTags = post.node.pageAttributes.tags;
         const postsInSameTag = posts.filter(({ node }) =>
-          haveSameItem(postTags, node.frontmatter.tags),
+          haveSameItem(postTags, node.pageAttributes.tags),
         );
         const indexInSameTag = postsInSameTag.findIndex(
           p => p.node.fields.slug === post.node.fields.slug,
@@ -119,8 +119,8 @@ function PageMaker(createPage) {
         // Tag pages:
         let tags = [];
         postsGroupByLang[langKey].forEach(post => {
-          if (R.path(['node', 'frontmatter', 'tags'], post)) {
-            tags = tags.concat(post.node.frontmatter.tags);
+          if (R.path(['node', 'pageAttributes', 'tags'], post)) {
+            tags = tags.concat(post.node.pageAttributes.tags);
           }
         });
         // Eliminate duplicate tags
@@ -152,7 +152,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
       graphql(
         `
           {
-            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+            allAsciidoc(sort: { fields: [revision___date], order: DESC }, limit: 1000) {
               edges {
                 node {
                   fields {
@@ -160,9 +160,13 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
                     langKey
                     directoryName
                   }
-                  frontmatter {
-                    date(formatString: "MMMM DD, YYYY")
+                  document {
                     title
+                  }
+                  revision {
+                    date(formatString: "MMMM DD, YYYY")
+                  }
+                  pageAttributes {
                     tags
                   }
                 }
@@ -176,7 +180,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
           reject(result.errors);
         }
 
-        const posts = result.data.allMarkdownRemark.edges;
+        const posts = result.data.allAsciidoc.edges;
         const gpLangPosts = byLangKey(posts);
 
         pageMaker.createBlogPost(posts);
@@ -190,9 +194,9 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
 };
 
 exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions;
+  if (R.path(['internal', 'type'], node) === 'Asciidoc') {
+    const { createNodeField } = actions;
 
-  if (R.path(['internal', 'type'], node) === 'MarkdownRemark') {
     createNodeField({
       node,
       name: 'directoryName',

@@ -23,7 +23,7 @@ const styles = {
 
 const TagsPage = ({
   data: {
-    allMarkdownRemark: { group },
+    allAsciidoc: { group },
     site: {
       siteMetadata: { title },
     },
@@ -58,7 +58,7 @@ const TagsPage = ({
 
 TagsPage.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allAsciidoc: PropTypes.shape({
       group: PropTypes.arrayOf(
         PropTypes.shape({
           fieldValue: PropTypes.string.isRequired,
@@ -86,8 +86,8 @@ export const pageQuery = graphql`
         lang
       }
     }
-    allMarkdownRemark(limit: 1000, filter: { fields: { langKey: { eq: $langKey } } }) {
-      group(field: frontmatter___tags) {
+    allAsciidoc(limit: 1000, filter: { fields: { langKey: { eq: $langKey } } }) {
+      group(field: pageAttributes___tags) {
         fieldValue
         totalCount
       }

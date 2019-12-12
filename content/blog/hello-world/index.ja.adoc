@@ -1,0 +1,5 @@
+= Hello World
+:revdate: 2015-05-01T22:12:03.284Z
+:page-tags: ["生活"]
+
+こんにちは世界

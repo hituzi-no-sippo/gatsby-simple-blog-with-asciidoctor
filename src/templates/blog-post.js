@@ -16,24 +16,24 @@ import { rhythm, scale } from 'utils/typography';
 import { useLang } from 'context/LanguageContext';
 
 function BlogPostTemplate({ data, pageContext, location }) {
-  const post = data.markdownRemark;
+  const post = data.asciidoc;
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next, previousInSameTag, nextInSameTag, translationsLink } = pageContext;
 
   const { lang, homeLink } = useLang();
 
   let tags;
-  if (post.frontmatter.tags) {
-    tags = <TagList tags={post.frontmatter.tags} baseUrl={`${homeLink}tags`} />;
+  if (post.pageAttributes.tags) {
+    tags = <TagList tags={post.pageAttributes.tags} baseUrl={`${homeLink}tags`} />;
   }
 
   return (
-    <Layout location={location} title={siteTitle} breadcrumbs={[{ text: post.frontmatter.title }]}>
+    <Layout location={location} title={siteTitle} breadcrumbs={[{ text: post.document.title }]}>
       <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        title={post.document.title}
+        description={post.document.description}
       />
-      <h1>{post.frontmatter.title}</h1>
+      <h1>{post.document.title}</h1>
       <p
         style={{
           ...scale(-1 / 5),
@@ -42,7 +42,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
           marginTop: rhythm(-1),
         }}
       >
-        {formatDate(post.frontmatter.date)}
+        {formatDate(post.revision.date)}
         {` • ${formatReadingTime(post.timeToRead)}`}
       </p>
 
@@ -77,20 +77,20 @@ function BlogPostTemplate({ data, pageContext, location }) {
         <li>
           {previous && (
             <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
+              ← {previous.document.title}
             </Link>
           )}
         </li>
         <li>
           {next && (
             <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
+              {next.document.title} →
             </Link>
           )}
         </li>
       </ul>
 
-      <Disqus identifier={post.id} show={post.frontmatter.disqus} title={post.frontmatter.title} />
+      <Disqus identifier={post.id} show={post.pageAttributes.disqus} title={post.document.title} />
     </Layout>
   );
 }
@@ -112,15 +112,18 @@ export const pageQuery = graphql`
         lang
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    asciidoc(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
       html
       timeToRead
-      frontmatter {
+      document {
         title
-        date(formatString: "MMMM DD, YYYY")
         description
+      }
+      revision {
+        date(formatString: "MMMM DD, YYYY")
+      }
+      pageAttributes {
         tags
         disqus
       }

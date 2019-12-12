@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.18.0
-:revdate: 2019-12-08T13:04:38+0900
-:revremark: Add log of fix materials used section in README
+:revnumber: v1.19.0
+:revdate: 2019-12-08T13:17:59+0900
+:revremark: Add log that change to create article from markdown to asciidoc
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -40,6 +40,13 @@ ifndef::env-github[:icons: font]
 :github-url: https://github.com
 :repository-url: {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
+
+== 0.2.0 (2019-12-08)
+
+=== Breaking Changes
+
+* Create articles from markdown to asciidoc. (close link:{issues-url}/12[#12])
+
 
 == 0.1.0 (2019-12-08)
 

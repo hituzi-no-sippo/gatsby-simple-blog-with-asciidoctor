@@ -9,7 +9,8 @@ import { formatDate } from 'utils/i18n';
 function RelativePost({ postNode }) {
   const {
     fields: { slug },
-    frontmatter: { title, date },
+    document: { title },
+    revision: {date},
   } = postNode;
   return (
     <Link style={{ boxShadow: 'none' }} to={slug} rel="bookmark">

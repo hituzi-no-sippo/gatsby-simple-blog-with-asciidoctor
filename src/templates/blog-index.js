@@ -11,9 +11,10 @@ import { formatMessage } from 'utils/i18n';
 
 function BlogIndex({ data, location }) {
   const siteTitle = data.site.siteMetadata.title;
-  const posts = data.allMarkdownRemark.edges;
+  const posts = data.allAsciidoc.edges;
 
   const { lang, homeLink } = useLang();
+
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -21,20 +22,20 @@ function BlogIndex({ data, location }) {
       <aside>
         <Bio />
       </aside>
-      <h4>{formatMessage('tfIndCountPosts', data.allMarkdownRemark.totalCount)}</h4>
+      <h4>{formatMessage('tfIndCountPosts', data.allAsciidoc.totalCount)}</h4>
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
+        const title = node.document.title || node.fields.slug;
         return (
           <PostAbbrev
             lang={lang}
             base={homeLink}
             key={node.fields.slug}
             slug={node.fields.slug}
-            date={node.frontmatter.date}
+            date={node.revision.date}
             timeToRead={node.timeToRead}
             title={title}
-            excerpt={node.frontmatter.description || node.excerpt}
-            tags={node.frontmatter.tags}
+            excerpt={node.document.description}
+            tags={node.pageAttributes.tags}
           />
         );
       })}
@@ -58,23 +59,26 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
+    allAsciidoc(
       filter: { fields: { langKey: { eq: $langKey } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [revision___date], order: DESC }
     ) {
       totalCount
       edges {
         node {
-          excerpt
           timeToRead
           fields {
             slug
             langKey
           }
-          frontmatter {
+          document {
+             title
+             description
+          }
+          revision {
             date(formatString: "MMMM DD, YYYY")
-            title
-            description
+          }
+          pageAttributes {
             tags
           }
         }
