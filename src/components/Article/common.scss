@@ -578,6 +578,10 @@ article[class=content] {
     visibility: visible;
   }
 
+  .paragraph.lead > p {
+    font-size: 1.21875em;
+    line-height: 1.6;
+  }
   .aqua {
     color: #00bfbf;
   }
