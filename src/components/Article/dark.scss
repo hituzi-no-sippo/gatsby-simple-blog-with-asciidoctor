@@ -310,6 +310,13 @@ body.dark article[class=content] {
     background: #7d7d7d;
   }
 
+  pre .conum[data-value] {
+    color: #FFFFFF;
+  }
+  .conum[data-value] {
+    background: #464545;
+  }
+
   @media all and (max-width: 600px) {
     table {
       width: 55vw!important;

@@ -470,6 +470,28 @@ article[class=content] {
     height: 0;
   }
 
+  pre .conum[data-value] {
+    position:relative;
+    top:-.125em;
+  }
+  .conum[data-value] {
+    display: inline-block;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: .75em;
+    width: 1.67em;
+    height: 1.67em;
+    line-height: 1.67em;
+    font-weight: bold
+  }
+  .conum[data-value]::after {
+    content: attr(data-value)
+  }
+  .conum[data-value]+b {
+    display: none;
+  }
+
   #toctitle,
   .sidebarblock > .content > .title, {
     line-height: 1.2;
