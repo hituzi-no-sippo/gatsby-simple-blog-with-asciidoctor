@@ -578,6 +578,54 @@ article[class=content] {
     visibility: visible;
   }
 
+  .subheader,
+  .admonitionblock td.content > .title,
+  .audioblock > .title,
+  .exampleblock > .title,
+  .imageblock > .title,
+  .listingblock > .title,
+  .literalblock > .title,
+  .stemblock > .title,
+  .openblock > .title,
+  .paragraph > .title,
+  .quoteblock > .title,
+  table.tableblock > .title,
+  .verseblock > .title,
+  .videoblock > .title,
+  .dlist > .title,
+  .olist > .title,
+  .ulist > .title,
+  .qlist > .title,
+  .hdlist > .title {
+    line-height: 1.45;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+  .admonitionblock td.content > .title,
+  .audioblock > .title,
+  .exampleblock > .title,
+  .imageblock > .title,
+  .listingblock > .title,
+  .literalblock > .title,
+  .stemblock > .title,
+  .openblock > .title,
+  .paragraph > .title,
+  .quoteblock > .title,
+  table.tableblock > .title,
+  .verseblock > .title,
+  .videoblock > .title,
+  .dlist > .title,
+  .olist > .title,
+  .ulist > .title,
+  .qlist > .title,
+  .hdlist > .title {
+    text-rendering: optimizeLegibility;
+    text-align: left;
+    font-size: 1rem;
+    font-style: italic;
+  }
+
   .paragraph.lead > p {
     font-size: 1.21875em;
     line-height: 1.6;
