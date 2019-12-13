@@ -492,6 +492,11 @@ article[class=content] {
     display: none;
   }
 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
   #toctitle,
   .sidebarblock > .content > .title, {
     line-height: 1.2;
