@@ -459,6 +459,17 @@ article[class=content] {
     vertical-align: middle;
   }
 
+  hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    border: solid #dddddf;
+    border-width: 1px 0 0;
+    clear: both;
+    margin: 1.25em 0 1.1875em;
+    height: 0;
+  }
+
   #toctitle,
   .sidebarblock > .content > .title, {
     line-height: 1.2;
