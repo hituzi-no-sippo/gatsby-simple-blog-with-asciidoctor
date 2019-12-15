@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.21.0
-:revdate: 2019-12-09T23:46:19+0900
-:revremark: Add log that add asciidoc examples article
+:revnumber: v1.23.0
+:revdate: 2019-12-15T16:54:19+0900
+:revremark: Add log that add asciidoc support for css
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -49,6 +49,10 @@ ifndef::env-github[:icons: font]
 
 === Features
 
+==== Add
+
+* Asciidoc support for css. (close link:{issues-url}/66[#66])
+
 ==== Change
 
 * Change element of blog text to `article`. (close link:{issues-url}/31[#31])
@@ -84,11 +88,13 @@ ifndef::env-github[:icons: font]
 +
 * Make footer link with value of config. (close link:{issues-url}/19[#19])
 * profile icon. (close link:{issues-url}/22[#22])
+* theme icon. (close link:{issues-url}/63[#63])
 
 === Docs
 
 * Add description in my-second-post.ja.js. (close link:{issues-url}/26[#26])
 * Fix materials used section in README. (close link:{issues-url}/28[#28])
+* delete screenshots in README. (close link:{issues-url}/62[#62])
 
 
 == 0.0.1 (2019-12-07)

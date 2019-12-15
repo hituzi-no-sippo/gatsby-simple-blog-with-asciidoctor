@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.7.0
-:revdate: 2019-12-11T14:55:44+0900
-:revremark: Add Admonition icons license
+:revnumber: v1.10.0
+:revdate: 2019-12-15T16:52:25+0900
+:revremark: add welcome pull request for css
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -70,7 +70,7 @@ disqus: true
 [source, Asciidoc]
 ----
 = Show Disqus
-:revdate: 2019-12-08T13:16:24+0900
+:revdate: 2019-12-15T16:52:25+0900
 :page-tags: ["2019"]
 :page-disqus: true
 ----
@@ -268,6 +268,7 @@ light:: link:https://github.com/asciidoctor/asciidoctor/blob/12fb0b68859a890f5aa
 dark::  link:https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/css/boot-darkly.css[
              boot-darkly^]
 
+*Welcome pull request for CSS*
 
 === Change links to SNS profile
 
@@ -316,7 +317,6 @@ All configurable values are here: `./config/index.js`
 . add [filename].[lang].md to content/blog and enjoy!
 
 == Features
-:screenshots-dir: ./screenshots
 
 * i18n
 +
@@ -325,54 +325,19 @@ Display multiple language. (Only be shown when supportedLanguages > 1)
 
 Display language link in every post.
 (You can disable it in config/index.js by displayTranslations: false)
-
-image::{screenshots-dir}/translations.png[translations]
 --
 +
-* overreacted design
-+
---
-link:https://overreacted.io/[
-overreacted.io] lookings
-
-image::{screenshots-dir}/top.png[top--light]
-image::{screenshots-dir}/top-dark.png[top--dark]
---
-+
-* Tags
-+
---
-Display articles in same tag.
-
-image::{screenshots-dir}/tag.png[tag]
-
-image::{screenshots-dir}/alltags.png[alltags]
---
-+
-* Breadcrumbs
-+
---
+* overreacted design +
+  link:https://overreacted.io/[
+  overreacted.io] lookings
+* Tags +
+  Display articles in same tag.
+* Breadcrumbs +
 Display breadcrumbs in header part.
-
-image::{screenshots-dir}/post.png[post]
---
-+
-* Relative posts
-+
---
+* Relative posts +
 Display previous and next posts in same tag in footer part.
-
-image::{screenshots-dir}/relative-posts.png[relative-posts]
---
-+
-* Disqus
-+
---
+* Disqus +
 Use disqus.com to enable comment.
-
-image::{screenshots-dir}/disqus.png[disqus]
---
-+
 * eslint +
   Enable eslint for better coding experience.
 * module resolver +
@@ -389,7 +354,8 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
 :cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[CC0 1.0]
 :font-awesome-github-repo-url: https://github.com/FortAwesome/Font-Awesome
 :dova-s-url: https://dova-s.jp
-[cols=3, options="headers, autowidth"]
+:evericons-url: http://www.evericons.com
+[cols="d,d,a", options="headers, autowidth"]
 |===
 |Material
 |LICENSE
@@ -400,11 +366,19 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
 |{cc0-10-link}
 |`content/assets/profile-pic.jpg`
 
-|link:http://www.evericons.com[
+|link:{evericons-url}[
       Language icon]
 |{cc0-10-link}
 |`src/components/LangButton/IconLanguage.js`
 
+|link:{evericons-url}[
+      Theme icons]
+|{cc0-10-link}
+|
+ * `src/components/Layout/ReadModeToggle/IconSun.js`
+ * `src/components/Layout/ReadModeToggle/IconMoon.js`
+
+Resized from 24x24 to 16x16.
 |link:{font-awesome-github-repo-url}[
       Admonition icon]
 |link:{font-awesome-github-repo-url}/#license[
@@ -417,4 +391,5 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
 |link:{dova-s-url}/_contents/license/[
       SOUND LICENSE]
 |`static/audios/moon_la.mp3`
+=======
 |===
