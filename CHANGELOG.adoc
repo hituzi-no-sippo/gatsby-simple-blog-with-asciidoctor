@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.19.0
-:revdate: 2019-12-15T15:21:17+0900
-:revremark: Add log that delete screenshots in README
+:revnumber: v1.20.0
+:revdate: 2019-12-15T15:24:28+0900
+:revremark: Add log that change theme icons
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -62,6 +62,7 @@ ifndef::env-github[:icons: font]
 +
 * Make footer link with value of config. (close link:{issues-url}/19[#19])
 * profile icon. (close link:{issues-url}/22[#22])
+* theme icon. (close link:{issues-url}/63[#63])
 
 === Docs
 

@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.6.0
-:revdate: 2019-12-15T15:22:23+0900
-:revremark: Delete screenshots
+:revnumber: v1.7.0
+:revdate: 2019-12-15T15:23:47+0900
+:revremark: add theme icons license
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -116,7 +116,8 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
 === Materials used
 
 :cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[CC0 1.0]
-[cols=3, options="headers, autowidth"]
+:evericons-url: http://www.evericons.com
+[cols="d,d,a", options="headers, autowidth"]
 |===
 |Material
 |LICENSE
@@ -127,8 +128,17 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
 |{cc0-10-link}
 |`content/assets/profile-pic.jpg`
 
-|link:http://www.evericons.com[
+|link:{evericons-url}[
       Language icon]
 |{cc0-10-link}
 |`src/components/LangButton/IconLanguage.js`
+
+|link:{evericons-url}[
+      Theme icons]
+|{cc0-10-link}
+|
+ * `src/components/Layout/ReadModeToggle/IconSun.js`
+ * `src/components/Layout/ReadModeToggle/IconMoon.js`
+
+Resized from 24x24 to 16x16.
 |===

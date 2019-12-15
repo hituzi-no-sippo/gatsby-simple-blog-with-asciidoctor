@@ -3,8 +3,8 @@ import Helmet from 'react-helmet';
 
 import withThemeFlag from 'utils/withThemeFlag';
 import Toggle from '../../Toggle';
-import sun from './sun.png';
-import moon from './moon.png';
+import IconSun from './IconSun';
+import IconMoon from './IconMoon';
 
 // eslint-disable-next-line react/prop-types
 function ReadModeToggle({ isLightTheme }) {
@@ -21,26 +21,8 @@ function ReadModeToggle({ isLightTheme }) {
       {isLightTheme != null ? (
         <Toggle
           icons={{
-            checked: (
-              <img
-                src={moon}
-                alt="night"
-                width="16"
-                height="16"
-                role="presentation"
-                style={{ pointerEvents: 'none' }}
-              />
-            ),
-            unchecked: (
-              <img
-                src={sun}
-                alt="day"
-                width="16"
-                height="16"
-                role="presentation"
-                style={{ pointerEvents: 'none' }}
-              />
-            ),
+            checked: <IconMoon fill="#f0c420"/>,
+            unchecked: <IconSun fill="#ef8e38"/>,
           }}
           checked={!isLightTheme}
           onChange={e => window.__setPreferredTheme(e.target.checked ? 'dark' : 'light')}
