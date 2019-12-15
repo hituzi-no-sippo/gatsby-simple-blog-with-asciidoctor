@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.5.0
-:revdate: 2019-12-08T13:07:01+0900
-:revremark: Fix materials used section
+:revnumber: v1.6.0
+:revdate: 2019-12-15T15:22:23+0900
+:revremark: Delete screenshots
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -81,7 +81,6 @@ All configurable values are here: `./config/index.js`
 . add [filename].[lang].md to content/blog and enjoy!
 
 == Features
-:screenshots-dir: ./screenshots
 
 * i18n
 +
@@ -90,54 +89,19 @@ Display multiple language. (Only be shown when supportedLanguages > 1)
 
 Display language link in every post.
 (You can disable it in config/index.js by displayTranslations: false)
-
-image::{screenshots-dir}/translations.png[translations]
 --
 +
-* overreacted design
-+
---
-link:https://overreacted.io/[
-overreacted.io] lookings
-
-image::{screenshots-dir}/top.png[top--light]
-image::{screenshots-dir}/top-dark.png[top--dark]
---
-+
-* Tags
-+
---
-Display articles in same tag.
-
-image::{screenshots-dir}/tag.png[tag]
-
-image::{screenshots-dir}/alltags.png[alltags]
---
-+
-* Breadcrumbs
-+
---
+* overreacted design +
+  link:https://overreacted.io/[
+  overreacted.io] lookings
+* Tags +
+  Display articles in same tag.
+* Breadcrumbs +
 Display breadcrumbs in header part.
-
-image::{screenshots-dir}/post.png[post]
---
-+
-* Relative posts
-+
---
+* Relative posts +
 Display previous and next posts in same tag in footer part.
-
-image::{screenshots-dir}/relative-posts.png[relative-posts]
---
-+
-* Disqus
-+
---
+* Disqus +
 Use disqus.com to enable comment.
-
-image::{screenshots-dir}/disqus.png[disqus]
---
-+
 * eslint +
   Enable eslint for better coding experience.
 * module resolver +
