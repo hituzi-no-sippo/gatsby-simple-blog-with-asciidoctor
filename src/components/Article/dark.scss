@@ -133,23 +133,6 @@ body.dark article[class=content] {
     margin-bottom: 0;
   }
 
-
-  /* links */
-  a {
-    color: rgb(12, 227, 172);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  a:hover,
-  a:focus {
-    color: #0ce3ac;
-    text-decoration: underline;
-  }
-  a:focus {
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-  }
-
   /* horizontal rules */
   hr {
     margin-top: 21px;
