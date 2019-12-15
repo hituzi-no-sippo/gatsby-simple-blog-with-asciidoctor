@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.6.0
-:revdate: 2019-12-08T13:16:24+0900
-:revremark: Add section that change to create article from markdown to asciidoc
+:revnumber: v1.7.0
+:revdate: 2019-12-11T14:55:44+0900
+:revremark: Add Admonition icons license
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -259,6 +259,16 @@ link:https://github.com/hitsuji-no-shippo/gatsby-plugin-i18n/tree/master/package
 @hitsuji_no_shippo/gatsby-plugin-i18n] that supports Asciidoc.
 
 
+=== Add asciidoc support to css
+
+.Based CSS
+[horizontal]
+light:: link:https://github.com/asciidoctor/asciidoctor/blob/12fb0b68859a890f5aadf8c871996ced824a558c/data/stylesheets/asciidoctor-default.css[
+             asciidoctor-default^]
+dark::  link:https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/css/boot-darkly.css[
+             boot-darkly^]
+
+
 === Change links to SNS profile
 
 From icon to text
@@ -266,6 +276,12 @@ From icon to text
 === Make footer link with value of config
 
 Used `site.repository` in `config/index.js`
+
+=== Change element of blog entry
+
+Change to
+link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article[
+`article`]
 
 
 == Description
@@ -371,6 +387,8 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
 === Materials used
 
 :cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[CC0 1.0]
+:font-awesome-github-repo-url: https://github.com/FortAwesome/Font-Awesome
+:dova-s-url: https://dova-s.jp
 [cols=3, options="headers, autowidth"]
 |===
 |Material
@@ -386,4 +404,17 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
       Language icon]
 |{cc0-10-link}
 |`src/components/LangButton/IconLanguage.js`
+
+|link:{font-awesome-github-repo-url}[
+      Admonition icon]
+|link:{font-awesome-github-repo-url}/#license[
+      CC BY 4.0 License]
+|link:{font-awesome-github-repo-url}[
+      FortAwesome/Font-Awesome]
+
+|link:{dova-s-url}/bgm/play5513.html[
+      Moon La]
+|link:{dova-s-url}/_contents/license/[
+      SOUND LICENSE]
+|`static/audios/moon_la.mp3`
 |===

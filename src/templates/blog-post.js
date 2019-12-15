@@ -9,6 +9,7 @@ import TagList from 'components/TagList';
 import RelativePosts from 'components/RelativePosts';
 import Disqus from 'components/Disqus';
 import TranslationsLink from 'components/TranslationsLink';
+import Article from 'components/Article';
 
 import { formatReadingTime } from 'utils/helpers';
 import { formatDate } from 'utils/i18n';
@@ -53,7 +54,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
         style={{ margin: '-0.5rem 0 1.5rem' }}
       />
 
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Article article={post.html} />
 
       <RelativePosts postNodes={[previousInSameTag, nextInSameTag]} lang={lang} />
 
