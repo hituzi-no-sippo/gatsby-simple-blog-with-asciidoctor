@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.10.0
-:revdate: 2019-12-15T16:52:25+0900
-:revremark: add welcome pull request for css
+:revnumber: v1.11.0
+:revdate: 2019-12-19T14:19:22+0900
+:revremark: add gatsby-plugin-feed in Deleted plugins
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -244,6 +244,10 @@ link:http://en.wikipedia.org/wiki/Salted_duck_egg[salted duck eggs, window=_blan
 
 |gatsby-remark-smartypants
 |None.
+
+2+h|The others
+|gatsby-plugin-feed
+|None. I want it too.
 |===
 
 [WARNING]
