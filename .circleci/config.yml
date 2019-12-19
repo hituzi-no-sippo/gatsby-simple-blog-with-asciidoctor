@@ -4,6 +4,11 @@ executors:
       - image: circleci/node:10
 
 aliases:
+  submodule_update: &submodule_update
+    run:
+      name: git submodule update
+      command: git submodule update --init src/components/Article/scss/
+
   restore_cache: &restore_cache
     restore_cache:
       name: Restore Npm Package Cache
@@ -29,6 +34,7 @@ jobs:
     executor: node
     steps:
       - checkout
+      - *submodule_update
       - <<: *restore_cache
       - <<: *install_node_modules
       - <<: *save_cache
@@ -40,6 +46,7 @@ jobs:
     executor: node
     steps:
       - checkout
+      - *submodule_update
       - <<: *restore_cache
       - <<: *install_node_modules
       - run:
@@ -54,6 +61,7 @@ jobs:
     executor: node
     steps:
       - checkout
+      - *submodule_update
       - attach_workspace:
           at: ./
       - <<: *restore_cache

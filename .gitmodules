@@ -1,0 +1,6 @@
+[submodule "src/components/Article/article-css-for-asciidoc"]
+	path = src/components/Article/article-css-for-asciidoc
+	url = https://github.com/hitsuji-no-shippo/article-css-for-asciidoc.git
+[submodule "src/components/Article/scss"]
+	path = src/components/Article/scss
+	url = https://github.com/hitsuji-no-shippo/article-css-for-asciidoc.git
