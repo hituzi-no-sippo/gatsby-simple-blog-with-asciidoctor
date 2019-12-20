@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.12.0
-:revdate: 2019-12-20T10:28:36+0900
-:revremark: change description of css support asciidoc
+:revnumber: v1.13.0
+:revdate: 2019-12-20T13:23:13+0900
+:revremark: add git submodule command in How to use section
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -302,6 +302,8 @@ eslint supported.
 npm install -g gatsby-cli
 
 gatsby new my-blog-folder https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
+cd my-blog-folder
+git submodule update --init src/components/Article/scss/
 ----
 
 == How to deploy by Circle-CI in Medium.com
