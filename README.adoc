@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.13.1
-:revdate: 2019-12-20T13:26:40+0900
-:revremark: fix typo
+:revnumber: v1.13.2
+:revdate: 2019-12-20T13:55:15+0900
+:revremark: add important admonition
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -115,8 +115,11 @@ disqus: true
 The following 7 remark plugins have been deleted.
 
 ifdef::env-github[]
+[WARNING]
+====
 *I'm sorry for those who read this README on GitHub because it is difficult to
 read.*
+====
 endif::env-github[]
 
 :asciidoctor-user-manual-url: https://asciidoctor.org/docs/user-manual
