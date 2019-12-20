@@ -35,9 +35,9 @@ jobs:
     steps:
       - checkout
       - *submodule_update
-      - <<: *restore_cache
-      - <<: *install_node_modules
-      - <<: *save_cache
+      - *restore_cache
+      - *install_node_modules
+      - *save_cache
       - run:
           name: Test
           command: yarn test
@@ -47,8 +47,8 @@ jobs:
     steps:
       - checkout
       - *submodule_update
-      - <<: *restore_cache
-      - <<: *install_node_modules
+      - *restore_cache
+      - *install_node_modules
       - run:
           name: Build
           command: yarn build
@@ -64,8 +64,8 @@ jobs:
       - *submodule_update
       - attach_workspace:
           at: ./
-      - <<: *restore_cache
-      - <<: *install_node_modules
+      - *restore_cache
+      - *install_node_modules
       - run:
           name: Install netlify-cli
           command: sudo npm install -g --silent netlify-cli
