@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.13.0
-:revdate: 2019-12-20T13:23:13+0900
-:revremark: add git submodule command in How to use section
+:revnumber: v1.13.1
+:revdate: 2019-12-20T13:26:40+0900
+:revremark: fix typo
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -139,7 +139,7 @@ endif::env-github[]
 * {asciidoctor-user-manual-url}/#images[Images]
 * {asciidoctor-user-manual-url}/#setting-the-location-of-images[Setting the Location of Images]
 * link:{gatsby-transformer-asciidoc-url}#set-imagesdir[
-  Set imagesdir: @hitsuji_no_shippo/asciidoctor-user-manual-url]
+  Set imagesdir: @hitsuji_no_shippo/gatsby-transformer-asciidoc]
 ifdef::env-github[]
 +
 --
@@ -213,7 +213,7 @@ image:{url}[alt text, link={link-url}]
 |link:{asciidoctor-user-manual-url}/#link-macro-attributes[
       window attribute in link macro.]
 
-.Macro exmaple
+.Macro examples
 [source, Asciidoc]
 ----
 link:{url}[display text, window=_blank]  // <1>
@@ -265,7 +265,7 @@ Therefore, the alternative may be wrong.
 .Change gatsby-plugin-i18n
 link:https://github.com/angeloocana/gatsby-plugin-i18n/tree/master/packages/gatsby-plugin-i18n[
 gatsby-plugin-i18n] doesn't support asciidoc. Therefore,it was changed to
-link:https://github.com/hitsuji-no-shippo/gatsby-plugin-i18n/tree/master/packages/gatsby-plugin-i18n[
+link:https://github.com/hitsuji-no-shippo/gatsby-plugin-i18n/tree/add-support-for-other-lightweight-markup/packages/gatsby-plugin-i18n[
 @hitsuji_no_shippo/gatsby-plugin-i18n] that supports Asciidoc.
 
 
@@ -386,7 +386,7 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
 
 Resized from 24x24 to 16x16.
 |link:{font-awesome-github-repo-url}[
-      Admonition icon]
+      Admonition icons]
 |link:{font-awesome-github-repo-url}/#license[
       CC BY 4.0 License]
 |link:{font-awesome-github-repo-url}[
@@ -397,5 +397,4 @@ Resized from 24x24 to 16x16.
 |link:{dova-s-url}/_contents/license/[
       SOUND LICENSE]
 |`static/audios/moon_la.mp3`
-=======
 |===
