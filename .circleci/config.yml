@@ -4,6 +4,11 @@ executors:
       - image: circleci/node:10
 
 aliases:
+  submodule_update: &submodule_update
+    run:
+      name: git submodule update
+      command: git submodule update --init src/components/Article/scss/
+
   restore_cache: &restore_cache
     restore_cache:
       name: Restore Npm Package Cache
@@ -29,9 +34,10 @@ jobs:
     executor: node
     steps:
       - checkout
-      - <<: *restore_cache
-      - <<: *install_node_modules
-      - <<: *save_cache
+      - *submodule_update
+      - *restore_cache
+      - *install_node_modules
+      - *save_cache
       - run:
           name: Test
           command: yarn test
@@ -40,8 +46,9 @@ jobs:
     executor: node
     steps:
       - checkout
-      - <<: *restore_cache
-      - <<: *install_node_modules
+      - *submodule_update
+      - *restore_cache
+      - *install_node_modules
       - run:
           name: Build
           command: yarn build
@@ -54,10 +61,11 @@ jobs:
     executor: node
     steps:
       - checkout
+      - *submodule_update
       - attach_workspace:
           at: ./
-      - <<: *restore_cache
-      - <<: *install_node_modules
+      - *restore_cache
+      - *install_node_modules
       - run:
           name: Install netlify-cli
           command: sudo npm install -g --silent netlify-cli

@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.11.0
-:revdate: 2019-12-19T14:57:19+0900
-:revremark: add gatsby-plugin-feed in Deleted plugins
+:revnumber: v1.12.0
+:revdate: 2019-12-20T10:28:36+0900
+:revremark: change description of css support asciidoc
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -271,14 +271,8 @@ link:https://github.com/hitsuji-no-shippo/gatsby-plugin-i18n/tree/master/package
 
 === Add asciidoc support to css
 
-.Based CSS
-[horizontal]
-light:: link:https://github.com/asciidoctor/asciidoctor/blob/12fb0b68859a890f5aadf8c871996ced824a558c/data/stylesheets/asciidoctor-default.css[
-             asciidoctor-default^]
-dark::  link:https://github.com/darshandsoni/asciidoctor-skins/blob/gh-pages/css/boot-darkly.css[
-             boot-darkly^]
-
-*Welcome pull request for CSS*
+Use this link:https://github.com/hitsuji-no-shippo/article-css-for-asciidoc/tree/c051efc8c593eec6537ce3404c21133027b353c3[
+git repository^].
 
 === Change links to SNS profile
 
