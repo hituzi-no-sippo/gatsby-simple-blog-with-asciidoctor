@@ -1,0 +1,21 @@
+= Include
+:revdate: 2019-12-21T21:26:58+0900
+:page-tags: [ascidoc, include]
+
+Include
+
+.Attributes
+[cols="m,d", cols="headers, autowidth"]
+|================================================
+|Attributes               |Values
+|\{doctitle}              |{doctitle}
+|\{dir-path-from-project} |{dir-path-from-project}
+|================================================
+
+.Include command
+[listing]
+....
+\include::{dir-path-from-project}/_includes/first.adoc[tag=body, leveloffset=+1]
+....
+
+include::{dir-path-from-project}/_includes/first.adoc[tag=body, leveloffset=+1]

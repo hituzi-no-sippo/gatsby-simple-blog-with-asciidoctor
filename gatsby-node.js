@@ -198,8 +198,8 @@ exports.onCreateNode = ({ node, actions }) => {
     actions.createNodeField({
       node,
       name: 'directoryName',
-      value: node.relativeFullPath.slice(
-        0, node.relativeFullPath.lastIndexOf(`/`)
+      value: node.paths.from.source.file.slice(
+        0, node.paths.from.source.file.lastIndexOf(`/`)
       )
     });
   }

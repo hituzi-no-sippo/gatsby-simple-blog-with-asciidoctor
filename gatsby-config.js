@@ -42,6 +42,7 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: 'blog',
+        ignore: ['**/_includes'],
       },
     },
     {
@@ -90,6 +91,7 @@ module.exports = {
         pagesPaths: ['/content/blog/'],
         lightweightMarkup: {
           language: "Asciidoc",
+          fileAbsolutePathField: "paths.absolute.file",
         }
       },
     },

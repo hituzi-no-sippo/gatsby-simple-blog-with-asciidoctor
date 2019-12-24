@@ -1,0 +1,23 @@
+:revdate: 2019-12-21T21:30:24+0900
+
+// tag::body[]
+= Second index
+
+Second index
+
+.Attributes
+[cols="m,d", cols="headers, autowidth"]
+|================================================
+|Attributes               |Values
+|\{doctitle}              |{doctitle}
+|\{dir-path-from-project} |{dir-path-from-project}
+|================================================
+
+.Include command
+[literal]
+....
+\include::./second.adoc[tag=body, leveloffset=+1]
+....
+
+include::./second.adoc[tag=body, leveloffset=+1]
+// end::body[]
