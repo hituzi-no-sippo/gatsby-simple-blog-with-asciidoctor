@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.24.0
-:revdate: 2019-12-19T14:59:18+0900
-:revremark: Add log that add link to demo site in README
+:revnumber: v1.25.0
+:revdate: 2019-12-24T22:34:36+0900
+:revremark: Add log that add ignore asciidoc in `_includes` directory
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -40,6 +40,15 @@ ifndef::env-github[:icons: font]
 :github-url: https://github.com
 :repository-url: {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
+
+== 0.3.0 (2019-12-24)
+
+== Features
+
+=== Add
+
+* Ignore asciidoc in `_includes` directory. (close link:{issues-url}/74[#74])
+
 
 == 0.2.0 (2019-12-19)
 

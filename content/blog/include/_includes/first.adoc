@@ -1,0 +1,22 @@
+:revdate: 2019-12-21T21:27:04+0900
+
+// tag::body[]
+= First
+
+First
+
+.Attributes
+[cols="m,d", cols="headers, autowidth"]
+|================================================
+|Attributes               |Values
+|\{doctitle}              |{doctitle}
+|================================================
+
+.Include command
+[literal]
+....
+\include::./second/index.adoc[tag=body, leveloffset=+1]
+....
+
+include::./second/index.adoc[tag=body, leveloffset=+1]
+// end::body[]

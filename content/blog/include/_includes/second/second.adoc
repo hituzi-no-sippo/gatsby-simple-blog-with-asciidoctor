@@ -1,0 +1,14 @@
+:revdate: 2019-12-21T21:26:29+0900
+
+// tag::body[]
+= Second
+
+Second
+
+.Attributes
+[cols="m,d", cols="headers, autowidth"]
+|================================================
+|Attributes               |Values
+|\{doctitle}              |{doctitle}
+|================================================
+// end::body[]

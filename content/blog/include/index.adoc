@@ -1,0 +1,20 @@
+= Include
+:revdate: 2019-12-21T21:26:58+0900
+:page-tags: [ascidoc, include]
+
+Include
+
+.Attributes
+[cols="m,d", cols="headers, autowidth"]
+|================================================
+|Attributes               |Values
+|\{doctitle}              |{doctitle}
+|================================================
+
+.Include command
+[listing]
+....
+\include::content/blog/include/_includes/first.adoc[tag=body, leveloffset=+1]
+....
+
+include::content/blog/include/_includes/first.adoc[tag=body, leveloffset=+1]

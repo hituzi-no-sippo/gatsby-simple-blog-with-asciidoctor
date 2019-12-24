@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.13.2
+:revnumber: v1.14.0
 :revdate: 2019-12-20T13:55:15+0900
-:revremark: add important admonition
+:revremark: add ignore asciidoc in `_includes` directory
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -351,6 +351,10 @@ Use disqus.com to enable comment.
   Enable eslint for better coding experience.
 * module resolver +
   Enable babel-module-resolver to prevent relative path hell
+* inogre +
+  The `ignore` option in link:[https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem
+  `gatsby-source-filesystem`^] is used so that the node of asciidoc in
+  `_includes` directory is not generated.
 
 == LICENSE
 
