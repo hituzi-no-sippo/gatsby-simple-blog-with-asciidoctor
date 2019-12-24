@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.26.0
-:revdate: 2019-12-24T22:35:29+0900
-:revremark: Add log that automatically add `dir-path-from-project` attribute
+:revnumber: v1.26.1
+:revdate: 2019-12-24T22:43:45+0900
+:revremark: fix link url of relation commit in gatsby-plugin-i18n
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -60,7 +60,7 @@ ifndef::env-github[:icons: font]
   link:{gatasby-transformer-asciidoc-url}/commit/c3a689e36900a92bb7d03df7a343fdbce8a187f6[
   Relation commit^]
 * link:{gatsby-plugin-i18n-url}[gatsby-plugin-i18n^] +
-  link:{gatsby-plugin-i18n-url}commit/8911e383a19989dba1e1f9ff7c1fdd031ff45289[
+  link:{gatsby-plugin-i18n-url}/commit/8911e383a19989dba1e1f9ff7c1fdd031ff45289[
   Relation commit^]
 --
 +
