@@ -10,6 +10,7 @@ First
 |================================================
 |Attributes               |Values
 |\{doctitle}              |{doctitle}
+|\{dir-path-from-project} |{dir-path-from-project}
 |================================================
 
 .Include command

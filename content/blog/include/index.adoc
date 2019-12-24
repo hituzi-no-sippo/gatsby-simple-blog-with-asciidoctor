@@ -9,12 +9,13 @@ Include
 |================================================
 |Attributes               |Values
 |\{doctitle}              |{doctitle}
+|\{dir-path-from-project} |{dir-path-from-project}
 |================================================
 
 .Include command
 [listing]
 ....
-\include::content/blog/include/_includes/first.adoc[tag=body, leveloffset=+1]
+\include::{dir-path-from-project}/_includes/first.adoc[tag=body, leveloffset=+1]
 ....
 
-include::content/blog/include/_includes/first.adoc[tag=body, leveloffset=+1]
+include::{dir-path-from-project}/_includes/first.adoc[tag=body, leveloffset=+1]

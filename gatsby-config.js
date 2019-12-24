@@ -91,6 +91,7 @@ module.exports = {
         pagesPaths: ['/content/blog/'],
         lightweightMarkup: {
           language: "Asciidoc",
+          fileAbsolutePathField: "paths.absolute.file",
         }
       },
     },

@@ -10,5 +10,6 @@ Second
 |================================================
 |Attributes               |Values
 |\{doctitle}              |{doctitle}
+|\{dir-path-from-project} |{dir-path-from-project}
 |================================================
 // end::body[]

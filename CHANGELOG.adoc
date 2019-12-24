@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.25.0
-:revdate: 2019-12-24T22:34:36+0900
-:revremark: Add log that add ignore asciidoc in `_includes` directory
+:revnumber: v1.26.0
+:revdate: 2019-12-24T22:35:29+0900
+:revremark: Add log that automatically add `dir-path-from-project` attribute
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -38,7 +38,8 @@ ifndef::env-github[:icons: font]
 :page-creation-date: 2019-12-02T10:40:51+0900
 // Variables
 :github-url: https://github.com
-:repository-url: {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
+:hitsuji-no-shippo-github-profile-url: {github-url}/hitsuji-no-shippo
+:repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
 == 0.3.0 (2019-12-24)
@@ -47,7 +48,22 @@ ifndef::env-github[:icons: font]
 
 === Add
 
+:gatasby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
+:gatsby-plugin-i18n-url: {hitsuji-no-shippo-github-profile-url}/gatsby-plugin-i18n
 * Ignore asciidoc in `_includes` directory. (close link:{issues-url}/74[#74])
+* automatically add `dir-path-from-project` attribute.
+  (close link:{issues-url}/75[#75]) +
++
+--
+.Update package
+* link:{gatasby-transformer-asciidoc-url}[gatasby-transformer-asciidoc^] +
+  link:{gatasby-transformer-asciidoc-url}/commit/c3a689e36900a92bb7d03df7a343fdbce8a187f6[
+  Relation commit^]
+* link:{gatsby-plugin-i18n-url}[gatsby-plugin-i18n^] +
+  link:{gatsby-plugin-i18n-url}commit/8911e383a19989dba1e1f9ff7c1fdd031ff45289[
+  Relation commit^]
+--
++
 
 
 == 0.2.0 (2019-12-19)
