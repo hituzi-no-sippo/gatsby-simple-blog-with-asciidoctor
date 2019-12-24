@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.26.1
-:revdate: 2019-12-24T22:43:45+0900
-:revremark: fix link url of relation commit in gatsby-plugin-i18n
+:revnumber: v1.27.0
+:revdate: 2019-12-24T23:54:19+0900
+:revremark: Add log that add netlify status icon in README
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -65,6 +65,10 @@ ifndef::env-github[:icons: font]
 --
 +
 
+
+=== Docs
+
+* Add netlify status icon in README. (close link:{issues-url}/77[#77])
 
 == 0.2.0 (2019-12-19)
 
