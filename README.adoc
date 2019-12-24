@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.15.0
-:revdate: 2019-12-24T23:55:24+0900
-:revremark: add netlify status icon
+:revnumber: v1.16.0
+:revdate: 2019-12-24T23:57:12+0900
+:revremark: add deploy to netlify button
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -46,6 +46,10 @@ image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d
 .Demo
 * link:{demo-url}[Home^]
 * link:{demo-url}/asciidoc-examples/[Asciidoc Examples^].
+
+:repository-url: https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
+image:https://www.netlify.com/img/deploy/button.svg[
+      Deploy to Netlify, link={netlify-app-url}/start/deploy?repository={repository-url}]
 
 == Diffrences from link:https://github.com/thundermiracle/gatsby-simple-blog[thundermiracle/gatsby-simple-blog]
 
