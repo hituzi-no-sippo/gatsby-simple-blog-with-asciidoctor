@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.28.0
-:revdate: 2019-12-24T23:57:43+0900
-:revremark: Add log that add deploy to netlify button in README
+:revnumber: v1.29.0
+:revdate: 2019-12-25T10:14:46+0900
+:revremark: Add log that fix link for gatasby-transformer-asciidoc
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -42,13 +42,15 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.3.0 (2019-12-24)
+== 0.3.0 (2019-12-25)
 
 == Features
 
 === Add
 
 :gatasby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
+:gatasby-transformer-asciidoc-link: link:{gatasby-transformer-asciidoc-url}[ \
+                                         gatasby-transformer-asciidoc^]
 :gatsby-plugin-i18n-url: {hitsuji-no-shippo-github-profile-url}/gatsby-plugin-i18n
 * Ignore asciidoc in `_includes` directory. (close link:{issues-url}/74[#74])
 * automatically add `dir-path-from-project` attribute.
@@ -56,7 +58,7 @@ ifndef::env-github[:icons: font]
 +
 --
 .Update package
-* link:{gatasby-transformer-asciidoc-url}[gatasby-transformer-asciidoc^] +
+* {gatasby-transformer-asciidoc-link} +
   link:{gatasby-transformer-asciidoc-url}/commit/c3a689e36900a92bb7d03df7a343fdbce8a187f6[
   Relation commit^]
 * link:{gatsby-plugin-i18n-url}[gatsby-plugin-i18n^] +
@@ -70,6 +72,9 @@ ifndef::env-github[:icons: font]
 
 * Add netlify status icon in README. (close link:{issues-url}/77[#77])
 * Add deploy to netlify icon in README. (close link:{issues-url}/78[#78])
+* Fix link for {gatasby-transformer-asciidoc-link}.
+  (close link:{issues-url}/80[#80])
+
 
 == 0.2.0 (2019-12-19)
 
