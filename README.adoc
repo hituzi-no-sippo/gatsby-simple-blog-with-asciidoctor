@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.16.0
-:revdate: 2019-12-24T23:57:12+0900
-:revremark: add deploy to netlify button
+:revnumber: v1.16.1
+:revdate: 2019-12-25T10:10:52+0900
+:revremark: fix link for gatsby-transformer-asciidoc
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -54,7 +54,7 @@ image:https://www.netlify.com/img/deploy/button.svg[
 == Diffrences from link:https://github.com/thundermiracle/gatsby-simple-blog[thundermiracle/gatsby-simple-blog]
 
 :gatsby-transformer-asciidoc-url: https://github.com/hitsuji-no-shippo/gatsby-transformer-asciidoc/tree/377b9938c9ec5ff127281d1da512a26bb3cae1c7
-:gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc}[ \
+:gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         @hitsji_no_shippo/gatsby-transformer-asciidoc]
 === Change to create article from markdown to asciidoc
 
