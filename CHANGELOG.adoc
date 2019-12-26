@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.31.1
-:revdate: 2019-12-26T13:00:50+0900
-:revremark: Fix submodule link for sample articles
+:revnumber: v1.32.0
+:revdate: 2019-12-26T20:03:50+0900
+:revremark: Add log that delete unnecessary iamge
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -80,13 +80,18 @@ ifndef::env-github[:icons: font]
 
 === Docs
 
+:sample-articles-fro-asciidoctor-url: {hitsuji-no-shippo-github-profile-url}/sample-articles-for-asciidoctor
 * Add netlify status icon in README. (close link:{issues-url}/77[#77])
 * Add deploy to netlify icon in README. (close link:{issues-url}/78[#78])
 * Fix link for {gatasby-transformer-asciidoc-link}.
   (close link:{issues-url}/80[#80])
 * Make submodule from sample articles. (close link:{issues-url}/83[#83]) +
-  link:https://github.com/hitsuji-no-shippo/sample-articles-for-asciidoctor/tree/bb4b82a2bf8817b7545cdf6f1b7e81cacb957a26[
+  link:{sample-articles-fro-asciidoctor-url}/tree/bb4b82a2bf8817b7545cdf6f1b7e81cacb957a26[
        submodule^]
+* Delete unnecessary image in sample articles.
+  (close link:{issues-url}/87[#87]) +
+  link:{sample-articles-fro-asciidoctor-url}/commit/c56784f4acacec01c789c97499afbae651b0484a[
+        Relatin commit in submodule]
 
 
 == 0.2.0 (2019-12-19)
