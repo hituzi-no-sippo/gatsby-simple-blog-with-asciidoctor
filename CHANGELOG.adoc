@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.29.0
-:revdate: 2019-12-25T10:14:46+0900
-:revremark: Add log that fix link for gatasby-transformer-asciidoc
+:revnumber: v1.30.0
+:revdate: 2019-12-26T09:36:30+0900
+:revremark: Add log that automatically add `full-path-from-project` attribute
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -42,7 +42,7 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.3.0 (2019-12-25)
+== 0.3.0 (2019-12-26)
 
 == Features
 
@@ -57,12 +57,22 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/75[#75]) +
 +
 --
-.Update package
+.Update packages
 * {gatasby-transformer-asciidoc-link} +
   link:{gatasby-transformer-asciidoc-url}/commit/c3a689e36900a92bb7d03df7a343fdbce8a187f6[
   Relation commit^]
 * link:{gatsby-plugin-i18n-url}[gatsby-plugin-i18n^] +
   link:{gatsby-plugin-i18n-url}/commit/8911e383a19989dba1e1f9ff7c1fdd031ff45289[
+  Relation commit^]
+--
++
+* automatically add `full-path-from-project` attribute.
+  (close link:{issues-url}/84[#84]) +
++
+--
+.Update packages
+* {gatasby-transformer-asciidoc-link} +
+  link:{gatasby-transformer-asciidoc-url}/commit/422bbd3ef904bbebec4b9ddf115435300f6a9783[
   Relation commit^]
 --
 +

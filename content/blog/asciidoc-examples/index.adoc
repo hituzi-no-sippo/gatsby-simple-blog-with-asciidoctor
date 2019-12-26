@@ -47,9 +47,11 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.0.0
-:revdate: 2019-12-08T15:11:25+0900
-:revremark: First Edition
+:revnumber: v1.1.0
+:revdate: 2019-12-26T09:38:49+0900
+:revremark: change include path from \
+            `content/blog/asciidoc-examples/index.adoc` to \
+            `{full-path-from-project}`
 :doctype: article
 :description:
 :title:
@@ -75,7 +77,7 @@
 .Attributes
 [source, Asciidoc]
 ----
-include::content/blog/asciidoc-examples/index.adoc[tag=attributes]
+include::{full-path-from-project}[tag=attributes]
 ----
 
 == Text
@@ -719,7 +721,7 @@ video::9NG7cFc-ddQ[youtube, 800, 600]
 .Asciidoc code
 [source, Asciidoc]
 ----
-include::content/blog/asciidoc-examples/index.adoc[tag=github-link]
+include::{full-path-from-project}[tag=github-link]
 ----
 
 [pass]
