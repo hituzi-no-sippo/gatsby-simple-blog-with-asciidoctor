@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.32.0
-:revdate: 2019-12-26T20:03:50+0900
-:revremark: Add log that delete unnecessary iamge
+:revnumber: v1.32.1
+:revdate: 2019-12-26T20:05:56+0900
+:revremark: delete unnecessary `+` symbol
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -65,9 +65,8 @@ ifndef::env-github[:icons: font]
   link:{gatsby-plugin-i18n-url}/commit/8911e383a19989dba1e1f9ff7c1fdd031ff45289[
   Relation commit^]
 --
-+
 * automatically add `full-path-from-project` attribute.
-  (close link:{issues-url}/84[#84]) +
+  (close link:{issues-url}/84[#84])
 +
 --
 .Update packages
@@ -75,7 +74,6 @@ ifndef::env-github[:icons: font]
   link:{gatasby-transformer-asciidoc-url}/commit/422bbd3ef904bbebec4b9ddf115435300f6a9783[
   Relation commit^]
 --
-+
 
 
 === Docs
