@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.17.0
+:revnumber: v1.18.0
 :revdate: 2019-12-25T10:15:48+0900
-:revremark: update link of gatsby-transformer-asciidoc
+:revremark: update git submodule update command
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -313,7 +313,7 @@ npm install -g gatsby-cli
 
 gatsby new my-blog-folder https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
 cd my-blog-folder
-git submodule update --init src/components/Article/scss/
+git submodule update --init --recursive
 ----
 
 == How to deploy by Circle-CI in Medium.com
