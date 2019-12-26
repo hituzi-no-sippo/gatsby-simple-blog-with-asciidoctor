@@ -4,3 +4,6 @@
 [submodule "src/components/Article/scss"]
 	path = src/components/Article/scss
 	url = https://github.com/hitsuji-no-shippo/article-css-for-asciidoc.git
+[submodule "content/blog"]
+	path = content/blog
+	url = https://github.com/hitsuji-no-shippo/sample-articles-for-asciidoctor.git

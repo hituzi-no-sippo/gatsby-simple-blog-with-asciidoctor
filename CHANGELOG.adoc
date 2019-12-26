@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.30.0
-:revdate: 2019-12-26T09:36:30+0900
-:revremark: Add log that automatically add `full-path-from-project` attribute
+:revnumber: v1.31.1
+:revdate: 2019-12-26T13:00:50+0900
+:revremark: Fix submodule link for sample articles
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -44,9 +44,9 @@ ifndef::env-github[:icons: font]
 
 == 0.3.0 (2019-12-26)
 
-== Features
+=== Features
 
-=== Add
+==== Add
 
 :gatasby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
 :gatasby-transformer-asciidoc-link: link:{gatasby-transformer-asciidoc-url}[ \
@@ -84,6 +84,9 @@ ifndef::env-github[:icons: font]
 * Add deploy to netlify icon in README. (close link:{issues-url}/78[#78])
 * Fix link for {gatasby-transformer-asciidoc-link}.
   (close link:{issues-url}/80[#80])
+* Make submodule from sample articles. (close link:{issues-url}/83[#83]) +
+  link:https://github.com/hitsuji-no-shippo/sample-articles-for-asciidoctor/tree/bb4b82a2bf8817b7545cdf6f1b7e81cacb957a26[
+       submodule^]
 
 
 == 0.2.0 (2019-12-19)
