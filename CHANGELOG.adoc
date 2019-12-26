@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.31.0
-:revdate: 2019-12-26T12:46:44+0900
-:revremark: Add log that make submodule from sample articles
+:revnumber: v1.31.1
+:revdate: 2019-12-26T13:00:50+0900
+:revremark: Fix submodule link for sample articles
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -85,7 +85,7 @@ ifndef::env-github[:icons: font]
 * Fix link for {gatasby-transformer-asciidoc-link}.
   (close link:{issues-url}/80[#80])
 * Make submodule from sample articles. (close link:{issues-url}/83[#83]) +
-  link:https://github.com/hitsuji-no-shippo/sample-articles-for-asciidoctor/commit/bb4b82a2bf8817b7545cdf6f1b7e81cacb957a26[
+  link:https://github.com/hitsuji-no-shippo/sample-articles-for-asciidoctor/tree/bb4b82a2bf8817b7545cdf6f1b7e81cacb957a26[
        submodule^]
 
 
