@@ -7,7 +7,7 @@ aliases:
   submodule_update: &submodule_update
     run:
       name: git submodule update
-      command: git submodule update --init src/components/Article/scss/
+      command: git submodule update --init --recursive
 
   restore_cache: &restore_cache
     restore_cache:
