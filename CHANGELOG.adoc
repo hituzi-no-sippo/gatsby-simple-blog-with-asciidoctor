@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.32.1
-:revdate: 2019-12-26T20:05:56+0900
-:revremark: delete unnecessary `+` symbol
+:revnumber: v1.33.0
+:revdate: 2019-12-26T20:10:40+0900
+:revremark: Add log that delete unnecessary module
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -75,6 +75,9 @@ ifndef::env-github[:icons: font]
   Relation commit^]
 --
 
+=== Refactor
+
+* Delete unnecessary module. (link:{issues-url}/70[#70])
 
 === Docs
 
