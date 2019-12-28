@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.33.0
-:revdate: 2019-12-26T20:10:40+0900
-:revremark: Add log that delete unnecessary module
+:revnumber: v1.34.0
+:revdate: 2019-12-28T21:30:33+0900
+:revremark: Add log that fix jump to id
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -42,7 +42,7 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.3.0 (2019-12-26)
+== 0.3.0 (2019-12-28)
 
 === Features
 
@@ -74,6 +74,12 @@ ifndef::env-github[:icons: font]
   link:{gatasby-transformer-asciidoc-url}/commit/422bbd3ef904bbebec4b9ddf115435300f6a9783[
   Relation commit^]
 --
+
+=== Fix
+
+* Jump to id. (link:{issues-url}/89[#89]) +
+  link:{gatasby-transformer-asciidoc-url}/commit/080df2810e23c7dee6033d00849ab9afd71dbc36[
+  Fix commit in gatsby-transformer-asciidoc]
 
 === Refactor
 
