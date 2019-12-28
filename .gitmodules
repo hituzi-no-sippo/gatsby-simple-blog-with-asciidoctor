@@ -1,5 +1,5 @@
-[submodule "src/components/Article/scss"]
-	path = src/components/Article/scss
+[submodule "src/components/Article/LightweightMarkup/scss"]
+	path = src/components/Article/LightweightMarkup/scss
 	url = https://github.com/hitsuji-no-shippo/article-css-for-asciidoc.git
 [submodule "content/blog"]
 	path = content/blog
