@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.34.0
-:revdate: 2019-12-28T21:30:33+0900
-:revremark: Add log that fix jump to id
+:revnumber: v1.35.0
+:revdate: 2019-12-31T07:05:35+0900
+:revremark: Add log that fix Prototype Pollution in handlebars
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -42,7 +42,7 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.3.0 (2019-12-28)
+== 0.3.0 (2019-12-31)
 
 === Features
 
@@ -80,6 +80,10 @@ ifndef::env-github[:icons: font]
 * Jump to id. (link:{issues-url}/89[#89]) +
   link:{gatasby-transformer-asciidoc-url}/commit/080df2810e23c7dee6033d00849ab9afd71dbc36[
   Fix commit in gatsby-transformer-asciidoc]
+
+=== Security
+
+* Fix prototype pollution in handlebars. (link:{issues-url}/93[#93])
 
 === Refactor
 
