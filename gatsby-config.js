@@ -27,6 +27,7 @@ module.exports = {
       ...{
         url: 'https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor',
         name: 'gatsby-simple-blog-with-asciidoctor',
+        displaysLink: true,
       },
       ...repository
     },

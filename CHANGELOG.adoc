@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.37.0
-:revdate: 2020-01-06T16:53:00+0900
-:revremark: Add log that add default values to `siteMetadata.repository`.
+:revnumber: v1.38.0
+:revdate: 2020-01-06T21:12:54+0900
+:revremark: Add log that add switching for repositroy link display.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -75,6 +75,7 @@ ifndef::env-github[:icons: font]
   Relation commit^]
 --
 * Add default values to `siteMetadata.repository`. (close link:{issues-url}/97[#97])
+* Switching of for repositroy link display. (close link:{issues-url}/98[#98])
 
 
 === Fix
