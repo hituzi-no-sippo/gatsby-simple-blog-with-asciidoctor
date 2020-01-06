@@ -23,7 +23,13 @@ module.exports = {
     author,
     description,
     siteUrl,
-    repository,
+    repository: {
+      ...{
+        url: 'https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor',
+        name: 'gatsby-simple-blog-with-asciidoctor',
+      },
+      ...repository
+    },
     social: {
       twitter,
       github,

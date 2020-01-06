@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.18.1
-:revdate: 2020-01-06T16:43:38+0900
-:revremark: Fix description of repository link
+:revnumber: v1.19.0
+:revdate: 2020-01-06T17:36:30+0900
+:revremark: Add default value to `siteMetadata.repository`
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -291,6 +291,11 @@ From icon to text
 === Repository link in Footer
 
 Used `siteMetadata.repository`.
+
+.Default values
+url :: {repository-url}
+name:: gatsby-simple-blog-with-asciidoctor
+
 
 === Change element of blog entry
 

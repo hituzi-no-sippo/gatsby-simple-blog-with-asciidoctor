@@ -4,8 +4,8 @@
 :author: {author-name}
 :!email: {author-email}
 :revnumber: v1.37.0
-:revdate: 2020-01-06T16:48:11+0900
-:revremark: Add log that fix description for repository link in README.
+:revdate: 2020-01-06T16:53:00+0900
+:revremark: Add log that add default values to `siteMetadata.repository`.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -74,6 +74,8 @@ ifndef::env-github[:icons: font]
   link:{gatasby-transformer-asciidoc-url}/commit/422bbd3ef904bbebec4b9ddf115435300f6a9783[
   Relation commit^]
 --
+* Add default values to `siteMetadata.repository`. (close link:{issues-url}/97[#97])
+
 
 === Fix
 
