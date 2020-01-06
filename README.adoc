@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.20.0
+:revnumber: v1.21.0
 :revdate: 2020-01-06T20:56:09+0900
-:revremark: Add `displaysLink` key to `siteMetadata.repository`
+:revremark: Change list style to horizontal for default values of
+            `siteMetadata.repository`
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -293,6 +294,7 @@ From icon to text
 Used `siteMetadata.repository`.
 
 .Default values
+[horizontal]
 url         :: {repository-url}
 name        :: gatsby-simple-blog-with-asciidoctor
 displaysLink:: true
