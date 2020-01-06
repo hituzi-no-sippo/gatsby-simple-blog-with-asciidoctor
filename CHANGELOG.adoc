@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.36.0
-:revdate: 2020-01-04T13:38:49+0900
-:revremark: Add log that fix git submodule command in test script
+:revnumber: v1.37.0
+:revdate: 2020-01-06T16:48:11+0900
+:revremark: Add log that fix description for repository link in README.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -42,7 +42,7 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.3.0 (2020-01-04)
+== 0.3.0 (2020-01-06)
 
 === Features
 
@@ -103,6 +103,7 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/87[#87]) +
   link:{sample-articles-fro-asciidoctor-url}/commit/c56784f4acacec01c789c97499afbae651b0484a[
         Relatin commit in submodule]
+* Fix description for repository link. (close link:{issues-url}/99[#99])
 
 === Test
 
