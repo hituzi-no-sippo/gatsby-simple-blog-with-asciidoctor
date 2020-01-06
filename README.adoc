@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.18.0
-:revdate: 2019-12-25T10:15:48+0900
-:revremark: update git submodule update command
+:revnumber: v1.21.0
+:revdate: 2020-01-06T20:56:09+0900
+:revremark: Change list style to horizontal for default values of
+            `siteMetadata.repository`
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -288,9 +289,16 @@ git repository^].
 
 From icon to text
 
-=== Make footer link with value of config
+=== Repository link in Footer
 
-Used `site.repository` in `config/index.js`
+Used `siteMetadata.repository`.
+
+.Default values
+[horizontal]
+url         :: {repository-url}
+name        :: gatsby-simple-blog-with-asciidoctor
+displaysLink:: true
+
 
 === Change element of blog entry
 

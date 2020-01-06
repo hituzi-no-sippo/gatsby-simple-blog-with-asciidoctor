@@ -16,6 +16,7 @@ function Footer() {
             repository {
               url
               name
+              displaysLink
             }
           }
         }
@@ -23,7 +24,7 @@ function Footer() {
     `,
   );
 
-  return (
+  return repository.displaysLink ? (
     <footer
       style={{
         marginTop: rhythm(2.5),
@@ -42,7 +43,7 @@ function Footer() {
         </a>
       </p>
     </footer>
-  );
+  ) : null;
 }
 
 export default Footer;

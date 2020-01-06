@@ -87,7 +87,7 @@
     "serve": "gatsby serve",
     "eslint": "eslint .",
     "jest": "jest",
-    "test": "git submodule update --init src/components/Article/scss && cross-env NODE_ENV=test yarn run eslint && cross-env NODE_ENV=test yarn run jest"
+    "test": "git submodule update --init --recursive && cross-env NODE_ENV=test yarn run eslint && cross-env NODE_ENV=test yarn run jest"
   },
   "husky": {
     "hooks": {

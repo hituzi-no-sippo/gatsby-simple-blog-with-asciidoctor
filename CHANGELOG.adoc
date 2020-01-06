@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.35.0
-:revdate: 2019-12-31T07:05:35+0900
-:revremark: Add log that fix Prototype Pollution in handlebars
+:revnumber: v1.38.0
+:revdate: 2020-01-06T21:12:54+0900
+:revremark: Add log that add switching for repositroy link display.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -42,7 +42,7 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.3.0 (2019-12-31)
+== 0.3.0 (2020-01-06)
 
 === Features
 
@@ -74,6 +74,9 @@ ifndef::env-github[:icons: font]
   link:{gatasby-transformer-asciidoc-url}/commit/422bbd3ef904bbebec4b9ddf115435300f6a9783[
   Relation commit^]
 --
+* Add default values to `siteMetadata.repository`. (close link:{issues-url}/97[#97])
+* Switching of for repositroy link display. (close link:{issues-url}/98[#98])
+
 
 === Fix
 
@@ -103,6 +106,11 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/87[#87]) +
   link:{sample-articles-fro-asciidoctor-url}/commit/c56784f4acacec01c789c97499afbae651b0484a[
         Relatin commit in submodule]
+* Fix description for repository link. (close link:{issues-url}/99[#99])
+
+=== Test
+
+* Fix git submodule command in test script. (close link:{issues-url}/90[#90])
 
 
 == 0.2.0 (2019-12-19)

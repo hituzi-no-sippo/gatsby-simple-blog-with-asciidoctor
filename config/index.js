@@ -4,10 +4,6 @@ const site = {
   author: 'hitsji no shippo',
   description: 'A starter blog with asciidoctor.',
   siteUrl: 'https://gatsby-starter-blog-demo.netlify.com/',
-  repository: {
-    url: 'https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor',
-    name: 'gatsby-simple-blog-with-asciidoctor',
-  },
   twitter: 'hns_equal_st',
   github: 'hitsuji-no-shippo',
   medium: 'thundermiracle',
