@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Header from './Header'
 import LightWeightMarkup from './LightweightMarkup'
+import Footer from './Footer'
 
 const Article = ({post, translationsLink, languageContexts}) => {
   return (
@@ -13,6 +14,7 @@ const Article = ({post, translationsLink, languageContexts}) => {
        languageContexts={languageContexts}
       />
       <LightWeightMarkup html={post.html}/>
+      <Footer post={post}/>
     </article>
   );
 }

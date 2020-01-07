@@ -96,6 +96,9 @@ export const pageQuery = graphql`
       id
       html
       timeToRead
+      internal {
+        type
+      }
       document {
         title
         description
@@ -106,6 +109,13 @@ export const pageQuery = graphql`
       pageAttributes {
         tags
         disqus
+      }
+      paths {
+        from {
+          source {
+            full
+          }
+        }
       }
       fields {
         langKey

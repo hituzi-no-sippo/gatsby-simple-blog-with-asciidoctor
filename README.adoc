@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.24.0
-:revdate: 2020-01-08T15:40:28+0900
-:revremark: Update link for article-css-for-asciidoc
+:revnumber: v1.25.0
+:revdate: 2020-01-08T15:41:13+0900
+:revremark: Add section that add link to edit article on GitHub
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -289,6 +289,103 @@ directory is not generated.
 
 Use this link:https://github.com/hitsuji-no-shippo/article-css-for-asciidoc/tree/30575534810dc487b6df82ba755943863340a271[
 git repository^].
+
+=== Add link to edit article on GitHub
+
+You can add link to edit on GitHub into article footer. To add a link,
+you need to set `repository` and `articles` in `siteMetadata`.
+If `siteMetadata.articles.url` is `''` (default), don't add a link.
+
+.`siteMetadata.articles`
+[cols="2", options="headers, autowidth"]
+|===========================================================
+|Keys                |Default values
+m|url               m|''
+m|isOtherRepositroy m|true
+m|filePath          m|{ Asciidoc: 'paths.from.source.full' }
+m|ignore            m|['']
+|===========================================================
+
+[WARNING]
+====
+Using `null` will cause an link:{repository-url}/issues/103[
+error].
+====
+
+==== How to make url
+
+.Articles is other repository (submodule)
+[source, JavaScript]
+----
+articles: {
+  dir: 'hitsuji-no-shippo/sample-articles-for-asciidoctor',  // <1>
+  isOtherRepositroy: true
+  filePath: { Asciidoc: 'paths.from.source.full' },
+}
+----
+<1> Repositroy name in GitHub.
+
+[CAUTION]
+====
+Nested submodules are not supported.
+====
+
+
+.Articles is same repository
+[source, JavaScript]
+----
+articles: {
+  dir: 'content/blog',  // <1>
+  isOtherRepositroy: false
+  filePath: { Asciidoc: 'paths.from.source.full' },
+}
+----
+<1> Articles directory path from gatsby project root.
+
+.url
+[cols="m,2*d", options="headers, autowidth]
+|===
+|isOtherRepositroy
+|URL to articles directory
+|Mutual
+
+|true
+|https://github.com
+
+.2+|/${articles.dir}/edit/master/${node[filePath]}
+
+|false
+|${repository.url}
+|===
+
+==== `filePath`
+
+After the `master/`, the field value of `filePath` in node follows.
+The Key is `node.internal.type` value, value is field of file path.
+For `Asciidoc: 'paths.from.source.full'`, Asciidoc node uses the value of
+`node.paths.from.source.full`.
+If field of `filePath` doesn't exist, not add link and no error occurs.
+
+[NOTE]
+====
+`node.paths.from.source` is maked link:{gatsby-transformer-asciidoc-url}#how-to-query[
+gatsby-transformer-asciidoc^].
+====
+
+==== `ignore`
+
+No link is added to the article with the path(field value of `filePath`) that
+glob matches at least one `siteMetadata.articles.ignore`.
+
+.example
+[source, JavaScript]
+----
+articles: {
+  dir: 'hitsuji-no-shippo/sample-articles-for-asciidoctor',
+  ignore: ['asciidoc-examples/**/*.adoc'],
+}
+----
+
 
 === Change links to SNS profile
 
