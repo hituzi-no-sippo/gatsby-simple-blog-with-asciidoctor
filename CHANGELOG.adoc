@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.39.0
-:revdate: 2020-01-07T09:34:04+0900
-:revremark: Add log that update gatsby-transformer-asciidoc
+:revnumber: v1.42.0
+:revdate: 2020-01-08T11:54:34+0900
+:revremark: Add log that add link to edit article on GitHub into article footer
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -42,7 +42,7 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.3.0 (2020-01-06)
+== 0.3.0 (2020-01-08)
 
 === Features
 
@@ -76,6 +76,9 @@ ifndef::env-github[:icons: font]
 --
 * Add default values to `siteMetadata.repository`. (close link:{issues-url}/97[#97])
 * Switching of for repositroy link display. (close link:{issues-url}/98[#98])
+* `header` element into `article` element. (close link:{issues-url}/91[#91])
+* Link to edit article on GitHub into artticle footer.
+  (close link:{issues-url}/92[#92])
 
 ==== Update
 
@@ -102,6 +105,7 @@ ifndef::env-github[:icons: font]
 === Refactor
 
 * Delete unnecessary module. (link:{issues-url}/70[#70])
+* Move code for article header to header file. (link:{issues-url}/90[#90])
 
 === Docs
 

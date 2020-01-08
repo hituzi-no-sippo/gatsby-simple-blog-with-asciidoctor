@@ -6,6 +6,7 @@ const {
   description,
   siteUrl,
   repository,
+  articles,
   twitter = '',
   github = '',
   medium = '',
@@ -30,6 +31,15 @@ module.exports = {
         displaysLink: true,
       },
       ...repository
+    },
+    articles: {
+      ...{
+        dir: '',
+        isOtherRepositroy: true,
+        filePath: { Asciidoc: 'paths.from.source.full' },
+        ignore: [''],
+      },
+      ...articles,
     },
     social: {
       twitter,

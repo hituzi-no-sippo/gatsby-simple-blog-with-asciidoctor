@@ -1,19 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import '@fortawesome/fontawesome-free/css/v4-shims.min.css';
+import Header from './Header'
+import LightWeightMarkup from './LightweightMarkup'
+import Footer from './Footer'
 
-import './scss/common.scss'
-import './scss/light.scss'
-import './scss/dark.scss'
-
-const Article = ({article}) => {
-  return <article className='content' dangerouslySetInnerHTML={{ __html: article }} />
+const Article = ({post, translationsLink, languageContexts}) => {
+  return (
+    <article>
+      <Header
+       post={post}
+       translationsLink={translationsLink}
+       languageContexts={languageContexts}
+      />
+      <LightWeightMarkup html={post.html}/>
+      <Footer post={post}/>
+    </article>
+  );
 }
 
 Article.propTypes = {
-  article: PropTypes.string.isRequired,
+  post: PropTypes.object.isRequired,
+  translationsLink: PropTypes.array.isRequired,
+  languageContexts: PropTypes.object.isRequired,
 };
 
 export default Article;

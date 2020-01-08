@@ -4,6 +4,10 @@ const site = {
   author: 'hitsji no shippo',
   description: 'A starter blog with asciidoctor.',
   siteUrl: 'https://gatsby-starter-blog-demo.netlify.com/',
+  articles: {
+    dir: 'hitsuji-no-shippo/sample-articles-for-asciidoctor',
+    ignore: ['asciidoc-examples/**/*.adoc'],
+  },
   twitter: 'hns_equal_st',
   github: 'hitsuji-no-shippo',
   medium: 'thundermiracle',
