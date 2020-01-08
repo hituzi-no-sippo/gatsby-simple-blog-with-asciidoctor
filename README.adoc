@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.21.0
-:revdate: 2020-01-06T20:56:09+0900
-:revremark: Change list style to horizontal for default values of
-            `siteMetadata.repository`
+:revnumber: v1.22.0
+:revdate: 2020-01-08T10:58:56+0900
+:revremark: Move position of ignore description
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -279,6 +278,12 @@ gatsby-plugin-i18n] doesn't support asciidoc. Therefore,it was changed to
 link:https://github.com/hitsuji-no-shippo/gatsby-plugin-i18n/tree/add-support-for-other-lightweight-markup/packages/gatsby-plugin-i18n[
 @hitsuji_no_shippo/gatsby-plugin-i18n] that supports Asciidoc.
 
+==== Asciidoc in `_includes` directory are not create nodes
+
+The `ignore` option in link:https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem[
+gatsby-source-filesystem^] is used so that the node of asciidoc in `_includes`
+directory is not generated.
+
 
 === Add asciidoc support to css
 
@@ -366,10 +371,6 @@ Use disqus.com to enable comment.
   Enable eslint for better coding experience.
 * module resolver +
   Enable babel-module-resolver to prevent relative path hell
-* inogre +
-  The `ignore` option in link:[https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem
-  `gatsby-source-filesystem`^] is used so that the node of asciidoc in
-  `_includes` directory is not generated.
 
 == LICENSE
 
