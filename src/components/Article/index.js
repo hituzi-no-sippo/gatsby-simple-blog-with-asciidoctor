@@ -6,14 +6,14 @@ import LightWeightMarkup from './LightweightMarkup'
 
 const Article = ({post, translationsLink, languageContexts}) => {
   return (
-    <>
+    <article>
       <Header
-      post={post}
-      translationsLink={translationsLink}
-      languageContexts={languageContexts}
+       post={post}
+       translationsLink={translationsLink}
+       languageContexts={languageContexts}
       />
       <LightWeightMarkup html={post.html}/>
-    </>
+    </article>
   );
 }
 

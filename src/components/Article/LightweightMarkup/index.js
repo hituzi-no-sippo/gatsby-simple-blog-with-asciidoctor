@@ -9,7 +9,7 @@ import './scss/light.scss'
 import './scss/dark.scss'
 
 const LightWeightMarkup = ({html}) => {
-  return <article className='content' dangerouslySetInnerHTML={{ __html: html }} />
+  return <div className='content' dangerouslySetInnerHTML={{ __html: html }} />
 }
 
 LightWeightMarkup.propTypes = {

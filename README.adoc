@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.23.0
-:revdate: 2020-01-08T12:42:28+0900
-:revremark: Update link to gatsby-transformer-asciidoc to v0.11.0
+:revnumber: v1.24.0
+:revdate: 2020-01-08T15:40:28+0900
+:revremark: Update link for article-css-for-asciidoc
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -287,7 +287,7 @@ directory is not generated.
 
 === Add asciidoc support to css
 
-Use this link:https://github.com/hitsuji-no-shippo/article-css-for-asciidoc/tree/c051efc8c593eec6537ce3404c21133027b353c3[
+Use this link:https://github.com/hitsuji-no-shippo/article-css-for-asciidoc/tree/30575534810dc487b6df82ba755943863340a271[
 git repository^].
 
 === Change links to SNS profile

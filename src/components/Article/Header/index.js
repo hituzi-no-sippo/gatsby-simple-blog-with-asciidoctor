@@ -12,7 +12,7 @@ import TranslationsLink from './TranslationsLink';
 
 const Header = ({post, translationsLink, languageContexts}) => {
   return (
-    <>
+    <header>
       <h1>{post.document.title}</h1>
       <p
         style={{
@@ -34,7 +34,7 @@ const Header = ({post, translationsLink, languageContexts}) => {
         langKey={languageContexts.lang}
         style={{ margin: '-0.5rem 0 1.5rem' }}
       />
-    </>
+    </header>
   );
 }
 
