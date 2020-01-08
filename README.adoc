@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.22.0
-:revdate: 2020-01-08T10:58:56+0900
-:revremark: Move position of ignore description
+:revnumber: v1.23.0
+:revdate: 2020-01-08T12:42:28+0900
+:revremark: Update link to gatsby-transformer-asciidoc to v0.11.0
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -53,7 +53,7 @@ image:https://www.netlify.com/img/deploy/button.svg[
 
 == Diffrences from link:https://github.com/thundermiracle/gatsby-simple-blog[thundermiracle/gatsby-simple-blog]
 
-:gatsby-transformer-asciidoc-url: https://github.com/hitsuji-no-shippo/gatsby-transformer-asciidoc/tree/dc14437c3f2210b493c8b1191b66e997e392a374
+:gatsby-transformer-asciidoc-url: https://github.com/hitsuji-no-shippo/gatsby-transformer-asciidoc/tree/v0.11.0
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         @hitsji_no_shippo/gatsby-transformer-asciidoc]
 === Change to create article from markdown to asciidoc
