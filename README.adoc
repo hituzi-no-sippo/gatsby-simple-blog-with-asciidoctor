@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.25.0
-:revdate: 2020-01-08T15:41:13+0900
-:revremark: Add section that add link to edit article on GitHub
+:revnumber: v1.26.0
+:revdate: 2020-01-08T16:55:50+0900
+:revremark: Update description of ignore asciidoc files
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -278,11 +278,15 @@ gatsby-plugin-i18n] doesn't support asciidoc. Therefore,it was changed to
 link:https://github.com/hitsuji-no-shippo/gatsby-plugin-i18n/tree/add-support-for-other-lightweight-markup/packages/gatsby-plugin-i18n[
 @hitsuji_no_shippo/gatsby-plugin-i18n] that supports Asciidoc.
 
-==== Asciidoc in `_includes` directory are not create nodes
+==== Ignore `_includes` directory and README, CHANGELOG
 
 The `ignore` option in link:https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem[
-gatsby-source-filesystem^] is used so that the node of asciidoc in `_includes`
-directory is not generated.
+gatsby-source-filesystem^] is used so that the next files are not generated.
+
+.Ignore ascidoc files
+* In `_includes` directory
+* `README.adoc`
+* `CHANGELOG.adoc`
 
 
 === Add asciidoc support to css
