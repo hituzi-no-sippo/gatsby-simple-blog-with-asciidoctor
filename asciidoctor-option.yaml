@@ -1,1 +1,6 @@
 safe: server
+attributes:
+  options:
+    paths:
+      dir-path-from-project: from.project.dir
+      full-path-from-project: from.project.full

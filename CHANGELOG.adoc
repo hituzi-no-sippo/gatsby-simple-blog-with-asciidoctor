@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.38.0
-:revdate: 2020-01-06T21:12:54+0900
-:revremark: Add log that add switching for repositroy link display.
+:revnumber: v1.39.0
+:revdate: 2020-01-07T09:34:04+0900
+:revremark: Add log that update gatsby-transformer-asciidoc
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -76,6 +76,17 @@ ifndef::env-github[:icons: font]
 --
 * Add default values to `siteMetadata.repository`. (close link:{issues-url}/97[#97])
 * Switching of for repositroy link display. (close link:{issues-url}/98[#98])
+
+==== Update
+
+* gatsby-transformer-asciidoc. (close link:{issues-url}/94[#94])
++
+--
+.Update packages
+* {gatasby-transformer-asciidoc-link} +
+  link:{gatasby-transformer-asciidoc-url}/commit/4ade15f0a7172d3a7bd1673a8a4eec84d497161d[
+  Relation commit^]
+--
 
 
 === Fix
