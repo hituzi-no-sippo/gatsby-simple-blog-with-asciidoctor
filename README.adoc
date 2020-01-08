@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.21.0
-:revdate: 2020-01-06T20:56:09+0900
-:revremark: Change list style to horizontal for default values of
-            `siteMetadata.repository`
+:revnumber: v1.21.1
+:revdate: 2020-01-08T10:25:02+0900
+:revremark: Fix link text of gatsby-source-filesystem
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -367,8 +366,8 @@ Use disqus.com to enable comment.
 * module resolver +
   Enable babel-module-resolver to prevent relative path hell
 * inogre +
-  The `ignore` option in link:[https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem
-  `gatsby-source-filesystem`^] is used so that the node of asciidoc in
+  The `ignore` option in link:https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem[
+  gatsby-source-filesystem^] is used so that the node of asciidoc in
   `_includes` directory is not generated.
 
 == LICENSE
