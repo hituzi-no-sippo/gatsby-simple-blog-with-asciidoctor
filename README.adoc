@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.26.1
-:revdate: 2020-01-09T17:25:06+0900
-:revremark: Fix typo `articles.url` to `articles.dir`
+:revnumber: v1.26.3
+:revdate: 2020-01-09T22:41:27+0900
+:revremark: fix description of the case where edit link is not displayed.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -298,7 +298,14 @@ git repository^].
 
 You can add link to edit on GitHub into article footer. To add a link,
 you need to set `repository` and `articles` in `siteMetadata`.
-If `siteMetadata.articles.dir` is `''` (default), don't add a link.
+The link is not displayed in the following cases.
+
+.Cases
+* `siteMetadata.articles.dir` is `''`.
+* Field of `siteMetadata.articles.filePath` doesn't exist.
+* `siteMetadata.articles.isOtherRepositroy` is `false` and
+  `siteMetadata.repository.url` is `''`.
+* Match with `siteMetadata.articles.ignore` option.
 
 .`siteMetadata.articles`
 [cols="2", options="headers, autowidth"]
@@ -398,6 +405,7 @@ From icon to text
 === Repository link in Footer
 
 Used `siteMetadata.repository`.
+Doesn't displays link, if `url` is `''` or `displaysLink` is `false`.
 
 .Default values
 [horizontal]

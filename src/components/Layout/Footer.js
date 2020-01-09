@@ -24,7 +24,7 @@ function Footer() {
     `,
   );
 
-  return repository.displaysLink ? (
+  return (repository.url !== '' && repository.displaysLink) ? (
     <footer
       style={{
         marginTop: rhythm(2.5),

@@ -32,7 +32,8 @@ const Footer = ({post}) => {
   );
 
   // Can't use `null` in siteMetadata. #103
-  if (articles.dir === '' || articles.filePath === '') {
+  if (articles.dir === '' || articles.filePath === ''
+      || (repository.url === '' && !articles.isOtherRepositroy)) {
     return null;
   }
 
