@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.26.1
-:revdate: 2020-01-09T17:25:06+0900
-:revremark: Fix typo `articles.url` to `articles.dir`
+:revnumber: v1.26.2
+:revdate: 2020-01-09T21:57:07+0900
+:revremark: Add description of the case where repository link is not displayed.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -398,6 +398,7 @@ From icon to text
 === Repository link in Footer
 
 Used `siteMetadata.repository`.
+Doesn't displays link, if `url` is `''` or `displaysLink` is `false`.
 
 .Default values
 [horizontal]
