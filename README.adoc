@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.26.0
-:revdate: 2020-01-08T16:55:50+0900
-:revremark: Update description of ignore asciidoc files
+:revnumber: v1.26.1
+:revdate: 2020-01-09T17:25:06+0900
+:revremark: Fix typo `articles.url` to `articles.dir`
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -298,13 +298,13 @@ git repository^].
 
 You can add link to edit on GitHub into article footer. To add a link,
 you need to set `repository` and `articles` in `siteMetadata`.
-If `siteMetadata.articles.url` is `''` (default), don't add a link.
+If `siteMetadata.articles.dir` is `''` (default), don't add a link.
 
 .`siteMetadata.articles`
 [cols="2", options="headers, autowidth"]
 |===========================================================
 |Keys                |Default values
-m|url               m|''
+m|dir               m|''
 m|isOtherRepositroy m|true
 m|filePath          m|{ Asciidoc: 'paths.from.source.full' }
 m|ignore            m|['']
