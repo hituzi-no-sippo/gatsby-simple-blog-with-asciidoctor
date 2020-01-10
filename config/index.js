@@ -4,10 +4,6 @@ const site = {
   author: 'hitsji no shippo',
   description: 'A starter blog with asciidoctor.',
   siteUrl: 'https://gatsby-starter-blog-demo.netlify.com/',
-  articles: {
-    dir: 'hitsuji-no-shippo/sample-articles-for-asciidoctor',
-    ignore: ['asciidoc-examples/**/*.adoc'],
-  },
   twitter: 'hns_equal_st',
   github: 'hitsuji-no-shippo',
   medium: 'thundermiracle',
@@ -23,7 +19,22 @@ const supportedLanguages = {
   'ja': '日本語',
 };
 
+const repository = {
+  url: 'https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor',
+  name: 'gatsby-simple-blog-with-asciidoctor',
+  displaysLink: true,
+}
+
+const articles = {
+  dir: 'hitsuji-no-shippo/sample-articles-for-asciidoctor',
+  isOtherRepositroy: true,
+  filePath: { Asciidoc: 'paths.from.source.full' },
+  ignore: ['asciidoc-examples/**/*.adoc'],
+};
+
 module.exports = {
   site,
   supportedLanguages,
+  repository,
+  articles,
 };

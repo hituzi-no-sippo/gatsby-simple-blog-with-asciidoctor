@@ -1,39 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, useStaticQuery } from 'gatsby';
 
 import minimatch from 'minimatch';
 
-const Footer = ({post}) => {
-  const {
-    site: {
-      siteMetadata: { repository, articles },
-    },
-  } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            repository {
-              url
-            }
-            articles {
-              dir
-              filePath {
-                Asciidoc
-              }
-              isOtherRepositroy
-              ignore
-            }
-          }
-        }
-      }
-    `,
-  );
+import { repository, articles } from 'config'
 
-  // Can't use `null` in siteMetadata. #103
-  if (articles.dir === '' || articles.filePath === ''
-      || (repository.url === '' && !articles.isOtherRepositroy)) {
+const Footer = ({post}) => {
+  if (!(articles.dir && articles.filePath
+      && (repository.url || articles.isOtherRepositroy))) {
     return null;
   }
 
@@ -51,7 +25,15 @@ const Footer = ({post}) => {
     return typeof value === 'string' ? value : null;
   })();
 
-  if (!filePath || articles.ignore.some(pattern => minimatch(filePath, pattern))) {
+  if (!filePath) {
+    return null;
+  }
+
+  const ignores = articles.ignore
+    ? articles.ignore.some(pattern => minimatch(filePath, pattern))
+    : false;
+
+  if (ignores) {
     return null;
   }
 

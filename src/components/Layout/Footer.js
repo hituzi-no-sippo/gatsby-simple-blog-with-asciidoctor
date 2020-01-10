@@ -1,30 +1,11 @@
 import React from 'react';
 
-import { graphql, useStaticQuery } from 'gatsby';
 import { rhythm } from 'utils/typography';
 
-function Footer() {
-  const {
-    site: {
-      siteMetadata: { repository },
-    },
-  } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            repository {
-              url
-              name
-              displaysLink
-            }
-          }
-        }
-      }
-    `,
-  );
+import { repository } from 'config'
 
-  return (repository.url !== '' && repository.displaysLink) ? (
+function Footer() {
+  return (repository.url && repository.displaysLink) ? (
     <footer
       style={{
         marginTop: rhythm(2.5),

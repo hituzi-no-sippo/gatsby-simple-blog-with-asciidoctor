@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.26.3
-:revdate: 2020-01-09T22:41:27+0900
-:revremark: fix description of the case where edit link is not displayed.
+:revnumber: v1.27.0
+:revdate: 2020-01-10T13:05:20+0900
+:revremark: Change used values from links \
+            from `siteMetadata` to `config/index.js`
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -297,31 +298,15 @@ git repository^].
 === Add link to edit article on GitHub
 
 You can add link to edit on GitHub into article footer. To add a link,
-you need to set `repository` and `articles` in `siteMetadata`.
+you need to set `repository` and `articles` in `config/index.js`.
 The link is not displayed in the following cases.
 
 .Cases
-* `siteMetadata.articles.dir` is `''`.
-* Field of `siteMetadata.articles.filePath` doesn't exist.
-* `siteMetadata.articles.isOtherRepositroy` is `false` and
-  `siteMetadata.repository.url` is `''`.
-* Match with `siteMetadata.articles.ignore` option.
-
-.`siteMetadata.articles`
-[cols="2", options="headers, autowidth"]
-|===========================================================
-|Keys                |Default values
-m|dir               m|''
-m|isOtherRepositroy m|true
-m|filePath          m|{ Asciidoc: 'paths.from.source.full' }
-m|ignore            m|['']
-|===========================================================
-
-[WARNING]
-====
-Using `null` will cause an link:{repository-url}/issues/103[
-error].
-====
+* `articles.dir` is `undefined`.
+* Field of `articles.filePath` doesn't exist.
+* `articles.isOtherRepositroy` is `false` and
+  `repository.url` is `undefined`.
+* Match with `articles.ignore` option.
 
 ==== How to make url
 
@@ -386,7 +371,7 @@ gatsby-transformer-asciidoc^].
 ==== `ignore`
 
 No link is added to the article with the path(field value of `filePath`) that
-glob matches at least one `siteMetadata.articles.ignore`.
+glob matches at least one `articles.ignore`.
 
 .example
 [source, JavaScript]
@@ -404,8 +389,8 @@ From icon to text
 
 === Repository link in Footer
 
-Used `siteMetadata.repository`.
-Doesn't displays link, if `url` is `''` or `displaysLink` is `false`.
+Used `repository` in `config/index.js`
+Doesn't displays link, if `url` is `undefined` or `displaysLink` is `false`.
 
 .Default values
 [horizontal]

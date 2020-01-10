@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.44.0
-:revdate: 2020-01-10T13:15:06+0900
-:revremark: Add relation issues #107 #108 to log of link features
+:revnumber: v1.45.0
+:revdate: 2020-01-10T13:17:02+0900
+:revremark: Add relation issues #110 to log of link features
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -76,10 +76,12 @@ ifndef::env-github[:icons: font]
 --
 * Add default values to `siteMetadata.repository`. (close link:{issues-url}/97[#97])
 * Switching of for repositroy link display.
-  (close link:{issues-url}/98[#98], close link:{issues-url}/107[#107])
+  (close link:{issues-url}/98[#98], close link:{issues-url}/107[#107],
+   close link:{issues-url}/110[#110])
 * `header` element into `article` element. (close link:{issues-url}/91[#91])
 * Link to edit article on GitHub into artticle footer.
-  (close link:{issues-url}/92[#92], close link:{issues-url}/108[#108])
+  (close link:{issues-url}/92[#92], close link:{issues-url}/108[#108],
+   close link:{issues-url}/110[#110])
 * `README.adoc` to ignore files. (close link:{issues-url}/106[#106])
 
 ==== Update

@@ -5,8 +5,6 @@ const {
   author,
   description,
   siteUrl,
-  repository,
-  articles,
   twitter = '',
   github = '',
   medium = '',
@@ -24,23 +22,6 @@ module.exports = {
     author,
     description,
     siteUrl,
-    repository: {
-      ...{
-        url: 'https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor',
-        name: 'gatsby-simple-blog-with-asciidoctor',
-        displaysLink: true,
-      },
-      ...repository
-    },
-    articles: {
-      ...{
-        dir: '',
-        isOtherRepositroy: true,
-        filePath: { Asciidoc: 'paths.from.source.full' },
-        ignore: [''],
-      },
-      ...articles,
-    },
     social: {
       twitter,
       github,
