@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.27.0
-:revdate: 2020-01-10T13:05:20+0900
-:revremark: Change used values from links \
-            from `siteMetadata` to `config/index.js`
+:revnumber: Branch feat/change-SEO v1.0.0 (Base v1.27.0)
+:revdate: 2020-01-10T23:46:18+0900
+:revremark: Add SEO section
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -404,6 +403,11 @@ displaysLink:: true
 Change to
 link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article[
 `article`]
+
+
+=== SEO
+
+* Delete `twitter:creator`
 
 
 == Description

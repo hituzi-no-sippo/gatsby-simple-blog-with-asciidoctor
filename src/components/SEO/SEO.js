@@ -60,10 +60,6 @@ function SEO({ description, meta, keywords, title }) {
           content: `summary`,
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
           name: `twitter:title`,
           content: title,
         },

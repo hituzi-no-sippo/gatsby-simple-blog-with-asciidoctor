@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.45.0
-:revdate: 2020-01-10T13:17:02+0900
-:revremark: Add relation issues #110 to log of link features
+:revnumber: Branch feat/change-SEO v1.0.0 (Base v1.45.0)
+:revdate: 2020-01-10T23:38:27+0900
+:revremark: Add log that delete `twitter:creator` in meta
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -94,6 +94,7 @@ ifndef::env-github[:icons: font]
   link:{gatasby-transformer-asciidoc-url}/commit/4ade15f0a7172d3a7bd1673a8a4eec84d497161d[
   Relation commit^]
 --
+* Delete `twitter:creator` in meta. (link:{issues-url}/113[#113])
 
 
 === Fix
