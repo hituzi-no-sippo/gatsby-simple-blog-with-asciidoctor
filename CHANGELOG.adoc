@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/change-SEO v1.0.0 (Base v1.45.0)
-:revdate: 2020-01-10T23:38:27+0900
-:revremark: Add log that delete `twitter:creator` in meta
+:revnumber: Branch feat/change-SEO v1.1.0 (Base v1.45.0)
+:revdate: 2020-01-10T23:53:02+0900
+:revremark: Add log that add `twitter:site` in meta
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -83,6 +83,7 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/92[#92], close link:{issues-url}/108[#108],
    close link:{issues-url}/110[#110])
 * `README.adoc` to ignore files. (close link:{issues-url}/106[#106])
+* `twitter:site` in meta. (close link:{issues-url}/114[#114])
 
 ==== Update
 
