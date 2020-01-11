@@ -140,7 +140,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "gatsby-simple-blog RSS Feed",
+            title
           },
         ],
       },
