@@ -69,7 +69,7 @@ function SEO({ description, meta, keywords, title, slug }) {
         },
         {
           name: `twitter:site`,
-          content: site.siteMetadata.social.twitter,
+          content: `@${site.siteMetadata.social.twitter}`,
         },
         {
           name: `twitter:title`,
