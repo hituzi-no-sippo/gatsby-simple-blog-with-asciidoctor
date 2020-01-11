@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.49.0
-:revdate: 2020-01-11T13:25:17+0900
-:revremark: Add log of change `pathPrefix` from `/gatsby-simple-blog` to `/`
+:revnumber: Branch docs/update-log-in-CHANGELOG v1.0.0 (Base v1.49.0)
+:revdate: 2020-01-11T15:02:40+0900
+:revremark: Delete log that add default values to `siteMetadata.repository`
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -79,7 +79,6 @@ ifndef::env-github[:icons: font]
   link:{gatasby-transformer-asciidoc-url}/commit/422bbd3ef904bbebec4b9ddf115435300f6a9783[
   Relation commit^]
 --
-* Add default values to `siteMetadata.repository`. (close link:{issues-url}/97[#97])
 * Switching of for repositroy link display.
   (close link:{issues-url}/98[#98], close link:{issues-url}/107[#107],
    close link:{issues-url}/110[#110])
