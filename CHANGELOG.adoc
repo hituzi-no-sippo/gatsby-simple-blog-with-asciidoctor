@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.48.0
-:revdate: 2020-01-11T13:06:23+0900
-:revremark: Add log of add rss support
+:revnumber: v1.49.0
+:revdate: 2020-01-11T13:25:17+0900
+:revremark: Add log of change `pathPrefix` from `/gatsby-simple-blog` to `/`
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -103,6 +103,8 @@ ifndef::env-github[:icons: font]
   Relation commit^]
 --
 * Delete `twitter:creator` in meta. (link:{issues-url}/113[#113])
+* Change `pathPrefix` from `/gatsby-simple-blog` to `/`.
+  (link:{issues-url}/118[#118])
 
 
 === Fix

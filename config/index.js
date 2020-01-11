@@ -1,5 +1,5 @@
 const site = {
-  pathPrefix: '/gatsby-simple-blog',
+  pathPrefix: '/',
   title: 'Gatsby Starter Blog',
   author: 'hitsji no shippo',
   description: 'A starter blog with asciidoctor.',
