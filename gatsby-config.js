@@ -5,10 +5,7 @@ const {
   author,
   description,
   siteUrl,
-  twitter = '',
-  github = '',
-  medium = '',
-  facebook = '',
+  social,
   disqusShortName = '',
   lang = 'en',
   googleTrackingId: trackingId,
@@ -23,10 +20,10 @@ module.exports = {
     description,
     siteUrl,
     social: {
-      twitter,
-      github,
-      medium,
-      facebook,
+      ...{
+        twitter: ''
+      },
+      ...social,
     },
     disqusShortName,
     lang,

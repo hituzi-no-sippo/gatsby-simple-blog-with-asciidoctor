@@ -10,9 +10,9 @@ import { StaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import { rhythm } from 'utils/typography';
-import './Bio.css';
+import Links from './Links';
 
-import SocialBar from '../SocialBar';
+import './Bio.css';
 
 function Bio() {
   return (
@@ -41,7 +41,7 @@ function Bio() {
               />
               <div className="description">
                 <p>{description}</p>
-                <SocialBar />
+                <Links />
               </div>
             </div>
           </div>

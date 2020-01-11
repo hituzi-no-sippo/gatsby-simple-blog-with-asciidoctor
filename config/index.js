@@ -4,10 +4,9 @@ const site = {
   author: 'hitsji no shippo',
   description: 'A starter blog with asciidoctor.',
   siteUrl: 'https://lucid-bell-34419c.netlify.com',  // demo site url
-  twitter: 'hns_equal_st',
-  github: 'hitsuji-no-shippo',
-  medium: 'thundermiracle',
-  facebook: 'thundermiracle',
+  social : {
+    twitter: 'hns_equal_st',
+  },
   disqusShortName: 'gatsby-simple-blog',
   googleTrackingId: '',
   lang: 'en',
@@ -32,9 +31,15 @@ const articles = {
   ignore: ['asciidoc-examples/**/*.adoc'],
 };
 
+const linksInBio = {
+  twitter: 'https://twitter.com/hns_equal_st',
+  GitHub: 'https://github.com/hitsuji-no-shippo',
+}
+
 module.exports = {
   site,
   supportedLanguages,
   repository,
   articles,
+  linksInBio,
 };

@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.28.0
-:revdate: 2020-01-11T10:51:16+0900
-:revremark: Add SEO section
+:revnumber: v1.29.0
+:revdate: 2020-01-11T11:10:14+0900
+:revremark: Change section of links in bio
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -382,9 +382,23 @@ articles: {
 ----
 
 
-=== Change links to SNS profile
+=== Links in Bio
 
-From icon to text
+.Change points
+* From icon to text.
+* Config From `siteMetadata` to `linksInBio` in `config/index.js`.
++
+--
+.Example
+[source, JavaScript]
+----
+{
+  twitter: 'https://twitter.com/hns_equal_st',     // <1>
+  GitHub: 'https://github.com/hitsuji-no-shippo',  // <1>
+}
+----
+<1> key (`twitter`) is dispaly text, value (`https...`) is url.
+--
 
 === Repository link in Footer
 
