@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.49.0
-:revdate: 2020-01-11T13:25:17+0900
-:revremark: Add log of change `pathPrefix` from `/gatsby-simple-blog` to `/`
+:revnumber: v1.50.0
+:revdate: 2020-01-11T15:17:18+0900
+:revremark: Delete unnecessary log and fix logs that add attributes
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -49,37 +49,18 @@ ifndef::env-github[:icons: font]
 * Change used values for links in bio from `siteMetadata` to `config/index.js`.
   (close link:{issues-url}/112[#112])
 
+:gatasby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
+:gatasby-transformer-asciidoc-link: link:{gatasby-transformer-asciidoc-url}[ \
+                                         gatasby-transformer-asciidoc^]
 === Features
 
 ==== Add
 
-:gatasby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
-:gatasby-transformer-asciidoc-link: link:{gatasby-transformer-asciidoc-url}[ \
-                                         gatasby-transformer-asciidoc^]
-:gatsby-plugin-i18n-url: {hitsuji-no-shippo-github-profile-url}/gatsby-plugin-i18n
 * Ignore asciidoc in `_includes` directory. (close link:{issues-url}/74[#74])
-* automatically add `dir-path-from-project` attribute.
-  (close link:{issues-url}/75[#75])
-+
---
-.Update packages
-* {gatasby-transformer-asciidoc-link} +
-  link:{gatasby-transformer-asciidoc-url}/commit/c3a689e36900a92bb7d03df7a343fdbce8a187f6[
-  Relation commit^]
-* link:{gatsby-plugin-i18n-url}[gatsby-plugin-i18n^] +
-  link:{gatsby-plugin-i18n-url}/commit/8911e383a19989dba1e1f9ff7c1fdd031ff45289[
-  Relation commit^]
---
-* automatically add `full-path-from-project` attribute.
-  (close link:{issues-url}/84[#84])
-+
---
-.Update packages
-* {gatasby-transformer-asciidoc-link} +
-  link:{gatasby-transformer-asciidoc-url}/commit/422bbd3ef904bbebec4b9ddf115435300f6a9783[
-  Relation commit^]
---
-* Add default values to `siteMetadata.repository`. (close link:{issues-url}/97[#97])
+* `dir-path-from-project` attribute.
+  (close link:{issues-url}/75[#75], close link:{issues-url}/94[#94])
+* `full-path-from-project` attribute.
+  (close link:{issues-url}/84[#84], close link:{issues-url}/94[#94])
 * Switching of for repositroy link display.
   (close link:{issues-url}/98[#98], close link:{issues-url}/107[#107],
    close link:{issues-url}/110[#110])
