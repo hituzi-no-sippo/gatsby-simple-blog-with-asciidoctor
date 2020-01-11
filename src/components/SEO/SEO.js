@@ -68,10 +68,6 @@ function SEO({ description, meta, keywords, title, slug }) {
           content: `summary`,
         },
         {
-          name: `twitter:site`,
-          content: `@${site.siteMetadata.social.twitter}`,
-        },
-        {
           name: `twitter:title`,
           content: title,
         },
@@ -87,6 +83,14 @@ function SEO({ description, meta, keywords, title, slug }) {
                 content: keywords.join(`, `),
               }
             : [],
+        )
+        .concat(
+          site.siteMetadata.social.twitter !== ''
+            ? {
+                name: `twitter:site`,
+                content: `@${site.siteMetadata.social.twitter}`,
+              }
+            : []
         )
         .concat(meta)}
     />
