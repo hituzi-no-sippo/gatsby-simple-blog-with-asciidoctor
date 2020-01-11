@@ -90,5 +90,60 @@ module.exports = {
         }
       },
     },
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
+        {
+          site {
+             siteMetadata {
+               title
+               description
+               siteUrl
+             }
+          }
+        }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allAsciidoc } }) => {
+              return allAsciidoc.edges.map(edge => {
+                return {
+                  title: edge.node.document.title,
+                  description: edge.node.document.description,
+                  date: edge.node.revision.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                }
+              })
+            },
+            query: `
+              {
+                allAsciidoc(
+                  sort: { order: DESC, fields: [revision___date] },
+                ) {
+                  edges {
+                    node {
+                      html
+                      fields { slug }
+                      document {
+                        title
+                        description
+                      }
+                      revision {
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "gatsby-simple-blog RSS Feed",
+          },
+        ],
+      },
+    },
   ],
 };

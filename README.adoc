@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.29.0
-:revdate: 2020-01-11T11:10:14+0900
-:revremark: Change section of links in bio
+:revnumber: v1.30.0
+:revdate: 2020-01-11T13:14:27+0900
+:revremark: Add rss support into change points in section of links in Bio
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -260,10 +260,6 @@ link:http://en.wikipedia.org/wiki/Salted_duck_egg[salted duck eggs, window=_blan
 
 |gatsby-remark-smartypants
 |None.
-
-2+h|The others
-|gatsby-plugin-feed
-|None. I want it too.
 |===
 
 [WARNING]
@@ -386,6 +382,7 @@ articles: {
 
 .Change points
 * From icon to text.
+* Add rss(`/rss.xml`).
 * Config From `siteMetadata` to `linksInBio` in `config/index.js`.
 +
 --

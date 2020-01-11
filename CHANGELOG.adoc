@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.47.0
-:revdate: 2020-01-11T11:48:53+0900
-:revremark: Add log of change used values for links in bio
+:revnumber: v1.48.0
+:revdate: 2020-01-11T13:06:23+0900
+:revremark: Add log of add rss support
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -90,6 +90,7 @@ ifndef::env-github[:icons: font]
 * `README.adoc` to ignore files. (close link:{issues-url}/106[#106])
 * `twitter:site` in meta. (close link:{issues-url}/114[#114])
 * `og:url` in meta. (close link:{issues-url}/115[#115])
+* rss support. (close link:{issues-url}/117[#117])
 
 ==== Update
 
