@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.27.0
-:revdate: 2020-01-10T13:05:20+0900
-:revremark: Change used values from links \
-            from `siteMetadata` to `config/index.js`
+:revnumber: v1.28.0
+:revdate: 2020-01-11T10:51:16+0900
+:revremark: Add SEO section
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -404,6 +403,14 @@ displaysLink:: true
 Change to
 link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article[
 `article`]
+
+
+=== SEO
+
+* Delete `twitter:creator`
+* Add `twitter:site`. The value (twitter id) used is
+  `siteMetadata.social.twitter`
+* Add `og:url`. The value used is `siteMetadata.siteUrl` + `node.fields.slug`
 
 
 == Description

@@ -3,7 +3,7 @@ const site = {
   title: 'Gatsby Starter Blog',
   author: 'hitsji no shippo',
   description: 'A starter blog with asciidoctor.',
-  siteUrl: 'https://gatsby-starter-blog-demo.netlify.com/',
+  siteUrl: 'https://lucid-bell-34419c.netlify.com',  // demo site url
   twitter: 'hns_equal_st',
   github: 'hitsuji-no-shippo',
   medium: 'thundermiracle',
