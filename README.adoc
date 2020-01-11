@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/change-SEO v1.1.0 (Base v1.27.0)
-:revdate: 2020-01-10T23:51:44+0900
-:revremark: Add change point to SEO section that add `twitter:site` in meta
+:revnumber: Branch feat/change-SEO v1.2.0 (Base v1.27.0)
+:revdate: 2020-01-11T10:32:05+0900
+:revremark: Add change point to SEO section that add `og:url` in meta
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -410,6 +410,7 @@ link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article[
 * Delete `twitter:creator`
 * Add `twitter:site`. The value (twitter id) used is
   `siteMetadata.social.twitter`
+* Add `og:url`. The value used is `siteMetadata.siteUrl` + `node.fields.slug`
 
 
 == Description

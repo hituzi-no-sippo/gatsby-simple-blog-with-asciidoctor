@@ -26,6 +26,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
       <SEO
         title={post.document.title}
         description={post.document.description}
+        slug={post.fields.slug}
       />
       <Article
        post={post}
@@ -119,6 +120,7 @@ export const pageQuery = graphql`
       }
       fields {
         langKey
+        slug
       }
     }
   }

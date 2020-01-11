@@ -11,7 +11,7 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useLang } from 'context/LanguageContext';
 
-function SEO({ description, meta, keywords, title }) {
+function SEO({ description, meta, keywords, title, slug }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,6 +21,7 @@ function SEO({ description, meta, keywords, title }) {
             description
             author
             lang
+            siteUrl
             social {
               twitter
             }
@@ -45,6 +46,10 @@ function SEO({ description, meta, keywords, title }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          property: 'og:url',
+          content: site.siteMetadata.siteUrl + slug,
         },
         {
           property: `og:title`,
@@ -90,6 +95,7 @@ function SEO({ description, meta, keywords, title }) {
 
 SEO.propTypes = {
   description: PropTypes.string,
+  slug: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
@@ -99,6 +105,7 @@ SEO.defaultProps = {
   meta: [],
   keywords: [],
   description: '',
+  slug: '',
 };
 
 export default SEO;
