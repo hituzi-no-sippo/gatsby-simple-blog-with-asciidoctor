@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.50.0
-:revdate: 2020-01-11T15:17:18+0900
-:revremark: Delete unnecessary log and fix logs that add attributes
+:revnumber: v1.51.0
+:revdate: 2020-01-11T18:34:31+0900
+:revremark: Add log that add link to tag list in index
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -72,6 +72,7 @@ ifndef::env-github[:icons: font]
 * `twitter:site` in meta. (close link:{issues-url}/114[#114])
 * `og:url` in meta. (close link:{issues-url}/115[#115])
 * rss support. (close link:{issues-url}/117[#117])
+* Link to tag list in index. (close link:{issues-url}/122[#122])
 
 ==== Update
 

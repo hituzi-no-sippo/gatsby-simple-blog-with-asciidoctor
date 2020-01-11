@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import Bio from 'components/Bio';
 import Layout from 'components/Layout';
@@ -22,7 +22,11 @@ function BlogIndex({ data, location }) {
       <aside>
         <Bio />
       </aside>
-      <h4>{formatMessage('tfIndCountPosts', data.allAsciidoc.totalCount)}</h4>
+      <h4>
+        {formatMessage('tfIndCountPosts', data.allAsciidoc.totalCount)}
+        {' • '}
+        <Link to={`${homeLink}tags/`}>{formatMessage('tfTagsLink')}</Link>
+      </h4>
       {posts.map(({ node }) => {
         const title = node.document.title || node.fields.slug;
         return (

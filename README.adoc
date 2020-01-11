@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.30.0
-:revdate: 2020-01-11T13:14:27+0900
-:revremark: Add rss support into change points in section of links in Bio
+:revnumber: v1.31.0
+:revdate: 2020-01-11T18:27:44+0900
+:revremark: Add section of tags link
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -396,6 +396,10 @@ articles: {
 ----
 <1> key (`twitter`) is dispaly text, value (`https...`) is url.
 --
+
+=== Tags Link
+
+Add link to tag list next to count posts in index.
 
 === Repository link in Footer
 

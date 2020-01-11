@@ -6,6 +6,7 @@ module.exports = {
   tIndTitle: 'All posts',
   taIndKeywords: [`blog`, `gatsby`, `javascript`, `react`],
   tfIndCountPosts: count => `${count} Posts`,
+  tfTagsLink: 'Tags',
   tfTagHeader: (totalCount, tag) =>
     `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`,
   t404Title: 'Not Found',
