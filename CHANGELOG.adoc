@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.51.0
-:revdate: 2020-01-11T18:34:31+0900
-:revremark: Add log that add link to tag list in index
+:revnumber: v1.52.0
+:revdate: 2020-01-16T16:19:48+0900
+:revremark: Add log that change url for submodule of sample articles
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -41,6 +41,14 @@ ifndef::env-github[:icons: font]
 :hitsuji-no-shippo-github-profile-url: {github-url}/hitsuji-no-shippo
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
+
+== 0.4.0 (2020-01-16)
+
+=== Chore
+
+* Change url for submodule of sample articles.
+  (close link:{issues-url}/123[#123])
+
 
 == 0.3.0 (2020-01-11)
 
