@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.52.0
-:revdate: 2020-01-16T16:19:48+0900
-:revremark: Add log that change url for submodule of sample articles
+:revnumber: v1.53.0
+:revdate: 2020-01-17T13:36:52+0900
+:revremark: Add log that delete `LinkLetter` component
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -42,7 +42,13 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.4.0 (2020-01-16)
+== 0.4.0 (2020-01-17)
+
+=== Refactor
+
+* Delete `LinkLetter` component. (close link:{issues-url}/124[#124^]) +
+  Delete to reason is this component not used.
+
 
 === Chore
 
