@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.31.0
-:revdate: 2020-01-11T18:27:44+0900
-:revremark: Add section of tags link
+:revnumber: v1.31.1
+:revdate: 2020-01-19T10:05:44+0900
+:revremark: Fix typo `pageAttributes.description` to `pageAttributes.disqus`
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -110,7 +110,7 @@ disqus: true
 
 
 |frontmatter.disqus
-|pageAttributes.description
+|pageAttributes.disqus
 |===
 
 ==== expect field delete

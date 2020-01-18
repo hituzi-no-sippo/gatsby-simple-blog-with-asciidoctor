@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.53.0
-:revdate: 2020-01-17T13:36:52+0900
-:revremark: Add log that delete `LinkLetter` component
+:revnumber: v1.54.0
+:revdate: 2020-01-18T19:01:29+0900
+:revremark: Add log that fix typo \
+            `pageAttributes.description` to `pageAttributes.disqus` in README
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -49,6 +50,10 @@ ifndef::env-github[:icons: font]
 * Delete `LinkLetter` component. (close link:{issues-url}/124[#124^]) +
   Delete to reason is this component not used.
 
+=== Docs
+
+* fix typo `pageAttributes.description` to `pageAttributes.disqus` in README.
+  (close link:{issues-url}/125[#125^])
 
 === Chore
 
