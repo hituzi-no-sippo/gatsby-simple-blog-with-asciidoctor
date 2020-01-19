@@ -21,8 +21,8 @@ function ReadModeToggle({ isLightTheme }) {
       {isLightTheme != null ? (
         <Toggle
           icons={{
-            checked: <IconMoon fill="#f0c420"/>,
-            unchecked: <IconSun fill="#ef8e38"/>,
+            checked: <IconMoon />,
+            unchecked: <IconSun />,
           }}
           checked={!isLightTheme}
           onChange={e => window.__setPreferredTheme(e.target.checked ? 'dark' : 'light')}
