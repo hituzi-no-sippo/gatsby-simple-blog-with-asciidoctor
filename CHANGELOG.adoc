@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/change-disqus v1.0.0. (Base v1.55.1)
-:revdate: 2020-01-19T23:20:47+0900
-:revremark: Add log that Update prop type from `any` to `string` \
-            in `Disqus` component
+:revnumber: Branch feat/change-disqus v1.1.0. (Base v1.55.1)
+:revdate: 2020-01-20T07:37:58+0900
+:revremark: Add log that add url into disqus config.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -43,9 +42,13 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.4.0 (2020-01-19)
+== 0.4.0 (2020-01-20)
 
 === Features
+
+==== Add
+
+* url into disqus config. (close link:{issues-url}/135[#135^])
 
 ==== Update
 

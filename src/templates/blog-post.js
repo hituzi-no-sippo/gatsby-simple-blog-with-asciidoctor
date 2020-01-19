@@ -71,7 +71,11 @@ function BlogPostTemplate({ data, pageContext, location }) {
         </li>
       </ul>
 
-      <Disqus identifier={post.id} show={post.pageAttributes.disqus} title={post.document.title} />
+      <Disqus
+        identifier={post.id}
+        show={post.pageAttributes.disqus}
+        title={post.document.title}
+        slug={post.fields.slug} />
     </Layout>
   );
 }
