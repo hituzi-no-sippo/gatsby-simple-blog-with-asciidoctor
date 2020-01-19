@@ -1,14 +1,13 @@
 import React from "react";
-import PropTypes from 'prop-types';
 
-const SunIcon = ({fill}) => {
+const SunIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="16pt"
       height="16pt"
       viewBox="0 0 16 16"
-      fill={fill}
+      fill="#ef8e38"
     >
       <path
         fillRule="evenodd"
@@ -16,10 +15,6 @@ const SunIcon = ({fill}) => {
         />
     </svg>
   );
-}
-
-SunIcon.propTypes = {
-  fill: PropTypes.string.isRequired,
 }
 
 export default SunIcon;
