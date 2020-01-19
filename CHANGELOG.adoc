@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/change-theme-icon-positons v1.0.0 (Base v1.54.0)
-:revdate: 2020-01-19T14:09:42+0900
-:revremark: Add log that fix typo \
-            `pageAttributes.description` to `pageAttributes.disqus` in README
+:revnumber: Branch feat/change-theme-icon-positons v1.1.0 (Base v1.54.0)
+:revdate: 2020-01-19T14:24:06+0900
+:revremark: Add log that change theme icon positons
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -44,6 +43,16 @@ ifndef::env-github[:icons: font]
 :issues-url: {repository-url}/issues
 
 == 0.4.0 (2020-01-17)
+
+=== Features
+
+==== Update
+
+* Theme icon positions.
+  (close link:{issues-url}/130[#130^], link:{issues-url}/63[#63]) +
+  At the time of implementation (link:{issues-url}/63[#63]),
+  I did not know how to change the position.
+
 
 === Refactor
 

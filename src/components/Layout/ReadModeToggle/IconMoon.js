@@ -6,7 +6,7 @@ const MoonIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="16pt"
       height="16pt"
-      viewBox="0 0 16 16"
+      viewBox="1 1 16 16"
       fill="#f0c420"
     >
       <path
