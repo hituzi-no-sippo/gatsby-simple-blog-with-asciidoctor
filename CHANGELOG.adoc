@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.55.0
-:revdate: 2020-01-19T14:35:35+0900
-:revremark: Add log sthat change theme icon positons and  \
+:revnumber: v1.55.1
+:revdate: 2020-01-19T18:11:48+0900
+:revremark: Add logs that change theme icon positons and  \
             delete theme icons' props
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
