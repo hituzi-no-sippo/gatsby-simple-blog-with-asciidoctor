@@ -1,5 +1,8 @@
 safe: server
 attributes:
+  values:
+    page-disqus@: true
+
   options:
     paths:
       dir-path-from-project: from.project.dir

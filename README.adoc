@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.31.1
-:revdate: 2020-01-19T10:05:44+0900
-:revremark: Fix typo `pageAttributes.description` to `pageAttributes.disqus`
+:revnumber: Branch feat/change-disqus v1.0.0. (Base v1.32.0)
+:revdate: 2020-01-19T15:14:28+0900
+:revremark: Add section of Disqus
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -400,6 +400,12 @@ articles: {
 === Tags Link
 
 Add link to tag list next to count posts in index.
+
+=== Disqus
+
+.Change default from non dispaly to dispaly
+By default, dispaly disqus in article pages. If the value of asciidoc attribute
+`page-disqus` is `false`, non dispaly.
 
 === Repository link in Footer
 

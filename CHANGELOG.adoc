@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/change-disqus v1.1.0. (Base v1.55.1)
-:revdate: 2020-01-20T07:37:58+0900
-:revremark: Add log that add url into disqus config.
+:revnumber: Branch feat/change-disqus v1.2.0. (Base v1.55.0)
+:revdate: 2020-01-20T07:40:10+0900
+:revremark: Add log that change the default display setting of disqus \
+            from non display to display.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -43,6 +44,11 @@ ifndef::env-github[:icons: font]
 :issues-url: {repository-url}/issues
 
 == 0.4.0 (2020-01-20)
+
+=== Breaking Changes
+
+* Change the default display setting of disqus from non display to display.
+  (close link:{issues-url}/126[#126^])
 
 === Features
 

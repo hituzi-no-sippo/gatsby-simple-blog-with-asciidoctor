@@ -47,11 +47,7 @@ Disqus.propTypes = {
   identifier: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  show: PropTypes.bool,
-};
-
-Disqus.defaultProps = {
-  show: false,
+  show: PropTypes.bool.isRequired,
 };
 
 export default Disqus;
