@@ -29,7 +29,7 @@ function Disqus({ identifier, title, show }) {
 }
 
 Disqus.propTypes = {
-  identifier: PropTypes.any.isRequired,
+  identifier: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   show: PropTypes.bool,
 };
