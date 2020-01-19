@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/change-disqus v1.2.0. (Base v1.55.0)
-:revdate: 2020-01-20T07:40:10+0900
-:revremark: Add log that change the default display setting of disqus \
-            from non display to display.
+:revnumber: Branch feat/change-disqus v1.3.0. (Base v1.55.0)
+:revdate: 2020-01-20T07:40:42+0900
+:revremark: Add log that add accessory Informations of article component.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -71,6 +70,9 @@ ifndef::env-github[:icons: font]
 * Delete `LinkLetter` component. (close link:{issues-url}/124[#124^]) +
   Delete to reason is this component not used.
 * Delete theme icons' props. (close link:{issues-url}/129[#129^])
+* Add accessory Informations of article component.
+  (close link:{issues-url}/136[#136^]) +
+  The infos to display are last update date and time to read.
 
 === Docs
 
