@@ -40,6 +40,8 @@ function BlogIndex({ data, location }) {
             title={title}
             excerpt={node.document.description}
             tags={node.pageAttributes.tags}
+            id={node.id}
+            showDisqus={node.pageAttributes.disqus !== false}
           />
         );
       })}
@@ -70,6 +72,7 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          id
           timeToRead
           fields {
             slug
@@ -84,6 +87,7 @@ export const pageQuery = graphql`
           }
           pageAttributes {
             tags
+            disqus
           }
         }
       }

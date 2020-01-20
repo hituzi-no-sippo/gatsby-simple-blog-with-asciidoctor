@@ -24,6 +24,12 @@ const Header = ({post, translationsLink, languageContexts}) => {
         <AccessoryInformations
           date={post.revision.date}
           time={post.timeToRead}
+          disqus={{
+            id: post.id,
+            title: post.document.title,
+            slug: post.fields.slug,
+            show: post.pageAttributes.disqus !== false,
+          }}
         />
       </p>
 

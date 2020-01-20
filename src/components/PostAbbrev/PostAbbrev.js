@@ -9,7 +9,7 @@ import { rhythm } from 'utils/typography';
 
 import TagList from '../TagList';
 
-function PostAbbrev({ slug, title, date, timeToRead, excerpt, tags, base }) {
+function PostAbbrev({ slug, title, date, timeToRead, excerpt, tags, base, id, showDisqus }) {
   let excerptPart;
   if (excerpt) {
     excerptPart = (
@@ -47,6 +47,12 @@ function PostAbbrev({ slug, title, date, timeToRead, excerpt, tags, base }) {
           <AccessoryInformations
             date={date}
             time={timeToRead}
+            disqus={{
+              id,
+              title,
+              slug,
+              show: showDisqus,
+            }}
           />
         </small>
         {excerptPart}
@@ -63,6 +69,8 @@ PostAbbrev.propTypes = {
   excerpt: PropTypes.string,
   tags: PropTypes.array,
   base: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  showDisqus: PropTypes.bool.isRequired,
 };
 
 PostAbbrev.defaultProps = {

@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/change-disqus v1.3.0. (Base v1.55.0)
-:revdate: 2020-01-20T07:40:42+0900
-:revremark: Add log that add accessory Informations of article component.
+:revnumber: Branch feat/change-disqus v1.4.0. (Base v1.55.0)
+:revdate: 2020-01-20T17:20:52+0900
+:revremark: Add log that add link for comment cocount of disqus.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -54,6 +54,7 @@ ifndef::env-github[:icons: font]
 ==== Add
 
 * url into disqus config. (close link:{issues-url}/135[#135^])
+* Link for comment count of disqus. (close link:{issues-url}/133[#133^])
 
 ==== Update
 

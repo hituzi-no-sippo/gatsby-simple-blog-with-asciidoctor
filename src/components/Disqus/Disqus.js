@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { graphql, useStaticQuery } from 'gatsby';
-import { DiscussionEmbed } from 'disqus-react';
 
-function Disqus({ identifier, title, slug, show }) {
+const Disqus = ({ identifier, title, slug, show, Component }) => {
   const {
     site: {
       siteMetadata: { siteUrl, disqusShortName },
@@ -36,7 +35,7 @@ function Disqus({ identifier, title, slug, show }) {
   }
 
   return (
-    <DiscussionEmbed
+    <Component
       shortname={disqusShortName}
       config={config}
     />
@@ -48,6 +47,7 @@ Disqus.propTypes = {
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   show: PropTypes.bool.isRequired,
+  Component: PropTypes.elementType.isRequired,
 };
 
 export default Disqus;

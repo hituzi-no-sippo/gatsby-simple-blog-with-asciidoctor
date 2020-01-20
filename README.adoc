@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/change-disqus v1.0.0. (Base v1.32.0)
-:revdate: 2020-01-19T15:14:28+0900
-:revremark: Add section of Disqus
+:revnumber: Branch feat/change-disqus v1.1.0. (Base v1.32.0)
+:revdate: 2020-01-20T17:20:09+0900
+:revremark: Add comment count link into section of Disqus
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -406,6 +406,9 @@ Add link to tag list next to count posts in index.
 .Change default from non dispaly to dispaly
 By default, dispaly disqus in article pages. If the value of asciidoc attribute
 `page-disqus` is `false`, non dispaly.
+
+.Add comment count link
+Displayed next to read to time. Click to go to embedded disqus of the article.
 
 === Repository link in Footer
 
