@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.57.0
-:revdate: 2020-01-20T19:37:00+0900
-:revremark: Add log that add scroll up at bottom right
+:revnumber: v1.58.0
+:revdate: 2020-01-20T19:37:33+0900
+:revremark: Add log that add home link between relative post links \
+            in article page
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -56,6 +57,8 @@ ifndef::env-github[:icons: font]
 * url into disqus config. (close link:{issues-url}/135[#135^])
 * Link for comment count of disqus. (close link:{issues-url}/133[#133^])
 * Scroll up at bottom right. (close link:{issues-url}/128[#128^])
+* Home link between realtive post links in article page.
+  (close link:{issues-url}/127[#127^])
 
 ==== Update
 

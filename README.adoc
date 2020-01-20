@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.34.0
-:revdate: 2020-01-20T18:06:24+0900
-:revremark: Add Scroll Up section
+:revnumber: v1.35.0
+:revdate: 2020-01-20T19:36:10+0900
+:revremark: Add Home Link section
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -404,6 +404,10 @@ Add link to tag list next to count posts in index.
 === Scroll Up
 
 Add Scroll Up at bottom right.
+
+=== HOME Link
+
+Add home link between relative posts in article page.
 
 === Disqus
 
