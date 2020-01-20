@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import TagList from 'components/TagList';
+import AccessoryInformations from 'components/AccessoryInformations';
 
 import { rhythm, scale } from 'utils/typography';
-import { formatDate } from 'utils/i18n';
-import { formatReadingTime } from 'utils/helpers';
 
 import TranslationsLink from './TranslationsLink';
 
@@ -22,8 +21,16 @@ const Header = ({post, translationsLink, languageContexts}) => {
           marginTop: rhythm(-1),
         }}
       >
-        {formatDate(post.revision.date)}
-        {` • ${formatReadingTime(post.timeToRead)}`}
+        <AccessoryInformations
+          date={post.revision.date}
+          time={post.timeToRead}
+          disqus={{
+            id: post.id,
+            title: post.document.title,
+            slug: post.fields.slug,
+            show: post.pageAttributes.disqus !== false,
+          }}
+        />
       </p>
 
       {post.pageAttributes.tags &&

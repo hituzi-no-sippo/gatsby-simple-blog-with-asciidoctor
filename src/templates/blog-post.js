@@ -6,7 +6,7 @@ import Bio from 'components/Bio';
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
 import RelativePosts from 'components/RelativePosts';
-import Disqus from 'components/Disqus';
+import { DisqusEmbed } from 'components/Disqus';
 import Article from 'components/Article';
 
 import { rhythm } from 'utils/typography';
@@ -71,7 +71,11 @@ function BlogPostTemplate({ data, pageContext, location }) {
         </li>
       </ul>
 
-      <Disqus identifier={post.id} show={post.pageAttributes.disqus} title={post.document.title} />
+      <DisqusEmbed
+        identifier={post.id}
+        show={post.pageAttributes.disqus !== false}
+        title={post.document.title}
+        slug={post.fields.slug} />
     </Layout>
   );
 }

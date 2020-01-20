@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import { Link } from 'gatsby';
 
+import AccessoryInformations from 'components/AccessoryInformations';
+
 import { rhythm } from 'utils/typography';
-import { formatReadingTime } from 'utils/helpers';
-import { formatDate } from 'utils/i18n';
 
 import TagList from '../TagList';
 
-function PostAbbrev({ slug, title, date, timeToRead, excerpt, tags, base }) {
+function PostAbbrev({ slug, title, date, timeToRead, excerpt, tags, base, id, showDisqus }) {
   let excerptPart;
   if (excerpt) {
     excerptPart = (
@@ -43,7 +43,18 @@ function PostAbbrev({ slug, title, date, timeToRead, excerpt, tags, base }) {
           </Link>
         </h3>
         {tagsPart}
-        <small>{`${formatDate(date)} • ${formatReadingTime(timeToRead)}`}</small>
+        <small>
+          <AccessoryInformations
+            date={date}
+            time={timeToRead}
+            disqus={{
+              id,
+              title,
+              slug,
+              show: showDisqus,
+            }}
+          />
+        </small>
         {excerptPart}
       </header>
     </article>
@@ -58,6 +69,8 @@ PostAbbrev.propTypes = {
   excerpt: PropTypes.string,
   tags: PropTypes.array,
   base: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  showDisqus: PropTypes.bool.isRequired,
 };
 
 PostAbbrev.defaultProps = {
