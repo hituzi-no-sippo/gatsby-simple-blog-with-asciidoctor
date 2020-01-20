@@ -8,6 +8,7 @@ import LanguageBar from './LanguageBar';
 import Header from './Header';
 import Footer from './Footer';
 import ReadModeToggle from './ReadModeToggle';
+import ScrollUp from './ScrollUp';
 import Breadcrumbs from '../Breadcrumbs';
 
 function Layout({ children, location, title, breadcrumbs }) {
@@ -56,6 +57,7 @@ function Layout({ children, location, title, breadcrumbs }) {
         />
         {children}
         <Footer />
+        <ScrollUp />
       </div>
     </div>
   );

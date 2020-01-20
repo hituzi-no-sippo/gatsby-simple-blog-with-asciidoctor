@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.33.0
-:revdate: 2020-01-20T17:34:05+0900
-:revremark: Add Disqus section
+:revnumber: v1.34.0
+:revdate: 2020-01-20T18:06:24+0900
+:revremark: Add Scroll Up section
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -401,6 +401,10 @@ articles: {
 
 Add link to tag list next to count posts in index.
 
+=== Scroll Up
+
+Add Scroll Up at bottom right.
+
 === Disqus
 
 .Change default from non dispaly to dispaly
@@ -533,6 +537,11 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
  * `src/components/Layout/ReadModeToggle/IconMoon.js`
 
 Resized from 24x24 to 16x16.
+|link:{evericons-url}[
+      Scroll up icon]
+|{cc0-10-link}
+|`src/components/Layout/ScrollUp.js`
+
 |link:{font-awesome-github-repo-url}[
       Admonition icons]
 |link:{font-awesome-github-repo-url}/#license[
