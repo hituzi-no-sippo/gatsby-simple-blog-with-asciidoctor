@@ -3,10 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.58.0
-:revdate: 2020-01-21T12:45:01+0900
-:revremark: Add log that tag list position in index \
-            to under the line starting from update date.
+:revnumber: v1.59.0
+:revdate: 2020-01-21T20:17:19+0900
+:revremark: Add relation issue #142 to log that \
+            add link for comment count of disqus.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -43,7 +43,7 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.4.0 (2020-01-20)
+== 0.4.0 (2020-01-21)
 
 === Breaking Changes
 
@@ -55,7 +55,8 @@ ifndef::env-github[:icons: font]
 ==== Add
 
 * url into disqus config. (close link:{issues-url}/135[#135^])
-* Link for comment count of disqus. (close link:{issues-url}/133[#133^])
+* Link for comment count of disqus.
+  (close link:{issues-url}/133[#133^], close link:{issues-url}/142[#142^])
 * Scroll up at bottom right. (close link:{issues-url}/128[#128^])
 * Home link between realtive post links in article page.
   (close link:{issues-url}/127[#127^])

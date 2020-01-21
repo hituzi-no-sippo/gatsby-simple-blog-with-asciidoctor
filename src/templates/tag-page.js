@@ -41,6 +41,8 @@ const TagPageTemplate = ({ pageContext, data, location }) => {
               date={node.revision.date}
               timeToRead={node.timeToRead}
               title={title}
+              id={node.id}
+              showDisqus={node.pageAttributes.disqus !== false}
             />
           );
         })}
@@ -95,6 +97,7 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+        id
         timeToRead
           fields {
             slug
@@ -105,6 +108,9 @@ export const pageQuery = graphql`
           }
           revision {
             date(formatString: "MMMM DD, YYYY")
+          }
+          pageAttributes {
+            disqus
           }
         }
       }
