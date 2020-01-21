@@ -3,10 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.62.0
-:revdate: 2020-01-22T16:58:23+0900
-:revremark: Add log that \
-            remove `asciidoc.fields.slug` in query in `blog-post.js`.
+:revnumber: v1.63.0
+:revdate: 2020-01-22T16:58:52+0900
+:revremark: Add log that remove `asciidoc.fields.lnagKey` in query \
+            in `blog-index.js` and `blog-post.js` and `tag-page`.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -85,6 +85,9 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/144[#144^])
 * Remove `asciidoc.fields.slug` in query in `blog-post.js`.
   (close link:{issues-url}/139[#139^])
+* Remove `asciidoc.fields.lanKey` in query
+  in `blog-index.js` and `blog-post.js` and `tag-page`.
+  (close link:{issues-url}/140[#140^])
 
 === Docs
 

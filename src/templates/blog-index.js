@@ -76,7 +76,6 @@ export const pageQuery = graphql`
           timeToRead
           fields {
             slug
-            langKey
           }
           document {
              title

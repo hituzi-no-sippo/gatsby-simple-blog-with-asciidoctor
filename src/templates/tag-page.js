@@ -70,7 +70,6 @@ TagPageTemplate.propTypes = {
             }),
             fields: PropTypes.shape({
               slug: PropTypes.string.isRequired,
-              langKey: PropTypes.string.isRequired,
             }),
           }),
         }).isRequired,
@@ -101,7 +100,6 @@ export const pageQuery = graphql`
         timeToRead
           fields {
             slug
-            langKey
           }
           document {
             title

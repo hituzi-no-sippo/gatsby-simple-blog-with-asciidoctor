@@ -124,9 +124,6 @@ export const pageQuery = graphql`
           }
         }
       }
-      fields {
-        langKey
-      }
     }
   }
 `;
