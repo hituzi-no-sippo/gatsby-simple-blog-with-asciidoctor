@@ -12,9 +12,9 @@ const ScrollUp= () => {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="50t"
+        width="50pt"
         height="50pt"
-        viewBox="-40 0 24 24"
+        viewBox="0 0 24 24"
       >
         <path
           fillRule="evenodd"
