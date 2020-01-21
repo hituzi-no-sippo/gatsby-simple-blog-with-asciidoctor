@@ -22,8 +22,8 @@ const Header = ({post, slug, translationsLink, languageContexts}) => {
         }}
       >
         <AccessoryInformations
-          date={post.revision.date}
-          time={post.timeToRead}
+          dateStr={post.revision.date}
+          timeToRead={post.timeToRead}
           disqus={{
             id: post.id,
             title: post.document.title,

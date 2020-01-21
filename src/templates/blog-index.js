@@ -35,7 +35,7 @@ function BlogIndex({ data, location }) {
             base={homeLink}
             key={node.fields.slug}
             slug={node.fields.slug}
-            date={node.revision.date}
+            dateStr={node.revision.date}
             timeToRead={node.timeToRead}
             title={title}
             excerpt={node.document.description}

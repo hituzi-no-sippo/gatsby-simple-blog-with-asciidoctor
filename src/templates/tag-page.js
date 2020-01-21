@@ -38,7 +38,7 @@ const TagPageTemplate = ({ pageContext, data, location }) => {
               base={homeLink}
               lang={lang}
               slug={node.fields.slug}
-              date={node.revision.date}
+              dateStr={node.revision.date}
               timeToRead={node.timeToRead}
               title={title}
               id={node.id}
