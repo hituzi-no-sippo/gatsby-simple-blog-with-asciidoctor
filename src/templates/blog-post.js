@@ -62,7 +62,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
             </Link>
           )}
         </li>
-        <li><Link to={`${languageContexts.homeLink}/`}>HOME</Link></li>
+        <li><Link to={`${languageContexts.homeLink}`}>HOME</Link></li>
         <li>
           {next && (
             <Link to={next.fields.slug} rel="next">
