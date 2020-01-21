@@ -42,7 +42,6 @@ function PostAbbrev({ slug, title, date, timeToRead, excerpt, tags, base, id, sh
             {title}
           </Link>
         </h3>
-        {tagsPart}
         <small>
           <AccessoryInformations
             date={date}
@@ -55,6 +54,7 @@ function PostAbbrev({ slug, title, date, timeToRead, excerpt, tags, base, id, sh
             }}
           />
         </small>
+        {tagsPart}
         {excerptPart}
       </header>
     </article>

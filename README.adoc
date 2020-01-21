@@ -4,8 +4,8 @@
 :author: {author-name}
 :!email: {author-email}
 :revnumber: v1.35.0
-:revdate: 2020-01-20T19:36:10+0900
-:revremark: Add Home Link section
+:revdate: 2020-01-21T12:45:39+0900
+:revremark: Add tag list position section
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -417,6 +417,10 @@ By default, dispaly disqus in article pages. If the value of asciidoc attribute
 
 .Add comment count link
 Displayed next to read to time. Click to go to embedded disqus of the article.
+
+=== Tag List position
+
+Change position in index to under the line starting from update date.
 
 === Repository link in Footer
 
