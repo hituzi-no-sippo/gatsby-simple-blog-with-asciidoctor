@@ -26,10 +26,11 @@ function BlogPostTemplate({ data, pageContext, location }) {
       <SEO
         title={post.document.title}
         description={post.document.description}
-        slug={post.fields.slug}
+        slug={pageContext.slug}
       />
       <Article
        post={post}
+       slug={pageContext.slug}
        translationsLink={translationsLink}
        languageContexts={languageContexts}
       />
@@ -76,7 +77,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
         identifier={post.id}
         show={post.pageAttributes.disqus !== false}
         title={post.document.title}
-        slug={post.fields.slug} />
+        slug={pageContext.slug} />
     </Layout>
   );
 }
@@ -125,7 +126,6 @@ export const pageQuery = graphql`
       }
       fields {
         langKey
-        slug
       }
     }
   }

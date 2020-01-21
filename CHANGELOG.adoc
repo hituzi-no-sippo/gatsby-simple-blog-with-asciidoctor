@@ -3,10 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.61.0
-:revdate: 2020-01-22T16:57:53+0900
+:revnumber: v1.62.0
+:revdate: 2020-01-22T16:58:23+0900
 :revremark: Add log that \
-            add no-console of eslint-disable into `formatMessage` function.
+            remove `asciidoc.fields.slug` in query in `blog-post.js`.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -83,6 +83,8 @@ ifndef::env-github[:icons: font]
   The infos to display are last update date and time to read.
 * Add no-console of eslint-disable into `formatMessage` function.
   (close link:{issues-url}/144[#144^])
+* Remove `asciidoc.fields.slug` in query in `blog-post.js`.
+  (close link:{issues-url}/139[#139^])
 
 === Docs
 

@@ -9,7 +9,7 @@ import { rhythm, scale } from 'utils/typography';
 import TranslationsLink from './TranslationsLink';
 
 
-const Header = ({post, translationsLink, languageContexts}) => {
+const Header = ({post, slug, translationsLink, languageContexts}) => {
   return (
     <header>
       <h1>{post.document.title}</h1>
@@ -27,7 +27,7 @@ const Header = ({post, translationsLink, languageContexts}) => {
           disqus={{
             id: post.id,
             title: post.document.title,
-            slug: post.fields.slug,
+            slug,
             show: post.pageAttributes.disqus !== false,
           }}
         />
@@ -47,6 +47,7 @@ const Header = ({post, translationsLink, languageContexts}) => {
 
 Header.propTypes = {
   post: PropTypes.object.isRequired,
+  slug: PropTypes.string.isRequired,
   translationsLink: PropTypes.array.isRequired,
   languageContexts: PropTypes.object.isRequired,
 };
