@@ -82,7 +82,7 @@ export const pageQuery = graphql`
              description
           }
           revision {
-            date(formatString: "MMMM DD, YYYY")
+            date
           }
           pageAttributes {
             tags

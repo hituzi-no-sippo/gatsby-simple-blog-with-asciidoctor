@@ -36,10 +36,22 @@ const linksInBio = {
   GitHub: 'https://github.com/hitsuji-no-shippo',
 }
 
+const dateDisplay = {
+  format: "LL",
+  diff: {
+    patternWithNotConvert: /month|year/,
+    newPost: {
+      boundary: 7,
+      emoji: '🎉',
+    },
+  },
+}
+
 module.exports = {
   site,
   supportedLanguages,
   repository,
   articles,
   linksInBio,
+  dateDisplay,
 };

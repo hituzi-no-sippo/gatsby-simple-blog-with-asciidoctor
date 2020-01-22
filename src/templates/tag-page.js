@@ -105,7 +105,7 @@ export const pageQuery = graphql`
             title
           }
           revision {
-            date(formatString: "MMMM DD, YYYY")
+            date
           }
           pageAttributes {
             disqus

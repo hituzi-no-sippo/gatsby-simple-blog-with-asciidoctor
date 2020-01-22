@@ -24,6 +24,7 @@
     "gatsby-source-filesystem": "^2.1.22",
     "gatsby-transformer-sharp": "^2.2.14",
     "minimatch": "^3.0.4",
+    "moment": "^2.24.0",
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "ptz-i18n": "^1.0.0",

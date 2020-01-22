@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.35.0
-:revdate: 2020-01-21T12:45:39+0900
-:revremark: Add tag list position section
+:revnumber: v1.36.0
+:revdate: 2020-01-23T00:09:58+0900
+:revremark: Add Date Display Config section
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -396,6 +396,66 @@ articles: {
 ----
 <1> key (`twitter`) is dispaly text, value (`https...`) is url.
 --
+
+=== Date Display Config
+
+Date display is determined by `dateDisplay` in `config/index.js`.
+
+.`dateDisplay`
+[source, Vim]
+----
+const dateDisplay = {
+  format: "LL",  // <1>
+  diff: {
+    patternWithNotConvert: /month|year/,  // <2>
+    newPost: {
+      boundary: 7,  // <3>
+      emoji: '🎉',  // <4>
+    },
+  },
+}
+----
+:moment-token-url: link:https://momentjs.com/docs/#/parsing/string-format/[ \
+                        token]
+<1> String using {moment-token-url}.
+    In the case of `LL`, the date dispaly is as follows:
++
+--
+[horizontal]
+English:: *January 22, 2020*
+日本語 :: *2020年1月21日*
+--
+<2> Pattern not converted to date difference (e.g *a day ago*, *1日前* ).
+    In the case of `/month|year/`, date dispaly is converted as follows:
++
+--
+.Now is January 22, 2020
+[horizontal]
+January  20, 2020:: 2 days ago
+December  2, 2019:: December  2, 2019
+January  20, 2019:: January  20, 2019
+--
+<3> Boundary days to determine if it is a new post.
+    In the case of `7`, it is determined as follows.
++
+--
+[cols=2, options="headers, autowidth"]
+|===================
+|Difficult      |New
+|an hour ago .4+|Yes
+|a day ago
+|2 days ago
+|7 days ago
+|8 days ago     |No
+|==================
+
+--
++
+[CAUTION]
+====
+Possible values are 1 to 25.
+====
+<4> Emoji to be added to the beginning of new post date.
 
 === Tags Link
 

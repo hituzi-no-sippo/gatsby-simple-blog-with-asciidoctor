@@ -7,17 +7,6 @@ function formatReadingTime(minutes) {
   return `${new Array(cups || 1).fill('☕️').join('')} ${minutes} min read`;
 }
 
-// `lang` is optional and will default to the current user agent locale
-function formatPostDate(date, lang) {
-  if (typeof Date.prototype.toLocaleDateString !== 'function') {
-    return date;
-  }
-
-  date = new Date(date);
-  const args = [lang, { day: 'numeric', month: 'long', year: 'numeric' }].filter(Boolean);
-  return date.toLocaleDateString(...args);
-}
-
 function haveSameItem(arr1 = [], arr2 = []) {
   if (arr1 == null || arr2 == null) {
     // false for no tags
@@ -62,7 +51,6 @@ function kebabCase(s) {
 
 module.exports = {
   formatReadingTime,
-  formatPostDate,
   haveSameItem,
   getPreviousNextNode,
   kebabCase,

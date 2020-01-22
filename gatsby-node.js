@@ -164,7 +164,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
                     title
                   }
                   revision {
-                    date(formatString: "MMMM DD, YYYY")
+                    date
                   }
                   pageAttributes {
                     tags
