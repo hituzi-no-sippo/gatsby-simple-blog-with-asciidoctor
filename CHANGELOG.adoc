@@ -3,10 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.60.0
-:revdate: 2020-01-21T20:17:43+0900
-:revremark: Add relation issue #141 to log that \
-            add home link between realtive post links in article page.
+:revnumber: v1.61.0
+:revdate: 2020-01-22T16:57:53+0900
+:revremark: Add log that \
+            add no-console of eslint-disable into `formatMessage` function.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -43,7 +43,7 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.4.0 (2020-01-21)
+== 0.4.0 (2020-01-22)
 
 === Breaking Changes
 
@@ -81,6 +81,8 @@ ifndef::env-github[:icons: font]
 * Add accessory Informations of article component.
   (close link:{issues-url}/136[#136^]) +
   The infos to display are last update date and time to read.
+* Add no-console of eslint-disable into `formatMessage` function.
+  (close link:{issues-url}/144[#144^])
 
 === Docs
 
