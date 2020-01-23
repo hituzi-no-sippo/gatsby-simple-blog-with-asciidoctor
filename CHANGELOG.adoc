@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.68.0
-:revdate: 2020-01-25T17:06:12+0900
-:revremark: Add log the update gatsby-transformer-asciidoctor to v0.12.0.
+:revnumber: Branch feat/display-author v1.0.0 (Base v1.68.0)
+:revdate: 2020-01-25T17:10:47+0900
+:revremark: Add log that \
+            set article author name and E-mail to default asciidoc attributes.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -55,6 +56,8 @@ ifndef::env-github[:icons: font]
 * Update {gatsby-transformer-asciidoc-link} to link:{gatsby-transformer-asciidoc-url}/tree/v0.12.0[
   v0.12.0]. (close link:{issues-url}/157[#157^]) +
   Change default value of `enablesEmptyAttribute` to `false`.
+* Set article author name and E-mail to default asciidoc attributes.
+  (close link:{issues-url}/149[#149^])
 
 === Features
 

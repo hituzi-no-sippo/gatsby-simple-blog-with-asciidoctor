@@ -1,11 +1,16 @@
+const author = {
+  name: 'hitsuji no shippo',
+  email: 'xxx@yyy.zzz',
+  twitter: 'hns_equal_st',
+}
+
 const site = {
   pathPrefix: '/',
   title: 'Gatsby Starter Blog',
-  author: 'hitsji no shippo',
   description: 'A starter blog with asciidoctor.',
   siteUrl: 'https://lucid-bell-34419c.netlify.com',  // demo site url
   social : {
-    twitter: 'hns_equal_st',
+    twitter: author.twitter,
   },
   disqusShortName: 'gatsby-simple-blog',
   googleTrackingId: '',
@@ -48,6 +53,7 @@ const dateDisplay = {
 }
 
 module.exports = {
+  author,
   site,
   supportedLanguages,
   repository,

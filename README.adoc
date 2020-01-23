@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.37.0
-:revdate: 2020-01-25T17:07:18+0900
-:revremark: Update gatsby-transformer-asciidoc to v0.12.0.
+:revnumber: Branch feat/display-author v1.0.0 (Base v1.37.0)
+:revdate: 2020-01-25T17:11:06+0900
+:revremark: Add Author Config section.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -289,6 +289,29 @@ gatsby-source-filesystem^] is used so that the next files are not generated.
 
 Use this link:https://github.com/hitsuji-no-shippo/article-css-for-asciidoc/tree/30575534810dc487b6df82ba755943863340a271[
 git repository^].
+
+=== Author Config
+
+Change value of the author name from `site.author` to `author.name` in
+`config/index.js`. The `authro` values are used as the default attributes in
+Asciidoc.
+
+[cols=4, options="headers, autowidht"]
+|====================================================
+|Key     |siteMetadata   |Asciidoc Attribute|Required
+|name    |author         |author            |Yes
+|email   |Not use        |email             |No
+|twitter |social.twitter |Not use           |No
+|====================================================
+
+:attributes-priority-description-link: link:{asciidoctor-user-manual-url}/#altering-the-attribute-assignment-precedence[ \
+                                            Page attributes take precedence^]
+[NOTE]
+====
+.{attributes-priority-description-link}
+Page attributes take precedence because `@` is added to the end of the
+default asciidco attributes.
+====
 
 === Add link to edit article on GitHub
 
