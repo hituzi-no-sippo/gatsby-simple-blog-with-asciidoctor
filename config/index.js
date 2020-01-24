@@ -1,6 +1,7 @@
 const author = {
   name: 'hitsuji no shippo',
   email: 'xxx@yyy.zzz',
+  url: 'https://github.com/hitsuji-no-shippo',
   twitter: 'hns_equal_st',
 }
 

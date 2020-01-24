@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/display-author v1.0.0 (Base v1.37.0)
-:revdate: 2020-01-25T17:11:06+0900
-:revremark: Add Author Config section.
+:revnumber: Branch feat/display-author v1.1.0 (Base v1.37.0)
+:revdate: 2020-01-25T19:03:04+0900
+:revremark: Add Profile Picture Link section.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -301,8 +301,11 @@ Asciidoc.
 |Key     |siteMetadata   |Asciidoc Attribute|Required
 |name    |author         |author            |Yes
 |email   |Not use        |email             |No
+|url     |Not use        |Not use           |No
 |twitter |social.twitter |Not use           |No
 |====================================================
+
+The `author.url` is used xref:profile-picture-link[profile picture].
 
 :attributes-priority-description-link: link:{asciidoctor-user-manual-url}/#altering-the-attribute-assignment-precedence[ \
                                             Page attributes take precedence^]
@@ -419,6 +422,12 @@ articles: {
 ----
 <1> key (`twitter`) is dispaly text, value (`https...`) is url.
 --
+
+=== Profile Picture Link
+
+Add link to the profile picture in Bio.
+Used value of url is `author.url` in `config/index.js`.
+If you do not want to add a link, set `author.url` to `null`.
 
 === Date Display Config
 
