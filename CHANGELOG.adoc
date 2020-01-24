@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.65.0
-:revdate: 2020-01-23T00:04:28+0900
-:revremark: Add log that and date display config
+:revnumber: v1.66.0
+:revdate: 2020-01-24T11:44:41+0900
+:revremark: Add log that fix copyright in Hellow World article.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -42,7 +42,7 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.4.0 (2020-01-23)
+== 0.4.0 (2020-01-24)
 
 === Breaking Changes
 
@@ -106,6 +106,7 @@ ifndef::env-github[:icons: font]
 
 * Change url for submodule of sample articles.
   (close link:{issues-url}/123[#123])
+* Fix copyright in Hello World article. (close link:{issues-url}/152[#152])
 
 
 == 0.3.0 (2020-01-11)
