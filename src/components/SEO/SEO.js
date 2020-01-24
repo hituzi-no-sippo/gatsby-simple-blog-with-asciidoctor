@@ -11,7 +11,7 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useLang } from 'context/LanguageContext';
 
-function SEO({ description, meta, keywords, title, slug }) {
+function SEO({ description, meta, keywords, title, slug, articleAuthor}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,7 +19,7 @@ function SEO({ description, meta, keywords, title, slug }) {
           siteMetadata {
             title
             description
-            author
+            authorName: author
             lang
             siteUrl
             social {
@@ -92,6 +92,16 @@ function SEO({ description, meta, keywords, title, slug }) {
               }
             : []
         )
+        .concat(
+          (articleAuthor.twitter &&
+           !(articleAuthor.name    !== site.siteMetadata.authorName &&
+             articleAuthor.twitter === site.siteMetadata.social.twitter))
+            ? {
+                name: `twitter:creator`,
+                content: `@${articleAuthor.twitter}`,
+              }
+            : []
+        )
         .concat(meta)}
     />
   );
@@ -103,6 +113,10 @@ SEO.propTypes = {
   meta: PropTypes.arrayOf(PropTypes.object),
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
+  articleAuthor: PropTypes.shape({
+    name: PropTypes.string,
+    twitter: PropTypes.string,
+  })
 };
 
 SEO.defaultProps = {
@@ -110,6 +124,10 @@ SEO.defaultProps = {
   keywords: [],
   description: '',
   slug: '',
+  articleAuthor: {
+    name: null,
+    twitter: null,
+  },
 };
 
 export default SEO;

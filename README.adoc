@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/display-author v1.1.0 (Base v1.37.0)
-:revdate: 2020-01-25T19:03:04+0900
-:revremark: Add Profile Picture Link section.
+:revnumber: Branch feat/display-author v1.2.0 (Base v1.37.0)
+:revdate: 2020-01-25T19:03:53+0900
+:revremark: Add description of `twitter:creator` in SEO section.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -297,13 +297,13 @@ Change value of the author name from `site.author` to `author.name` in
 Asciidoc.
 
 [cols=4, options="headers, autowidht"]
-|====================================================
-|Key     |siteMetadata   |Asciidoc Attribute|Required
-|name    |author         |author            |Yes
-|email   |Not use        |email             |No
-|url     |Not use        |Not use           |No
-|twitter |social.twitter |Not use           |No
-|====================================================
+|======================================================
+|Key     |siteMetadata   |Asciidoc Attribute  |Required
+|name    |author         |author              |Yes
+|email   |Not use        |email               |No
+|url     |Not use        |Not use             |No
+|twitter |social.twitter |page-author-twitter |No
+|======================================================
 
 The `author.url` is used xref:profile-picture-link[profile picture].
 
@@ -535,10 +535,23 @@ link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article[
 
 === SEO
 
-* Delete `twitter:creator`
 * Add `twitter:site`. The value (twitter id) used is
   `siteMetadata.social.twitter`
 * Add `og:url`. The value used is `siteMetadata.siteUrl` + `node.fields.slug`
+* The value used in `twitter: creator` has been changed to
+  `page-author-twitter` asciidoc attribute.
++
+--
+[NOTE]
+====
+.Cases where `twitter: creator` is not created.
+* The `page-author-twitter` asciidoc attribute isn't exist.
+* The `author` attribute is different from the `siteMetadata.author` and
+  the `page-author-twitter` attribute value is the same as
+  `siteMetadata.social.twitter`.
+====
+--
++
 
 
 == Description

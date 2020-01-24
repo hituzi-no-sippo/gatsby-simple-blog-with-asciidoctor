@@ -53,6 +53,7 @@ module.exports = {
             'author@': author.name,
             ...Object.entries({
               'email': author.email,
+              'page-author-twitter': author.twitter
             }).reduce((attributes, [name, value]) => {
               if (value) {
                 attributes[`${name}@`] = value
