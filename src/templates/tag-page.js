@@ -43,6 +43,11 @@ const TagPageTemplate = ({ pageContext, data, location }) => {
               title={title}
               id={node.id}
               showDisqus={node.pageAttributes.disqus !== false}
+              author={{
+                name: node.author.fullName,
+                url: node.pageAttributes.author_url,
+                twitter: node.pageAttributes.author_twitter,
+              }}
             />
           );
         })}
@@ -101,6 +106,9 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          author {
+            fullName
+          }
           document {
             title
           }
@@ -109,6 +117,8 @@ export const pageQuery = graphql`
           }
           pageAttributes {
             disqus
+            author_twitter
+            author_url
           }
         }
       }

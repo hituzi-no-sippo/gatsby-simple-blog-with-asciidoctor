@@ -5,12 +5,14 @@ import { DisqusCommentCount } from 'components/Disqus';
 
 import { formatDate } from 'utils/i18n';
 import { formatReadingTime } from 'utils/helpers';
+import Author from './Author';
 
-const AccessoryInformations = ({dateStr, timeToRead, disqus}) => {
+const AccessoryInformations = ({dateStr, timeToRead, disqus, author}) => {
   const separatorMark = ` • `;
 
   return (
     <>
+      <Author {...author} />
       {formatDate(dateStr) + separatorMark + formatReadingTime(timeToRead)}
       <DisqusCommentCount
         identifier={disqus.id}
@@ -31,7 +33,12 @@ AccessoryInformations.propTypes = {
     title: PropTypes.string,
     slug: PropTypes.string,
     show: PropTypes.bool,
-  }).isRequired
+  }).isRequired,
+  author: PropTypes.shape({
+    name: PropTypes.string,
+    url: PropTypes.string,
+    twitter: PropTypes.string,
+  }).isRequired,
 };
 
 export default AccessoryInformations;

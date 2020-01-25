@@ -30,6 +30,11 @@ const Header = ({post, slug, translationsLink, languageContexts}) => {
             slug,
             show: post.pageAttributes.disqus !== false,
           }}
+          author={{
+            name: post.author.fullName,
+            url: post.pageAttributes.author_url,
+            twitter: post.pageAttributes.author_twitter,
+          }}
         />
       </p>
 

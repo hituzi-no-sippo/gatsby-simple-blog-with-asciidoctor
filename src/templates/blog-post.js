@@ -124,6 +124,7 @@ export const pageQuery = graphql`
         tags
         disqus
         author_twitter
+        author_url
       }
       paths {
         from {

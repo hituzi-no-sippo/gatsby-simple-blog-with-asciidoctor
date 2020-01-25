@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/display-author v1.2.0 (Base v1.37.0)
-:revdate: 2020-01-25T19:03:53+0900
-:revremark: Add description of `twitter:creator` in SEO section.
+:revnumber: Branch feat/display-author v1.3.0 (Base v1.37.0)
+:revdate: 2020-01-25T19:10:45+0900
+:revremark: Add Dispaly Article Author section.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -297,15 +297,14 @@ Change value of the author name from `site.author` to `author.name` in
 Asciidoc.
 
 [cols=4, options="headers, autowidht"]
-|======================================================
-|Key     |siteMetadata   |Asciidoc Attribute  |Required
-|name    |author         |author              |Yes
-|email   |Not use        |email               |No
-|url     |Not use        |Not use             |No
-|twitter |social.twitter |page-author-twitter |No
-|======================================================
-
-The `author.url` is used xref:profile-picture-link[profile picture].
+|============================================================
+|Key           |siteMetadata   |Asciidoc Attribute  |Required
+|name          |author         |author              |Yes
+|email         |Not use        |email               |No
+|url           |Not use        |page-author-url     |No
+|twitter       |social.twitter |page-author-twitter |No
+|shouldDisplay |Not use        |Not use             |No
+|============================================================
 
 :attributes-priority-description-link: link:{asciidoctor-user-manual-url}/#altering-the-attribute-assignment-precedence[ \
                                             Page attributes take precedence^]
@@ -428,6 +427,32 @@ articles: {
 Add link to the profile picture in Bio.
 Used value of url is `author.url` in `config/index.js`.
 If you do not want to add a link, set `author.url` to `null`.
+
+=== Dispaly Article Author
+
+Dispaly article author under article title. By default, if the article author
+name is the same as `author.name` in `config/index.js`,
+it will not be displayed. If you want to display it,
+set `author.shouldDisplay` in `config/index.js` to `true`.
+
+==== Link
+
+.The article author is the blog author.
+If the `author.url` exist, will be a link.
+
+.The article author is not the blog author.
+If the `page-author-url` or `page-author-twitter` of asciidoc attributes exists,
+will be a link.
+
+.How to make href (Y: exist N: not exist)
+|==========================================================
+|twitter|url    |href
+|N      |N      |Not link
+|Y      |N     m|\https://twitter.com/@{page-author-twitter}
+|N      |Y   .2+|page-author-url
+|Y      |Y
+|==========================================================
+
 
 === Date Display Config
 
