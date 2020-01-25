@@ -865,10 +865,10 @@
     graphql "^0.11.7"
     ptz-i18n "^1.0.0"
 
-"@hitsuji_no_shippo/gatsby-transformer-asciidoc@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@hitsuji_no_shippo/gatsby-transformer-asciidoc/-/gatsby-transformer-asciidoc-0.11.0.tgz#549d404d263483b8ba1c0012d06de33eaa86b2e1"
-  integrity sha512-md3oIKt++BkWZjR0E0KvW2pW27zinb7dDBWCmyjSpody4Kvs9HbjXdQM/ZdvFuXs14+NGcn7wbTPh23GBkfYpg==
+"@hitsuji_no_shippo/gatsby-transformer-asciidoc@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@hitsuji_no_shippo/gatsby-transformer-asciidoc/-/gatsby-transformer-asciidoc-0.12.0.tgz#3a4d98b275fa2d6c411c0a5df061049054089aa3"
+  integrity sha512-gx61t9oikx1xtx+nFIjMekk7JqwKDW9fyyygg6toGkzMeBoNAVIONcFBnXtNLFjVIotz08Mkwsg9MBHEX5sVKg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@hitsuji_no_shippo/extract-matching-values-in-patterns" "^0.1.0"

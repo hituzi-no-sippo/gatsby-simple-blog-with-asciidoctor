@@ -3,11 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.67.1
-:revdate: 2020-01-25T11:26:52+0900
-:revremark: Add the following logs: + \
-            * Add relationship attribute in anchor elements. + \
-            * Collect `LanguageBar` component codes.
+:revnumber: v1.68.0
+:revdate: 2020-01-25T17:06:12+0900
+:revremark: Add log the update gatsby-transformer-asciidoctor to v0.12.0.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -44,6 +42,9 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
+:gatsby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
+:gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
+                                        gatsby-transformer-asciidoc^]
 == 0.4.0 (2020-01-25)
 
 === Breaking Changes
@@ -51,6 +52,9 @@ ifndef::env-github[:icons: font]
 * Change the default display config of disqus from non display to display.
   (close link:{issues-url}/126[#126^])
 * Date display config. (close link:{issues-url}/145[#145^])
+* Update {gatsby-transformer-asciidoc-link} to link:{gatsby-transformer-asciidoc-url}/tree/v0.12.0[
+  v0.12.0]. (close link:{issues-url}/157[#157^]) +
+  Change default value of `enablesEmptyAttribute` to `false`.
 
 === Features
 
@@ -122,9 +126,6 @@ ifndef::env-github[:icons: font]
 * Change used values for links in bio from `siteMetadata` to `config/index.js`.
   (close link:{issues-url}/112[#112])
 
-:gatasby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
-:gatasby-transformer-asciidoc-link: link:{gatasby-transformer-asciidoc-url}[ \
-                                         gatasby-transformer-asciidoc^]
 === Features
 
 ==== Add
@@ -153,8 +154,8 @@ ifndef::env-github[:icons: font]
 +
 --
 .Update packages
-* {gatasby-transformer-asciidoc-link} +
-  link:{gatasby-transformer-asciidoc-url}/commit/4ade15f0a7172d3a7bd1673a8a4eec84d497161d[
+* {gatsby-transformer-asciidoc-link} +
+  link:{gatsby-transformer-asciidoc-url}/commit/4ade15f0a7172d3a7bd1673a8a4eec84d497161d[
   Relation commit^]
 --
 * Delete `twitter:creator` in meta. (link:{issues-url}/113[#113])
@@ -165,7 +166,7 @@ ifndef::env-github[:icons: font]
 === Fix
 
 * Jump to id. (link:{issues-url}/89[#89]) +
-  link:{gatasby-transformer-asciidoc-url}/commit/080df2810e23c7dee6033d00849ab9afd71dbc36[
+  link:{gatsby-transformer-asciidoc-url}/commit/080df2810e23c7dee6033d00849ab9afd71dbc36[
   Fix commit in gatsby-transformer-asciidoc]
 
 === Security
@@ -182,7 +183,7 @@ ifndef::env-github[:icons: font]
 :sample-articles-fro-asciidoctor-url: {hitsuji-no-shippo-github-profile-url}/sample-articles-for-asciidoctor
 * Add netlify status icon in README. (close link:{issues-url}/77[#77])
 * Add deploy to netlify icon in README. (close link:{issues-url}/78[#78])
-* Fix link for {gatasby-transformer-asciidoc-link}.
+* Fix link for {gatsby-transformer-asciidoc-link}.
   (close link:{issues-url}/80[#80])
 * Make submodule from sample articles. (close link:{issues-url}/83[#83]) +
   link:{sample-articles-fro-asciidoctor-url}/tree/bb4b82a2bf8817b7545cdf6f1b7e81cacb957a26[
