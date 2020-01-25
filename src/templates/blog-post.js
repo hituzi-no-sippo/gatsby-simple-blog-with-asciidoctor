@@ -27,6 +27,10 @@ function BlogPostTemplate({ data, pageContext, location }) {
         title={post.document.title}
         description={post.document.description}
         slug={pageContext.slug}
+        articleAuthor={{
+          name: post.author.fullName,
+          twitter: post.pageAttributes.author_twitter,
+        }}
       />
       <Article
        post={post}
@@ -106,6 +110,9 @@ export const pageQuery = graphql`
       internal {
         type
       }
+      author {
+        fullName
+      }
       document {
         title
         description
@@ -116,6 +123,8 @@ export const pageQuery = graphql`
       pageAttributes {
         tags
         disqus
+        author_twitter
+        author_url
       }
       paths {
         from {

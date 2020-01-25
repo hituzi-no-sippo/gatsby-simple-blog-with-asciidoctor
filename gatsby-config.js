@@ -1,29 +1,27 @@
 const { toPairs } = require('ramda');
 const {
-  pathPrefix,
-  title,
   author,
-  description,
-  siteUrl,
-  social,
-  disqusShortName = '',
-  lang = 'en',
-  googleTrackingId: trackingId,
-} = require('./config').site;
+  site: {
+    pathPrefix,
+    title,
+    description,
+    siteUrl,
+    disqusShortName = '',
+    lang = 'en',
+    googleTrackingId: trackingId,
+  },
+} = require('./config');
 const supportedLanguages = require('./config').supportedLanguages;
 
 module.exports = {
   pathPrefix,
   siteMetadata: {
     title,
-    author,
+    author: author.name,
     description,
     siteUrl,
     social: {
-      ...{
-        twitter: ''
-      },
-      ...social,
+      twitter: author.twitter || '',
     },
     disqusShortName,
     lang,
@@ -49,6 +47,24 @@ module.exports = {
     },
     {
       resolve: `@hitsuji_no_shippo/gatsby-transformer-asciidoc`,
+      options: {
+        attributes: {
+          values: {
+            'author@': author.name,
+            ...Object.entries({
+              'email': author.email,
+              'page-author-url': author.url,
+              'page-author-twitter': author.twitter
+            }).reduce((attributes, [name, value]) => {
+              if (value) {
+                attributes[`${name}@`] = value
+              }
+
+              return attributes;
+            }, {})
+          },
+        },
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

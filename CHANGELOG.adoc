@@ -3,9 +3,14 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.68.0
-:revdate: 2020-01-25T17:06:12+0900
-:revremark: Add log the update gatsby-transformer-asciidoctor to v0.12.0.
+:revnumber: v1.69.0
+:revdate: 2020-01-25T19:33:33+0900
+:revremark: Add the following logs: + \
+            * Set article author name and E-mail \
+              to default asciidoc attributes. + \
+            * Add profile picture link. + \
+            * Add `twitter:creator`. + \
+            * Add article author display.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -55,6 +60,8 @@ ifndef::env-github[:icons: font]
 * Update {gatsby-transformer-asciidoc-link} to link:{gatsby-transformer-asciidoc-url}/tree/v0.12.0[
   v0.12.0]. (close link:{issues-url}/157[#157^]) +
   Change default value of `enablesEmptyAttribute` to `false`.
+* Set article author name and E-mail to default asciidoc attributes.
+  (close link:{issues-url}/149[#149^])
 
 === Features
 
@@ -69,6 +76,9 @@ ifndef::env-github[:icons: font]
 * Relationship attribute in anchor elements.
   ** `author` and `external` in bio links. (close link:{issues-url}/153[#153^])
   ** `alternate` in translation links. (close link:{issues-url}/154[#154^])
+* Profile picture link. (close link:{issues-url}/148[#148^])
+* `twitter:creator` in meta. (close link:{issues-url}/150[#150^])
+* Display article author. (close link:{issues-url}/151[#151^])
 
 ==== Update
 

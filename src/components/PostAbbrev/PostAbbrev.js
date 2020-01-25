@@ -18,7 +18,8 @@ function PostAbbrev({
   tags,
   base,
   id,
-  showDisqus
+  showDisqus,
+  author,
 }) {
   let excerptPart;
   if (excerpt) {
@@ -62,6 +63,7 @@ function PostAbbrev({
               slug,
               show: showDisqus,
             }}
+            author={author}
           />
         </small>
         {tagsPart}
@@ -81,6 +83,11 @@ PostAbbrev.propTypes = {
   base: PropTypes.string,
   id: PropTypes.string.isRequired,
   showDisqus: PropTypes.bool.isRequired,
+  author: PropTypes.shape({
+    name: PropTypes.string,
+    url: PropTypes.string,
+    twitter: PropTypes.string,
+  }).isRequired,
 };
 
 PostAbbrev.defaultProps = {

@@ -3,9 +3,12 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.37.0
-:revdate: 2020-01-25T17:07:18+0900
-:revremark: Update gatsby-transformer-asciidoc to v0.12.0.
+:revnumber: v1.38.0
+:revdate: 2020-01-25T19:34:17+0900
+:revremark: Add `twitter:creator` description and the following sections: + \
+            * Author Config + \
+            * Profile Picture Link + \
+            * Dispaly Article Author
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -290,6 +293,31 @@ gatsby-source-filesystem^] is used so that the next files are not generated.
 Use this link:https://github.com/hitsuji-no-shippo/article-css-for-asciidoc/tree/30575534810dc487b6df82ba755943863340a271[
 git repository^].
 
+=== Author Config
+
+Change value of the author name from `site.author` to `author.name` in
+`config/index.js`. The `authro` values are used as the default attributes in
+Asciidoc.
+
+[cols=4, options="headers, autowidht"]
+|============================================================
+|Key           |siteMetadata   |Asciidoc Attribute  |Required
+|name          |author         |author              |Yes
+|email         |Not use        |email               |No
+|url           |Not use        |page-author-url     |No
+|twitter       |social.twitter |page-author-twitter |No
+|shouldDisplay |Not use        |Not use             |No
+|============================================================
+
+:attributes-priority-description-link: link:{asciidoctor-user-manual-url}/#altering-the-attribute-assignment-precedence[ \
+                                            Page attributes take precedence^]
+[NOTE]
+====
+.{attributes-priority-description-link}
+Page attributes take precedence because `@` is added to the end of the
+default asciidco attributes.
+====
+
 === Add link to edit article on GitHub
 
 You can add link to edit on GitHub into article footer. To add a link,
@@ -397,6 +425,38 @@ articles: {
 <1> key (`twitter`) is dispaly text, value (`https...`) is url.
 --
 
+=== Profile Picture Link
+
+Add link to the profile picture in Bio.
+Used value of url is `author.url` in `config/index.js`.
+If you do not want to add a link, set `author.url` to `null`.
+
+=== Dispaly Article Author
+
+Dispaly article author under article title. By default, if the article author
+name is the same as `author.name` in `config/index.js`,
+it will not be displayed. If you want to display it,
+set `author.shouldDisplay` in `config/index.js` to `true`.
+
+==== Link
+
+.The article author is the blog author.
+If the `author.url` exist, will be a link.
+
+.The article author is not the blog author.
+If the `page-author-url` or `page-author-twitter` of asciidoc attributes exists,
+will be a link.
+
+.How to make href (Y: exist N: not exist)
+|==========================================================
+|twitter|url    |href
+|N      |N      |Not link
+|Y      |N     m|\https://twitter.com/@{page-author-twitter}
+|N      |Y   .2+|page-author-url
+|Y      |Y
+|==========================================================
+
+
 === Date Display Config
 
 Date display is determined by `dateDisplay` in `config/index.js`.
@@ -503,10 +563,23 @@ link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article[
 
 === SEO
 
-* Delete `twitter:creator`
 * Add `twitter:site`. The value (twitter id) used is
   `siteMetadata.social.twitter`
 * Add `og:url`. The value used is `siteMetadata.siteUrl` + `node.fields.slug`
+* The value used in `twitter: creator` has been changed to
+  `page-author-twitter` asciidoc attribute.
++
+--
+[NOTE]
+====
+.Cases where `twitter: creator` is not created.
+* The `page-author-twitter` asciidoc attribute isn't exist.
+* The `author` attribute is different from the `siteMetadata.author` and
+  the `page-author-twitter` attribute value is the same as
+  `siteMetadata.social.twitter`.
+====
+--
++
 
 
 == Description

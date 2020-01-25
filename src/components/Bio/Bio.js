@@ -7,9 +7,9 @@
 
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import Image from 'gatsby-image';
 
 import { rhythm } from 'utils/typography';
+import ProfilePicture from './ProfilePicture';
 import Links from './Links';
 
 import './Bio.css';
@@ -20,7 +20,7 @@ function Bio() {
       // eslint-disable-next-line no-use-before-define
       query={bioQuery}
       render={data => {
-        const { author, description } = data.site.siteMetadata;
+        const { description } = data.site.siteMetadata;
         return (
           <div
             style={{
@@ -28,16 +28,8 @@ function Bio() {
             }}
           >
             <div className="bio">
-              <Image
-                fixed={data.avatar.childImageSharp.fixed}
-                alt={author}
-                className="pic"
-                style={{
-                  marginRight: rhythm(1 / 2),
-                }}
-                imgStyle={{
-                  borderRadius: '50%',
-                }}
+              <ProfilePicture
+                picture={data.avatar}
               />
               <div className="description">
                 <p>{description}</p>
@@ -62,7 +54,6 @@ const bioQuery = graphql`
     }
     site {
       siteMetadata {
-        author
         description
       }
     }

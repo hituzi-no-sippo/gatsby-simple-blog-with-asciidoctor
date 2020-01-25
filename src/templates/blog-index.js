@@ -42,6 +42,11 @@ function BlogIndex({ data, location }) {
             tags={node.pageAttributes.tags}
             id={node.id}
             showDisqus={node.pageAttributes.disqus !== false}
+            author={{
+              name: node.author.fullName,
+              url: node.pageAttributes.author_url,
+              twitter: node.pageAttributes.author_twitter,
+            }}
           />
         );
       })}
@@ -77,6 +82,9 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          author {
+            fullName
+          }
           document {
              title
              description
@@ -87,6 +95,8 @@ export const pageQuery = graphql`
           pageAttributes {
             tags
             disqus
+            author_twitter
+            author_url
           }
         }
       }
