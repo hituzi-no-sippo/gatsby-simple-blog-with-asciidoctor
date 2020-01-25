@@ -83,6 +83,7 @@ function PageMaker(createPage) {
           translationsLink = translations.map(trans => ({
             name: supportedLanguages[trans],
             url: `/${trans}/${dirName}/`.replace(`/${defaultLang}`, ''),
+            langKey: trans,
           }));
         }
 

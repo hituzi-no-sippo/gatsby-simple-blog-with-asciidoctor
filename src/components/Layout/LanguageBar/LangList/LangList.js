@@ -12,7 +12,13 @@ function LangList({ languages, langKey, ...restProps }) {
         const url = lang === langKey ? '/' : `/${lang}/`;
 
         return (
-          <Link key={lang} to={url} className="lang-link">
+          <Link
+            key={lang}
+            to={url}
+            className="lang-link"
+            rel="alternate"
+            hrefLang={lang}
+          >
             {languages[lang]}
           </Link>
         );
