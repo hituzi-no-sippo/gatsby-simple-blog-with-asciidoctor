@@ -3,9 +3,11 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.66.0
-:revdate: 2020-01-24T11:44:41+0900
-:revremark: Add log that fix copyright in Hellow World article.
+:revnumber: Branch feat/add-relationship-attributes-in-anchor-elements v1.0.0 \
+            (Base v1.66.0)
+:revdate: 2020-01-25T11:06:38+0900
+:revremark: Add log that \
+            add `author` and `external` of relationship attribute in bio links.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -42,7 +44,7 @@ ifndef::env-github[:icons: font]
 :repository-url: {hitsuji-no-shippo-github-profile-url}/gatsby-simple-blog-with-asciidoctor
 :issues-url: {repository-url}/issues
 
-== 0.4.0 (2020-01-24)
+== 0.4.0 (2020-01-25)
 
 === Breaking Changes
 
@@ -60,6 +62,8 @@ ifndef::env-github[:icons: font]
 * Scroll up at bottom right. (close link:{issues-url}/128[#128^])
 * Home link between realtive post links in article page.
   (close link:{issues-url}/127[#127^], close link:{issues-url}/141[#141^])
+* Relationship attribute in anchor elements.
+  ** `author` and `external` in bio links. (close link:{issues-url}/153[#153^])
 
 ==== Update
 

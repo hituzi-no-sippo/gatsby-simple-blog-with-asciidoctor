@@ -17,7 +17,7 @@ const Links = ()  => {
             <a key={displayText}
             href={url}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="author external noopener noreferrer"
             >
             {displayText}
             </a>
