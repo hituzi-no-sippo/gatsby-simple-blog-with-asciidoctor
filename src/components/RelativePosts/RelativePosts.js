@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { formatMessage } from 'utils/i18n';
-import RelativePost from '../RelativePost';
+import Post from './Post';
 
 function RelativePosts({ postNodes, lang }) {
   const postNodesNotNull = postNodes.filter(x => x);
@@ -16,7 +16,7 @@ function RelativePosts({ postNodes, lang }) {
       <hr />
       <div style={{ marginTop: '-1rem' }}>{formatMessage('tRelativePosts')}:</div>
       {postNodesNotNull.map(postNode => (
-        <RelativePost lang={lang} key={postNode.fields.slug} postNode={postNode} />
+        <Post lang={lang} key={postNode.fields.slug} postNode={postNode} />
       ))}
     </>
   );

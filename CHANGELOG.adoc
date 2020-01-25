@@ -4,10 +4,10 @@
 :author: {author-name}
 :!email: {author-email}
 :revnumber: Branch refactor/collect-codes-to-one-directory-and-update-prop-types \
-            v1.3.0 (Base v1.72.0)
-:revdate: 2020-01-28T13:07:04+0900
+            v1.4.0 (Base v1.72.0)
+:revdate: 2020-01-28T13:09:31+0900
 :revremark: Add log that \
-            Change `location` to `pathname` of prop in `Layout` component.
+            Collect codes of `RelativePosts` component to one directory.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -124,6 +124,8 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/164[#164^])
 * Change `location` to `pathname` of prop in `Layout` component.
   (close link:{issues-url}/172[#172^])
+* Collect codes of `RelativePosts` component to one directory.
+  (close link:{issues-url}/165[#165^])
 
 === Docs
 
