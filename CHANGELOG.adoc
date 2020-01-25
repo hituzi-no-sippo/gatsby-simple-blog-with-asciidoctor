@@ -3,10 +3,11 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/add-relationship-attributes-in-anchor-elements v1.1.0 \
+:revnumber: Branch feat/add-relationship-attributes-in-anchor-elements v1.2.0 \
             (Base v1.66.0)
-:revdate: 2020-01-25T11:07:27+0900
-:revremark: Add log that collet `LanguageBar` component codes.
+:revdate: 2020-01-25T11:08:39+0900
+:revremark: Add log that \
+            add `alternate` of realtionship attribute in translation links.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -63,6 +64,7 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/127[#127^], close link:{issues-url}/141[#141^])
 * Relationship attribute in anchor elements.
   ** `author` and `external` in bio links. (close link:{issues-url}/153[#153^])
+  ** `alternate` in translation links. (close link:{issues-url}/154[#154^])
 
 ==== Update
 

@@ -38,7 +38,6 @@ const Header = ({post, slug, translationsLink, languageContexts}) => {
         baseUrl={`${languageContexts.homeLink}tags`} />}
       <TranslationsLink
         translationsLink={translationsLink}
-        langKey={languageContexts.lang}
         style={{ margin: '-0.5rem 0 1.5rem' }}
       />
     </header>
