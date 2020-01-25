@@ -4,10 +4,10 @@
 :author: {author-name}
 :!email: {author-email}
 :revnumber: Branch refactor/collect-codes-to-one-directory-and-update-prop-types \
-            v1.5.0 (Base v1.72.0)
-:revdate: 2020-01-28T13:10:43+0900
+            v1.6.0 (Base v1.72.0)
+:revdate: 2020-01-28T13:12:35+0900
 :revremark: Add log that \
-            Collect codes of `Layout` component to one directory.
+            Rename file from `${component name}.js` to `index.js`.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -128,6 +128,8 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/165[#165^])
 * Collect codes of `Layout` component to one directory.
   (close link:{issues-url}/166[#166^])
+* Rename file from `${component name}.js` to `index.js`.
+  (close link:{issues-url}/167[#167^])
 
 === Docs
 

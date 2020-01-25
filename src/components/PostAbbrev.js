@@ -7,7 +7,7 @@ import AccessoryInformations from 'components/AccessoryInformations';
 
 import { rhythm } from 'utils/typography';
 
-import TagList from '../TagList';
+import TagList from './TagList';
 
 function PostAbbrev({
   slug,
