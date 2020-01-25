@@ -3,10 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.67.0
-:revdate: 2020-01-25T11:24:51+0900
+:revnumber: v1.67.1
+:revdate: 2020-01-25T11:26:52+0900
 :revremark: Add the following logs: + \
-            * Add relationship attribute in anchor elements.
+            * Add relationship attribute in anchor elements. + \
             * Collect `LanguageBar` component codes.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
