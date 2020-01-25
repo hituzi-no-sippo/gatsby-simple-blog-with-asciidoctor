@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.39.0
-:revdate: 2020-01-25T19:47:38+0900
-:revremark: Delete git submodule command in How to use section.
+:revnumber: v1.40.0
+:revdate: 2020-01-25T20:48:12+0900
+:revremark: Organize section positions
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -47,13 +47,16 @@ image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d
 * link:{demo-url}[Home^]
 * link:{demo-url}/asciidoc-examples/[Asciidoc Examples^].
 
-:repository-url: https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
+:github-url: https://github.com
+:repository-url: {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
 image:https://www.netlify.com/img/deploy/button.svg[
       Deploy to Netlify, link={netlify-app-url}/start/deploy?repository={repository-url}]
 
-== Diffrences from link:https://github.com/thundermiracle/gatsby-simple-blog[thundermiracle/gatsby-simple-blog]
+:base-repository-link: link:{github-url}/thundermiracle/gatsby-simple-blog/tree/d8537730b37fb08a2171a29ac9c5be3d6458b0bc[ \
+                            thundermiracle/gatsby-simple-blog 2019-09-14]
+== Diffrences from {base-repository-link}
 
-:gatsby-transformer-asciidoc-url: https://github.com/hitsuji-no-shippo/gatsby-transformer-asciidoc/tree/v0.12.0
+:gatsby-transformer-asciidoc-url: {github-url}/hitsuji-no-shippo/gatsby-transformer-asciidoc/tree/v0.12.0
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         @hitsji_no_shippo/gatsby-transformer-asciidoc]
 === Change to create article from markdown to asciidoc
@@ -88,7 +91,6 @@ disqus: true
 :page-disqus: true
 ----
 |===
-
 
 .Change fields
 [cols=2, options="headers, autowidth"]
@@ -269,14 +271,14 @@ Therefore, the alternative may be wrong.
 ====
 
 .Change gatsby-plugin-i18n
-link:https://github.com/angeloocana/gatsby-plugin-i18n/tree/master/packages/gatsby-plugin-i18n[
+link:{github-url}/angeloocana/gatsby-plugin-i18n/tree/master/packages/gatsby-plugin-i18n[
 gatsby-plugin-i18n] doesn't support asciidoc. Therefore,it was changed to
-link:https://github.com/hitsuji-no-shippo/gatsby-plugin-i18n/tree/add-support-for-other-lightweight-markup/packages/gatsby-plugin-i18n[
+link:{github-url}/hitsuji-no-shippo/gatsby-plugin-i18n/tree/add-support-for-other-lightweight-markup/packages/gatsby-plugin-i18n[
 @hitsuji_no_shippo/gatsby-plugin-i18n] that supports Asciidoc.
 
 ==== Ignore `_includes` directory and README, CHANGELOG
 
-The `ignore` option in link:https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem[
+The `ignore` option in link:{github-url}/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem[
 gatsby-source-filesystem^] is used so that the next files are not generated.
 
 .Ignore ascidoc files
@@ -284,38 +286,12 @@ gatsby-source-filesystem^] is used so that the next files are not generated.
 * `README.adoc`
 * `CHANGELOG.adoc`
 
+=== Asciidoctor Support to CSS
 
-=== Add asciidoc support to css
-
-Use this link:https://github.com/hitsuji-no-shippo/article-css-for-asciidoc/tree/30575534810dc487b6df82ba755943863340a271[
+Use this link:{github-url}/hitsuji-no-shippo/article-css-for-asciidoc/tree/30575534810dc487b6df82ba755943863340a271[
 git repository^].
 
-=== Author Config
-
-Change value of the author name from `site.author` to `author.name` in
-`config/index.js`. The `authro` values are used as the default attributes in
-Asciidoc.
-
-[cols=4, options="headers, autowidht"]
-|============================================================
-|Key           |siteMetadata   |Asciidoc Attribute  |Required
-|name          |author         |author              |Yes
-|email         |Not use        |email               |No
-|url           |Not use        |page-author-url     |No
-|twitter       |social.twitter |page-author-twitter |No
-|shouldDisplay |Not use        |Not use             |No
-|============================================================
-
-:attributes-priority-description-link: link:{asciidoctor-user-manual-url}/#altering-the-attribute-assignment-precedence[ \
-                                            Page attributes take precedence^]
-[NOTE]
-====
-.{attributes-priority-description-link}
-Page attributes take precedence because `@` is added to the end of the
-default asciidco attributes.
-====
-
-=== Add link to edit article on GitHub
+=== Link to edit article on GitHub
 
 You can add link to edit on GitHub into article footer. To add a link,
 you need to set `repository` and `articles` in `config/index.js`.
@@ -346,7 +322,6 @@ articles: {
 Nested submodules are not supported.
 ====
 
-
 .Articles is same repository
 [source, JavaScript]
 ----
@@ -366,7 +341,7 @@ articles: {
 |Mutual
 
 |true
-|https://github.com
+|{github-url}
 
 .2+|/${articles.dir}/edit/master/${node[filePath]}
 
@@ -402,7 +377,6 @@ articles: {
 }
 ----
 
-
 === Links in Bio
 
 .Change points
@@ -412,15 +386,40 @@ articles: {
 +
 --
 .Example
-[source, JavaScript]
+[source, JavaScript, subs="attributes"]
 ----
 {
   twitter: 'https://twitter.com/hns_equal_st',     // <1>
-  GitHub: 'https://github.com/hitsuji-no-shippo',  // <1>
+  GitHub: '{github-url}/hitsuji-no-shippo',  // <1>
 }
 ----
 <1> key (`twitter`) is dispaly text, value (`https...`) is url.
 --
+
+=== Author Config
+
+Change value of the author name from `site.author` to `author.name` in
+`config/index.js`. The `authro` values are used as the default attributes in
+Asciidoc.
+
+[cols=4, options="headers, autowidht"]
+|============================================================
+|Key           |siteMetadata   |Asciidoc Attribute  |Required
+|name          |author         |author              |Yes
+|email         |Not use        |email               |No
+|url           |Not use        |page-author-url     |No
+|twitter       |social.twitter |page-author-twitter |No
+|shouldDisplay |Not use        |Not use             |No
+|============================================================
+
+:attributes-priority-description-link: link:{asciidoctor-user-manual-url}/#altering-the-attribute-assignment-precedence[ \
+                                            Page attributes take precedence^]
+[NOTE]
+====
+.{attributes-priority-description-link}
+Page attributes take precedence because `@` is added to the end of the
+default asciidco attributes.
+====
 
 === Profile Picture Link
 
@@ -428,7 +427,7 @@ Add link to the profile picture in Bio.
 Used value of url is `author.url` in `config/index.js`.
 If you do not want to add a link, set `author.url` to `null`.
 
-=== Dispaly Article Author
+=== Article Author Display
 
 Dispaly article author under article title. By default, if the article author
 name is the same as `author.name` in `config/index.js`,
@@ -454,7 +453,7 @@ will be a link.
 |==========================================================
 
 
-=== Date Display Config
+=== Date Display
 
 Date display is determined by `dateDisplay` in `config/index.js`.
 
@@ -514,6 +513,15 @@ Possible values are 1 to 25.
 ====
 <4> Emoji to be added to the beginning of new post date.
 
+=== Disqus
+
+.Change default from non dispaly to dispaly
+By default, dispaly disqus in article pages. If the value of asciidoc attribute
+`page-disqus` is `false`, non dispaly.
+
+.Add comment count link
+Displayed next to read to time. Click to go to embedded disqus of the article.
+
 === Tags Link
 
 Add link to tag list next to count posts in index.
@@ -525,15 +533,6 @@ Add Scroll Up at bottom right.
 === HOME Link
 
 Add home link between relative posts in article page.
-
-=== Disqus
-
-.Change default from non dispaly to dispaly
-By default, dispaly disqus in article pages. If the value of asciidoc attribute
-`page-disqus` is `false`, non dispaly.
-
-.Add comment count link
-Displayed next to read to time. Click to go to embedded disqus of the article.
 
 === Tag List position
 
@@ -550,13 +549,11 @@ url         :: {repository-url}
 name        :: gatsby-simple-blog-with-asciidoctor
 displaysLink:: true
 
-
 === Change element of blog entry
 
 Change to
 link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article[
 `article`]
-
 
 === SEO
 
@@ -591,7 +588,7 @@ eslint supported.
 ----
 npm install -g gatsby-cli
 
-gatsby new my-blog-folder https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
+gatsby new my-blog-folder {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
 cd my-blog-folder
 ----
 
@@ -647,7 +644,7 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
 === Materials used
 
 :cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[CC0 1.0]
-:font-awesome-github-repo-url: https://github.com/FortAwesome/Font-Awesome
+:font-awesome-github-repo-url: {github-url}/FortAwesome/Font-Awesome
 :dova-s-url: https://dova-s.jp
 :evericons-url: http://www.evericons.com
 [cols="d,d,a", options="headers, autowidth"]
