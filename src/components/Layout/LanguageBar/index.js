@@ -5,9 +5,9 @@ import { fromPairs } from 'ramda';
 
 import { rhythm } from 'utils/typography';
 
-import LangButton from '../LangButton';
-import BalloonField from '../BalloonField';
-import LangList from '../LangList/LangList';
+import LangButton from './LangButton';
+import BalloonField from './BalloonField';
+import LangList from './LangList';
 import './LanguageBar.css';
 
 /**

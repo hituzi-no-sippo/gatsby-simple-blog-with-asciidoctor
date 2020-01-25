@@ -3,11 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch feat/add-relationship-attributes-in-anchor-elements v1.0.0 \
+:revnumber: Branch feat/add-relationship-attributes-in-anchor-elements v1.1.0 \
             (Base v1.66.0)
-:revdate: 2020-01-25T11:06:38+0900
-:revremark: Add log that \
-            add `author` and `external` of relationship attribute in bio links.
+:revdate: 2020-01-25T11:07:27+0900
+:revremark: Add log that collet `LanguageBar` component codes.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -100,6 +99,7 @@ ifndef::env-github[:icons: font]
 * `date` => `dateStr`
 * `time` => `timeToRead`
 --
+* Collet `LanguageBar` component codes. (close link:{issues-url}/155[#155^])
 
 === Docs
 
