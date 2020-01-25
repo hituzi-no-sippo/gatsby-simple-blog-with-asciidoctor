@@ -9,7 +9,7 @@ import Header from './Header';
 import Footer from './Footer';
 import ReadModeToggle from './ReadModeToggle';
 import ScrollUp from './ScrollUp';
-import Breadcrumbs from '../Breadcrumbs';
+import Breadcrumbs from './Breadcrumbs';
 
 function Layout({ children, pathname, title, breadcrumbs }) {
   const { lang, homeLink, refresh } = useLang();

@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import withThemeFlag from 'utils/withThemeFlag';
-import Toggle from '../../Toggle';
+import Toggle from './Toggle';
 import IconSun from './IconSun';
 import IconMoon from './IconMoon';
 
