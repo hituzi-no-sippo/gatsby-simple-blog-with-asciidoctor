@@ -3,14 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.69.0
-:revdate: 2020-01-25T19:33:33+0900
-:revremark: Add the following logs: + \
-            * Set article author name and E-mail \
-              to default asciidoc attributes. + \
-            * Add profile picture link. + \
-            * Add `twitter:creator`. + \
-            * Add article author display.
+:revnumber: v1.70.0
+:revdate: 2020-01-25T20:02:29+0900
+:revremark: Add log that fix npm script.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -91,6 +86,9 @@ ifndef::env-github[:icons: font]
 * tag list position in index to under the line starting from update date.
   (close link:{issues-url}/138[#138^])
 
+=== Fix
+
+* npm script. (close link:{issues-url}/161[#161^])
 
 === Refactor
 

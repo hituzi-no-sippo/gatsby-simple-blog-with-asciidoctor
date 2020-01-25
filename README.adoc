@@ -3,12 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.38.0
-:revdate: 2020-01-25T19:34:17+0900
-:revremark: Add `twitter:creator` description and the following sections: + \
-            * Author Config + \
-            * Profile Picture Link + \
-            * Dispaly Article Author
+:revnumber: v1.39.0
+:revdate: 2020-01-25T19:47:38+0900
+:revremark: Delete git submodule command in How to use section.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -596,7 +593,6 @@ npm install -g gatsby-cli
 
 gatsby new my-blog-folder https://github.com/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
 cd my-blog-folder
-git submodule update --init --recursive
 ----
 
 == How to deploy by Circle-CI in Medium.com

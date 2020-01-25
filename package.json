@@ -83,15 +83,16 @@
     "url": "github:hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor"
   },
   "scripts": {
-    "build": "gatsby build",
+    "submodule": "git submodule update --init --recursive",
+    "build": "yarn run submodule && gatsby build",
     "build:gh": "gatsby build --prefix-paths",
-    "dev": "gatsby develop",
+    "dev": "yarn run submodule && gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "yarn run dev",
     "serve": "gatsby serve",
     "eslint": "eslint .",
     "jest": "jest",
-    "test": "git submodule update --init --recursive && cross-env NODE_ENV=test yarn run eslint && cross-env NODE_ENV=test yarn run jest"
+    "test": "yarn run submodule && cross-env NODE_ENV=test yarn run eslint && cross-env NODE_ENV=test yarn run jest"
   },
   "husky": {
     "hooks": {
