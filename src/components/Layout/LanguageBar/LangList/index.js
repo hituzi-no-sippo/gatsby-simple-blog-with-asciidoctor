@@ -28,7 +28,7 @@ function LangList({ languages, langKey, ...restProps }) {
 }
 
 LangList.propTypes = {
-  languages: PropTypes.object.isRequired,
+  languages: PropTypes.objectOf(PropTypes.string).isRequired,
   langKey: PropTypes.string.isRequired,
 };
 

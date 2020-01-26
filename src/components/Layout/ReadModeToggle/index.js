@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import withThemeFlag from 'utils/withThemeFlag';
@@ -6,7 +7,6 @@ import Toggle from './Toggle';
 import IconSun from './IconSun';
 import IconMoon from './IconMoon';
 
-// eslint-disable-next-line react/prop-types
 function ReadModeToggle({ isLightTheme }) {
   return (
     <>
@@ -33,5 +33,13 @@ function ReadModeToggle({ isLightTheme }) {
     </>
   );
 }
+
+ReadModeToggle.propTypes = {
+  isLightTheme: PropTypes.bool,
+};
+
+ReadModeToggle.defaultProps = {
+  isLightTheme: null,
+};
 
 export default withThemeFlag(ReadModeToggle);

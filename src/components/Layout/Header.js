@@ -62,13 +62,8 @@ function Header({ pathname, title, base }) {
 
 Header.propTypes = {
   pathname: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  base: PropTypes.string,
-};
-
-Header.defaultProps = {
-  title: null,
-  base: '',
+  title: PropTypes.string.isRequired,
+  base: PropTypes.string.isRequired,
 };
 
 export default Header;

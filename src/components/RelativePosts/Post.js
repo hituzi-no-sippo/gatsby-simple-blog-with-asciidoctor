@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { Link } from 'gatsby';
 
 import { rhythm } from 'utils/typography';
 import { formatDate } from 'utils/i18n';
+import { createPagesQuery as createPagesQueryPropTypes } from 'utils/propTypes';
 
 function RelativePost({ postNode }) {
   const {
@@ -43,7 +43,7 @@ function RelativePost({ postNode }) {
 }
 
 RelativePost.propTypes = {
-  postNode: PropTypes.object.isRequired,
+  postNode: createPagesQueryPropTypes.isRequired,
 };
 
 export default RelativePost;

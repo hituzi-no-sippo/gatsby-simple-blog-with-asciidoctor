@@ -64,15 +64,19 @@ function Layout({ children, pathname, title, breadcrumbs }) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.arrayOf(PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ])).isRequired,
   pathname: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  breadcrumbs: PropTypes.array,
+  title: PropTypes.string.isRequired,
+  breadcrumbs: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    url: PropTypes.string,
+  }))
 };
 
 Layout.defaultProps = {
-  children: null,
-  title: null,
   breadcrumbs: null,
 };
 

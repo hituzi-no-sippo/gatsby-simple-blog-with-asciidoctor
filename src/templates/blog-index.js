@@ -7,13 +7,11 @@ import Layout from 'components/Layout';
 import SEO from 'components/SEO';
 import PostAbbrev from 'components/PostAbbrev';
 import { formatMessage } from 'utils/i18n';
+import { location as locationPropTypes } from 'utils/propTypes';
 
 function BlogIndex({ data, location, pageContext }) {
-  const siteTitle = data.site.siteMetadata.title;
-  const posts = data.allAsciidoc.edges;
-
   return (
-    <Layout pathname={location.pathname} title={siteTitle}>
+    <Layout pathname={location.pathname} title={data.site.siteMetadata.title}>
       <SEO
         title={formatMessage('tIndTitle')}
         keywords={formatMessage('taIndKeywords')}
@@ -29,7 +27,8 @@ function BlogIndex({ data, location, pageContext }) {
           {formatMessage('tfTagsLink')}
         </Link>
       </h4>
-      {posts.map(({ node }) => {
+      {// eslint-disable-next-line react/prop-types
+       data.allAsciidoc.edges.map(({ node }) => {
         const title = node.document.title || node.fields.slug;
         return (
           <PostAbbrev
@@ -57,15 +56,47 @@ function BlogIndex({ data, location, pageContext }) {
 }
 
 BlogIndex.propTypes = {
-  data: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      })
+    }).isRequired,
+    allAsciidoc: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+      edges: PropTypes.arrayOf(PropTypes.shape({
+        node: PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          timeToRead: PropTypes.number.isRequired,
+          fields: PropTypes.shape({
+            slug: PropTypes.string.isRequired,
+          }).isRequired,
+          author: PropTypes.shape({
+            fullName: PropTypes.string.isRequired,
+          }).isRequired,
+          document: PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            description: PropTypes.string
+          }).isRequired,
+          revision: PropTypes.shape({
+            date: PropTypes.string.isRequired,
+          }).isRequired,
+          pageAttributes: PropTypes.shape({
+            tags: PropTypes.arrayOf(PropTypes.string),
+            disqus: PropTypes.bool,
+            author_twitter: PropTypes.string,
+            author_url: PropTypes.string,
+          }).isRequired,
+        }).isRequired,
+      }).isRequired).isRequired,
+    }).isRequired,
+  }).isRequired,
+  location: locationPropTypes.isRequired,
   pageContext: PropTypes.shape({
     langKey: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
   }).isRequired,
 };
-
-BlogIndex.defaultProps = {};
 
 export default BlogIndex;
 

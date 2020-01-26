@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {
+  articleQuery as articleQueryPropTypes,
+  translationsLink as translationsLinkPropTypes,
+} from 'utils/propTypes';
+
 import Header from './Header'
 import LightWeightMarkup from './LightweightMarkup'
 import Footer from './Footer'
@@ -21,9 +26,9 @@ const Article = ({article, slug, translationsLink, homeUrl}) => {
 }
 
 Article.propTypes = {
-  article: PropTypes.object.isRequired,
+  article: articleQueryPropTypes.isRequired,
   slug: PropTypes.string.isRequired,
-  translationsLink: PropTypes.array.isRequired,
+  translationsLink: translationsLinkPropTypes.isRequired,
   homeUrl: PropTypes.string.isRequired,
 };
 

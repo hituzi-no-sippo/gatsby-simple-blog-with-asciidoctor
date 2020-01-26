@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { formatMessage } from 'utils/i18n';
+import { createPagesQuery as createPagesQueryPropTypes } from 'utils/propTypes';
 import Post from './Post';
 
 function RelativePosts({ postNodes, lang }) {
@@ -23,13 +24,8 @@ function RelativePosts({ postNodes, lang }) {
 }
 
 RelativePosts.propTypes = {
-  postNodes: PropTypes.array,
-  lang: PropTypes.string,
-};
-
-RelativePosts.defaultProps = {
-  postNodes: [],
-  lang: '',
+  postNodes: PropTypes.arrayOf(createPagesQueryPropTypes).isRequired,
+  lang: PropTypes.string.isRequired,
 };
 
 export default RelativePosts;

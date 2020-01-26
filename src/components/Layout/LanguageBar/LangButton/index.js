@@ -16,17 +16,9 @@ function LangButton({ lang, onClick, focused, ...restProps }) {
 }
 
 LangButton.propTypes = {
-  lang: PropTypes.string,
-  onClick: PropTypes.func,
-  focused: PropTypes.bool,
+  lang: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  focused: PropTypes.bool.isRequired,
 };
-
-LangButton.defaultProps = {
-  lang: 'English',
-  onClick: null,
-  focused: false,
-};
-
-LangButton.defaultProps = {};
 
 export default LangButton;

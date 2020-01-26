@@ -4,10 +4,9 @@
 :author: {author-name}
 :!email: {author-email}
 :revnumber: Branch refactor/collect-codes-to-one-directory-and-update-prop-types \
-            v1.6.0 (Base v1.72.0)
-:revdate: 2020-01-28T13:12:35+0900
-:revremark: Add log that \
-            Rename file from `${component name}.js` to `index.js`.
+            v1.7.0 (Base v1.72.0)
+:revdate: 2020-01-28T13:15:40+0900
+:revremark: Add log that update prop types.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -130,6 +129,7 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/166[#166^])
 * Rename file from `${component name}.js` to `index.js`.
   (close link:{issues-url}/167[#167^])
+* Update prop types. (close link:{issues-url}/168[#168^])
 
 === Docs
 

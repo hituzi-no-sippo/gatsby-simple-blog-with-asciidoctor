@@ -65,6 +65,7 @@ const TagPageTemplate = ({ pageContext, data, location }) => {
 TagPageTemplate.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
+    langKey: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
   }).isRequired,
   data: PropTypes.shape({
@@ -75,14 +76,14 @@ TagPageTemplate.propTypes = {
           node: PropTypes.shape({
             document: PropTypes.shape({
               title: PropTypes.string.isRequired,
-            }),
+            }).isRequired,
             fields: PropTypes.shape({
               slug: PropTypes.string.isRequired,
-            }),
-          }),
+            }).isRequired,
+          }).isRequired,
         }).isRequired,
-      ),
-    }),
+      ).isRequired,
+    }).isRequired,
   }).isRequired,
   location: PropTypes.object.isRequired,
 };
@@ -104,8 +105,8 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-        id
-        timeToRead
+          id
+          timeToRead
           fields {
             slug
           }

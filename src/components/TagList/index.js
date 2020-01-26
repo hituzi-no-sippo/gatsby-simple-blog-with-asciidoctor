@@ -18,12 +18,8 @@ function TagList({ tags, baseUrl, ...restProps }) {
 }
 
 TagList.propTypes = {
-  tags: PropTypes.array.isRequired,
-  baseUrl: PropTypes.string,
-};
-
-TagList.defaultProps = {
-  baseUrl: '',
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  baseUrl: PropTypes.string.isRequired,
 };
 
 export default TagList;

@@ -1,7 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { Link } from 'gatsby';
+
+import { translationsLink as translationsLinkPropTypes} from 'utils/propTypes';
 
 import './TranslationsLink.css';
 
@@ -28,7 +29,7 @@ function TranslationsLink({ translationsLink, ...restProps }) {
 }
 
 TranslationsLink.propTypes = {
-  translationsLink: PropTypes.array.isRequired,
+  translationsLink: translationsLinkPropTypes.isRequired,
 };
 
 export default TranslationsLink;

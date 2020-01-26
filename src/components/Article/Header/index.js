@@ -5,6 +5,10 @@ import TagList from 'components/TagList';
 import AccessoryInformations from 'components/AccessoryInformations';
 
 import { rhythm, scale } from 'utils/typography';
+import {
+  articleQuery as articleQueryPropTypes,
+  translationsLink as translationsLinkPropTypes,
+} from 'utils/propTypes';
 
 import TranslationsLink from './TranslationsLink';
 
@@ -50,9 +54,9 @@ const Header = ({article, slug, translationsLink, homeUrl}) => {
 }
 
 Header.propTypes = {
-  article: PropTypes.object.isRequired,
+  article: articleQueryPropTypes.isRequired,
   slug: PropTypes.string.isRequired,
-  translationsLink: PropTypes.array.isRequired,
+  translationsLink: translationsLinkPropTypes.isRequired,
   homeUrl: PropTypes.string.isRequired,
 };
 

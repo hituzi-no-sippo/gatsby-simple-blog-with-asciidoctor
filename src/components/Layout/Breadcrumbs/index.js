@@ -45,22 +45,17 @@ function Breadcrumbs({ data, showTop, base, langKey, ...restProps }) {
 }
 
 Breadcrumbs.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      text: PropTypes.string.isRequired,
-      url: PropTypes.string,
-    }),
-  ),
-  showTop: PropTypes.bool,
-  base: PropTypes.string,
-  langKey: PropTypes.string,
+  data: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    url: PropTypes.string,
+  }).isRequired),
+  showTop: PropTypes.bool.isRequired,
+  base: PropTypes.string.isRequired,
+  langKey: PropTypes.string.isRequired,
 };
 
 Breadcrumbs.defaultProps = {
   data: null,
-  showTop: false,
-  base: '',
-  langKey: 'en',
 };
 
 export default Breadcrumbs;

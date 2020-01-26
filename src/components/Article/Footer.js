@@ -1,9 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import minimatch from 'minimatch';
 
 import { repository, articles } from 'config'
+
+import { articleQuery as articleQueryPropTypes, } from 'utils/propTypes';
 
 const Footer = ({article}) => {
   if (!(articles.dir && articles.filePath
@@ -52,7 +53,7 @@ const Footer = ({article}) => {
 }
 
 Footer.propTypes = {
-  article: PropTypes.object.isRequired,
+  article: articleQueryPropTypes.isRequired,
 };
 
 export default Footer;
