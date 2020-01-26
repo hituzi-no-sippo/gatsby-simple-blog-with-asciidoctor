@@ -36,7 +36,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
         article={post}
         slug={pageContext.slug}
         translationsLink={translationsLink}
-        languageContexts={languageContexts}
+        homeUrl={languageContexts.homeLink}
       />
 
       <RelativePosts

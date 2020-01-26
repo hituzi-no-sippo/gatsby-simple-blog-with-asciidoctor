@@ -4,10 +4,10 @@
 :author: {author-name}
 :!email: {author-email}
 :revnumber: Branch refactor/collect-codes-to-one-directory-and-update-prop-types \
-            v1.1.0 (Base v1.72.0)
-:revdate: 2020-01-28T12:59:58+0900
-:revremark: Add log that \
-            rename prop from `post` to `article` in `article` component.
+            v1.2.0 (Base v1.72.0)
+:revdate: 2020-01-28T13:04:32+0900
+:revremark: Add log that change `languageContexts` to `homeUrl` of prop \
+            in `Article` component.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -120,6 +120,8 @@ ifndef::env-github[:icons: font]
 * Delete useless comments. (close link:{issues-url}/170[#170^])
 * Rename prop from `post` to `article` in `article` component.
   (close link:{issues-url}/171[#171^])
+* Change `languageContexts` to `homeUrl` of prop in `Article` component.
+  (close link:{issues-url}/164[#164^])
 
 === Docs
 

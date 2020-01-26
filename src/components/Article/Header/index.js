@@ -9,7 +9,7 @@ import { rhythm, scale } from 'utils/typography';
 import TranslationsLink from './TranslationsLink';
 
 
-const Header = ({article, slug, translationsLink, languageContexts}) => {
+const Header = ({article, slug, translationsLink, homeUrl}) => {
   return (
     <header>
       <h1>{article.document.title}</h1>
@@ -40,7 +40,7 @@ const Header = ({article, slug, translationsLink, languageContexts}) => {
 
       {article.pageAttributes.tags &&
        <TagList tags={article.pageAttributes.tags}
-        baseUrl={`${languageContexts.homeLink}tags`} />}
+        baseUrl={`${homeUrl}tags`} />}
       <TranslationsLink
         translationsLink={translationsLink}
         style={{ margin: '-0.5rem 0 1.5rem' }}
@@ -53,7 +53,7 @@ Header.propTypes = {
   article: PropTypes.object.isRequired,
   slug: PropTypes.string.isRequired,
   translationsLink: PropTypes.array.isRequired,
-  languageContexts: PropTypes.object.isRequired,
+  homeUrl: PropTypes.string.isRequired,
 };
 
 export default Header;
