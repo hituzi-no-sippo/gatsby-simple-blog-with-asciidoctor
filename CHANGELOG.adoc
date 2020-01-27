@@ -4,9 +4,10 @@
 :author: {author-name}
 :!email: {author-email}
 :revnumber: Branch refactor/collect-codes-to-one-directory-and-update-prop-types \
-            v1.0.0 (Base v1.72.0)
-:revdate: 2020-01-28T12:56:52+0900
-:revremark: Add log that delete useless comments.
+            v1.1.0 (Base v1.72.0)
+:revdate: 2020-01-28T12:59:58+0900
+:revremark: Add log that \
+            rename prop from `post` to `article` in `article` component.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -117,6 +118,8 @@ ifndef::env-github[:icons: font]
 --
 * Collect `LanguageBar` component codes. (close link:{issues-url}/155[#155^])
 * Delete useless comments. (close link:{issues-url}/170[#170^])
+* Rename prop from `post` to `article` in `article` component.
+  (close link:{issues-url}/171[#171^])
 
 === Docs
 

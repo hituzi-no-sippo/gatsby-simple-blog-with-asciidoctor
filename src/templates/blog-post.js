@@ -33,10 +33,10 @@ function BlogPostTemplate({ data, pageContext, location }) {
         }}
       />
       <Article
-       post={post}
-       slug={pageContext.slug}
-       translationsLink={translationsLink}
-       languageContexts={languageContexts}
+        article={post}
+        slug={pageContext.slug}
+        translationsLink={translationsLink}
+        languageContexts={languageContexts}
       />
 
       <RelativePosts

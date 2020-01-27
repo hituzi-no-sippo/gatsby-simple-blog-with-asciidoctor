@@ -9,10 +9,10 @@ import { rhythm, scale } from 'utils/typography';
 import TranslationsLink from './TranslationsLink';
 
 
-const Header = ({post, slug, translationsLink, languageContexts}) => {
+const Header = ({article, slug, translationsLink, languageContexts}) => {
   return (
     <header>
-      <h1>{post.document.title}</h1>
+      <h1>{article.document.title}</h1>
       <p
         style={{
           ...scale(-1 / 5),
@@ -22,24 +22,24 @@ const Header = ({post, slug, translationsLink, languageContexts}) => {
         }}
       >
         <AccessoryInformations
-          dateStr={post.revision.date}
-          timeToRead={post.timeToRead}
+          dateStr={article.revision.date}
+          timeToRead={article.timeToRead}
           disqus={{
-            id: post.id,
-            title: post.document.title,
+            id: article.id,
+            title: article.document.title,
             slug,
-            show: post.pageAttributes.disqus !== false,
+            show: article.pageAttributes.disqus !== false,
           }}
           author={{
-            name: post.author.fullName,
-            url: post.pageAttributes.author_url,
-            twitter: post.pageAttributes.author_twitter,
+            name: article.author.fullName,
+            url: article.pageAttributes.author_url,
+            twitter: article.pageAttributes.author_twitter,
           }}
         />
       </p>
 
-      {post.pageAttributes.tags &&
-       <TagList tags={post.pageAttributes.tags}
+      {article.pageAttributes.tags &&
+       <TagList tags={article.pageAttributes.tags}
         baseUrl={`${languageContexts.homeLink}tags`} />}
       <TranslationsLink
         translationsLink={translationsLink}
@@ -50,7 +50,7 @@ const Header = ({post, slug, translationsLink, languageContexts}) => {
 }
 
 Header.propTypes = {
-  post: PropTypes.object.isRequired,
+  article: PropTypes.object.isRequired,
   slug: PropTypes.string.isRequired,
   translationsLink: PropTypes.array.isRequired,
   languageContexts: PropTypes.object.isRequired,

@@ -5,23 +5,23 @@ import Header from './Header'
 import LightWeightMarkup from './LightweightMarkup'
 import Footer from './Footer'
 
-const Article = ({post, slug, translationsLink, languageContexts}) => {
+const Article = ({article, slug, translationsLink, languageContexts}) => {
   return (
     <article>
       <Header
-       post={post}
-       slug={slug}
-       translationsLink={translationsLink}
-       languageContexts={languageContexts}
+        article={article}
+        slug={slug}
+        translationsLink={translationsLink}
+        languageContexts={languageContexts}
       />
-      <LightWeightMarkup html={post.html}/>
-      <Footer post={post}/>
+      <LightWeightMarkup html={article.html}/>
+      <Footer article={article}/>
     </article>
   );
 }
 
 Article.propTypes = {
-  post: PropTypes.object.isRequired,
+  article: PropTypes.object.isRequired,
   slug: PropTypes.string.isRequired,
   translationsLink: PropTypes.array.isRequired,
   languageContexts: PropTypes.object.isRequired,
