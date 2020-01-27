@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.72.0
-:revdate: 2020-01-27T14:24:34+0900
-:revremark: Add log that add slug to `og:url` meta in index pages.
+:revnumber: Branch refactor/collect-codes-to-one-directory-and-update-prop-types \
+            v1.0.0 (Base v1.72.0)
+:revdate: 2020-01-28T12:56:52+0900
+:revremark: Add log that delete useless comments.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -45,7 +46,7 @@ ifndef::env-github[:icons: font]
 :gatsby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         gatsby-transformer-asciidoc^]
-== 0.4.0 (2020-01-27)
+== 0.4.0 (2020-01-28)
 
 === Breaking Changes
 
@@ -115,6 +116,7 @@ ifndef::env-github[:icons: font]
 * `time` => `timeToRead`
 --
 * Collect `LanguageBar` component codes. (close link:{issues-url}/155[#155^])
+* Delete useless comments. (close link:{issues-url}/170[#170^])
 
 === Docs
 
