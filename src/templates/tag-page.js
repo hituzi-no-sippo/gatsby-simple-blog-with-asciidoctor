@@ -22,9 +22,12 @@ const TagPageTemplate = ({ pageContext, data, location }) => {
 
   return (
     <Layout
-      location={location}
+      pathname={location.pathname}
       title={siteTitle}
-      breadcrumbs={[{ text: formatMessage('tTags'), url: `${homeLink}tags` }, { text: tag }]}
+      breadcrumbs={[
+        { text: formatMessage('tTags'), url: `${homeLink}tags` },
+        { text: tag }
+      ]}
     >
       <SEO title={tagHeader} description={tagHeader} slug={pageContext.slug} />
       <h1>{tagHeader}</h1>

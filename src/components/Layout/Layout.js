@@ -11,12 +11,12 @@ import ReadModeToggle from './ReadModeToggle';
 import ScrollUp from './ScrollUp';
 import Breadcrumbs from '../Breadcrumbs';
 
-function Layout({ children, location, title, breadcrumbs }) {
+function Layout({ children, pathname, title, breadcrumbs }) {
   const { lang, homeLink, refresh } = useLang();
 
   React.useEffect(() => {
-    refresh(location);
-  }, [location, refresh]);
+    refresh(pathname);
+  }, [pathname, refresh]);
 
   return (
     <div
@@ -45,7 +45,7 @@ function Layout({ children, location, title, breadcrumbs }) {
             marginBottom: '2.625rem',
           }}
         >
-          <Header base={homeLink} location={location} title={title} />
+          <Header base={homeLink} pathname={pathname} title={title} />
           <ReadModeToggle />
         </header>
         <Breadcrumbs
@@ -65,7 +65,7 @@ function Layout({ children, location, title, breadcrumbs }) {
 
 Layout.propTypes = {
   children: PropTypes.any,
-  location: PropTypes.object.isRequired,
+  pathname: PropTypes.string.isRequired,
   title: PropTypes.string,
   breadcrumbs: PropTypes.array,
 };

@@ -10,11 +10,11 @@ import { scale } from 'utils/typography';
  *
  * @param {*object} { location, title, base}
  */
-function Header({ location, title, base }) {
+function Header({ pathname, title, base }) {
   // eslint-disable-next-line no-undef
   const rootPath = `${__PATH_PREFIX__}${base}`;
 
-  if (location.pathname === rootPath) {
+  if (pathname === rootPath) {
     return (
       <h1
         style={{
@@ -61,7 +61,7 @@ function Header({ location, title, base }) {
 }
 
 Header.propTypes = {
-  location: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+  pathname: PropTypes.string.isRequired,
   title: PropTypes.string,
   base: PropTypes.string,
 };

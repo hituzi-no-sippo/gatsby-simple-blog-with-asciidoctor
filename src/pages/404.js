@@ -10,7 +10,7 @@ function NotFoundPage({ data, location }) {
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout pathname={location.pathname} title={siteTitle}>
       <SEO title={formatMessage('t404Title')} />
       <h1>{formatMessage('t404Title')}</h1>
       <p>{formatMessage('t404Content')}</p>

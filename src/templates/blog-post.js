@@ -19,7 +19,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
 
   return (
     <Layout
-      location={location}
+      pathname={location.pathname}
       title={data.site.siteMetadata.title}
       breadcrumbs={[{ text: post.document.title }]}
     >

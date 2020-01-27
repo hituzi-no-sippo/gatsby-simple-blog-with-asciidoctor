@@ -32,7 +32,11 @@ const TagsPage = ({
   const tTags = formatMessage('tTags');
 
   return (
-    <Layout location={location} title={title} breadcrumbs={[{ text: tTags }]}>
+    <Layout
+      pathname={location.pathname}
+      title={title}
+      breadcrumbs={[{ text: tTags }]}
+    >
       <aside>
         <Bio />
       </aside>

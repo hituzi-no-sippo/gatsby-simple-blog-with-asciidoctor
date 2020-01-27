@@ -13,7 +13,7 @@ function BlogIndex({ data, location, pageContext }) {
   const posts = data.allAsciidoc.edges;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout pathname={location.pathname} title={siteTitle}>
       <SEO
         title={formatMessage('tIndTitle')}
         keywords={formatMessage('taIndKeywords')}
