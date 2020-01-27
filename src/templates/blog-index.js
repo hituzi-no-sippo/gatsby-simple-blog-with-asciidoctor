@@ -6,33 +6,35 @@ import Bio from 'components/Bio';
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
 import PostAbbrev from 'components/PostAbbrev';
-import { useLang } from 'context/LanguageContext';
 import { formatMessage } from 'utils/i18n';
 
-function BlogIndex({ data, location }) {
+function BlogIndex({ data, location, pageContext }) {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allAsciidoc.edges;
 
-  const { lang, homeLink } = useLang();
-
-
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title={formatMessage('tIndTitle')} keywords={formatMessage('taIndKeywords')} />
+      <SEO
+        title={formatMessage('tIndTitle')}
+        keywords={formatMessage('taIndKeywords')}
+        slug={pageContext.slug}
+      />
       <aside>
         <Bio />
       </aside>
       <h4>
         {formatMessage('tfIndCountPosts', data.allAsciidoc.totalCount)}
         {' • '}
-        <Link to={`${homeLink}tags/`}>{formatMessage('tfTagsLink')}</Link>
+        <Link to={`${pageContext.slug}tags/`}>
+          {formatMessage('tfTagsLink')}
+        </Link>
       </h4>
       {posts.map(({ node }) => {
         const title = node.document.title || node.fields.slug;
         return (
           <PostAbbrev
-            lang={lang}
-            base={homeLink}
+            lang={pageContext.langKey}
+            base={pageContext.slug}
             key={node.fields.slug}
             slug={node.fields.slug}
             dateStr={node.revision.date}
@@ -57,6 +59,10 @@ function BlogIndex({ data, location }) {
 BlogIndex.propTypes = {
   data: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
+  pageContext: PropTypes.shape({
+    langKey: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 BlogIndex.defaultProps = {};

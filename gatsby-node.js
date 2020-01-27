@@ -39,11 +39,14 @@ function PageMaker(createPage) {
     createBlogIndex() {
       // Create index pages for all supported languages
       Object.keys(supportedLanguages).forEach(langKey => {
+        const slug = getBaseUrl(defaultLang, langKey);
+
         createPage({
-          path: getBaseUrl(defaultLang, langKey),
+          path: slug,
           component: blogIndex,
           context: {
             langKey,
+            slug,
           },
         });
       });
@@ -129,12 +132,15 @@ function PageMaker(createPage) {
 
         // Make tag pages
         tags.forEach(tag => {
+          const slug = `${getBaseUrl(defaultLang, langKey)}tags/${kebabCase(tag)}/`;
+
           createPage({
-            path: `${getBaseUrl(defaultLang, langKey)}tags/${kebabCase(tag)}/`,
+            path: slug,
             component: tagPage,
             context: {
               tag,
               langKey,
+              slug,
             },
           });
         });

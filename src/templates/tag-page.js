@@ -27,7 +27,7 @@ const TagPageTemplate = ({ pageContext, data, location }) => {
       title={siteTitle}
       breadcrumbs={[{ text: formatMessage('tTags'), url: `${homeLink}tags` }, { text: tag }]}
     >
-      <SEO title={tagHeader} description={tagHeader} />
+      <SEO title={tagHeader} description={tagHeader} slug={pageContext.slug} />
       <h1>{tagHeader}</h1>
       <main>
         {edges.map(({ node }) => {
@@ -63,6 +63,7 @@ const TagPageTemplate = ({ pageContext, data, location }) => {
 TagPageTemplate.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
   }).isRequired,
   data: PropTypes.shape({
     allAsciidoc: PropTypes.shape({

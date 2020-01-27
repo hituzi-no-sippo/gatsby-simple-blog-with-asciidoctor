@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.71.0
-:revdate: 2020-01-25T20:40:43+0900
-:revremark: Add log that organize section positions.
+:revnumber: v1.72.0
+:revdate: 2020-01-27T14:24:34+0900
+:revremark: Add log that add slug to `og:url` meta in index pages.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -45,7 +45,7 @@ ifndef::env-github[:icons: font]
 :gatsby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         gatsby-transformer-asciidoc^]
-== 0.4.0 (2020-01-25)
+== 0.4.0 (2020-01-27)
 
 === Breaking Changes
 
@@ -74,6 +74,7 @@ ifndef::env-github[:icons: font]
 * Profile picture link. (close link:{issues-url}/148[#148^])
 * `twitter:creator` in meta. (close link:{issues-url}/150[#150^])
 * Display article author. (close link:{issues-url}/151[#151^])
+* The slug to `og:url` meta in index pages. (close link:{issues-url}/163[#163^])
 
 ==== Update
 
