@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Utilities
 import { kebabCase } from 'utils/helpers';
 
-// Components
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 
@@ -13,13 +11,7 @@ import Tag from 'components/Tag';
 import Bio from 'components/Bio';
 import { useLang } from 'context/LanguageContext';
 import { formatMessage } from 'utils/i18n';
-
-const styles = {
-  tagListDiv: {
-    marginLeft: '1.5rem',
-    lineHeight: 3,
-  },
-};
+import { location as locationPropTypes } from 'utils/propTypes';
 
 const TagsPage = ({
   data: {
@@ -34,14 +26,18 @@ const TagsPage = ({
   const tTags = formatMessage('tTags');
 
   return (
-    <Layout location={location} title={title} breadcrumbs={[{ text: tTags }]}>
+    <Layout
+      pathname={location.pathname}
+      title={title}
+      breadcrumbs={[{ text: tTags }]}
+    >
       <aside>
         <Bio />
       </aside>
       <Helmet title={tTags} />
       <div>
         <h1>{tTags}</h1>
-        <div style={styles.tagListDiv}>
+        <div style={{ marginLeft: '1.5rem', lineHeight: 3, }}>
           {group.map(tag => (
             <Tag
               key={tag.fieldValue}
@@ -64,16 +60,16 @@ TagsPage.propTypes = {
           fieldValue: PropTypes.string.isRequired,
           totalCount: PropTypes.number.isRequired,
         }).isRequired,
-      ),
-    }),
+      ).isRequired,
+    }).isRequired,
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
         title: PropTypes.string.isRequired,
         lang: PropTypes.string.isRequired,
-      }),
-    }),
+      }).isRequired,
+    }).isRequired,
   }).isRequired,
-  location: PropTypes.object.isRequired,
+  location: locationPropTypes.isRequired,
 };
 
 export default TagsPage;

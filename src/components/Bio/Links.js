@@ -15,11 +15,11 @@ const Links = ()  => {
         {Object.entries(linksInBio).map(([displayText, url]) => {
           return (
             <a key={displayText}
-            href={url}
-            target="_blank"
-            rel="author external noopener noreferrer"
+              href={url}
+              target="_blank"
+              rel="author external noopener noreferrer"
             >
-            {displayText}
+              {displayText}
             </a>
           );
         })}
@@ -33,4 +33,4 @@ const Links = ()  => {
   );
 }
 
-export default Links
+export default Links;

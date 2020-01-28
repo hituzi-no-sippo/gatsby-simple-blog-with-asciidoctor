@@ -29,13 +29,13 @@ AccessoryInformations.propTypes = {
   dateStr: PropTypes.string.isRequired,
   timeToRead: PropTypes.number.isRequired,
   disqus: PropTypes.shape({
-    id: PropTypes.string,
-    title: PropTypes.string,
-    slug: PropTypes.string,
-    show: PropTypes.bool,
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    show: PropTypes.bool.isRequired,
   }).isRequired,
   author: PropTypes.shape({
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
     url: PropTypes.string,
     twitter: PropTypes.string,
   }).isRequired,

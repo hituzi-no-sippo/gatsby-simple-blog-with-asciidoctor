@@ -1,30 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {
+  articleQuery as articleQueryPropTypes,
+  translationsLink as translationsLinkPropTypes,
+} from 'utils/propTypes';
+
 import Header from './Header'
 import LightWeightMarkup from './LightweightMarkup'
 import Footer from './Footer'
 
-const Article = ({post, slug, translationsLink, languageContexts}) => {
+const Article = ({article, slug, translationsLink, homeUrl}) => {
   return (
     <article>
       <Header
-       post={post}
-       slug={slug}
-       translationsLink={translationsLink}
-       languageContexts={languageContexts}
+        article={article}
+        slug={slug}
+        translationsLink={translationsLink}
+        homeUrl={homeUrl}
       />
-      <LightWeightMarkup html={post.html}/>
-      <Footer post={post}/>
+      <LightWeightMarkup html={article.html}/>
+      <Footer article={article}/>
     </article>
   );
 }
 
 Article.propTypes = {
-  post: PropTypes.object.isRequired,
+  article: articleQueryPropTypes.isRequired,
   slug: PropTypes.string.isRequired,
-  translationsLink: PropTypes.array.isRequired,
-  languageContexts: PropTypes.object.isRequired,
+  translationsLink: translationsLinkPropTypes.isRequired,
+  homeUrl: PropTypes.string.isRequired,
 };
 
 export default Article;

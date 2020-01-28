@@ -1,6 +1,5 @@
 function formatReadingTime(minutes) {
   const cups = Math.round(minutes / 5);
-  // let bowls = 0;
   if (cups > 5) {
     return `${new Array(Math.round(cups / Math.E)).fill('🍱').join('')} ${minutes} min read`;
   }
@@ -9,7 +8,6 @@ function formatReadingTime(minutes) {
 
 function haveSameItem(arr1 = [], arr2 = []) {
   if (arr1 == null || arr2 == null) {
-    // false for no tags
     return false;
   }
   const s = new Set([...arr1, ...arr2]);

@@ -10,6 +10,12 @@ import { DisqusEmbed } from 'components/Disqus';
 import Article from 'components/Article';
 
 import { rhythm } from 'utils/typography';
+import {
+  articleQuery as articleQueryPropTypes,
+  createPagesQuery as createPagesQueryPropTypes,
+  translationsLink as translationsLinkPropTypes,
+  location as locationPropTypes,
+} from 'utils/propTypes';
 import { useLang } from 'context/LanguageContext';
 
 function BlogPostTemplate({ data, pageContext, location }) {
@@ -19,7 +25,7 @@ function BlogPostTemplate({ data, pageContext, location }) {
 
   return (
     <Layout
-      location={location}
+      pathname={location.pathname}
       title={data.site.siteMetadata.title}
       breadcrumbs={[{ text: post.document.title }]}
     >
@@ -33,10 +39,10 @@ function BlogPostTemplate({ data, pageContext, location }) {
         }}
       />
       <Article
-       post={post}
-       slug={pageContext.slug}
-       translationsLink={translationsLink}
-       languageContexts={languageContexts}
+        article={post}
+        slug={pageContext.slug}
+        translationsLink={translationsLink}
+        homeUrl={languageContexts.homeLink}
       />
 
       <RelativePosts
@@ -87,9 +93,25 @@ function BlogPostTemplate({ data, pageContext, location }) {
 }
 
 BlogPostTemplate.propTypes = {
-  data: PropTypes.object.isRequired,
-  pageContext: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        lang: PropTypes.string.isRequired
+      })
+    }).isRequired,
+    asciidoc: articleQueryPropTypes.isRequired,
+  }).isRequired,
+  pageContext: PropTypes.shape({
+    slug: PropTypes.string.isRequired,
+    previous: createPagesQueryPropTypes,
+    next: createPagesQueryPropTypes,
+    previousInSameTag: createPagesQueryPropTypes,
+    nextInSameTag: createPagesQueryPropTypes,
+    translationsLink: translationsLinkPropTypes.isRequired,
+  }).isRequired,
+  location: locationPropTypes.isRequired,
 };
 
 export default BlogPostTemplate;

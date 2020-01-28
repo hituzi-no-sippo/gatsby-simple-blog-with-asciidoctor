@@ -73,11 +73,7 @@ function LanguageBar({ lang: langKey }) {
 }
 
 LanguageBar.propTypes = {
-  lang: PropTypes.string,
-};
-
-LanguageBar.defaultProps = {
-  lang: 'en',
+  lang: PropTypes.string.isRequired,
 };
 
 const supportedLanguagesQuery = graphql`

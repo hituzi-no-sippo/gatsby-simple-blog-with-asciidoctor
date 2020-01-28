@@ -7,7 +7,7 @@ import AccessoryInformations from 'components/AccessoryInformations';
 
 import { rhythm } from 'utils/typography';
 
-import TagList from '../TagList';
+import TagList from './TagList';
 
 function PostAbbrev({
   slug,
@@ -35,7 +35,11 @@ function PostAbbrev({
   let tagsPart;
   if (tags) {
     tagsPart = (
-      <TagList style={{ margin: '0.5rem 0 -0.5rem -0.5rem' }} tags={tags} baseUrl={`${base}tags`} />
+      <TagList
+        style={{ margin: '0.5rem 0 -0.5rem -0.5rem' }}
+        tags={tags}
+        baseUrl={`${base}tags`}
+      />
     );
   }
 
@@ -75,26 +79,24 @@ function PostAbbrev({
 
 PostAbbrev.propTypes = {
   slug: PropTypes.string.isRequired,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   dateStr: PropTypes.string.isRequired,
   timeToRead: PropTypes.number.isRequired,
   excerpt: PropTypes.string,
   tags: PropTypes.array,
-  base: PropTypes.string,
+  base: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   showDisqus: PropTypes.bool.isRequired,
   author: PropTypes.shape({
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
     url: PropTypes.string,
     twitter: PropTypes.string,
   }).isRequired,
 };
 
 PostAbbrev.defaultProps = {
-  title: null,
   excerpt: null,
   tags: null,
-  base: '',
 };
 
 export default PostAbbrev;

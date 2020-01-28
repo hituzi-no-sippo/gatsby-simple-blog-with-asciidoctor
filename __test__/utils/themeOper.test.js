@@ -1,4 +1,4 @@
-import { themeOper } from '../../../src/utils/IIFE';
+import themeOper from '../../src/utils/themeOper';
 
 function initialize() {
   // mock

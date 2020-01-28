@@ -1,20 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import minimatch from 'minimatch';
 
 import { repository, articles } from 'config'
 
-const Footer = ({post}) => {
+import { articleQuery as articleQueryPropTypes, } from 'utils/propTypes';
+
+const Footer = ({article}) => {
   if (!(articles.dir && articles.filePath
       && (repository.url || articles.isOtherRepositroy))) {
     return null;
   }
 
   const filePath = (() => {
-    let value = post;
+    let value = article;
 
-    articles.filePath[post.internal.type].split('.').some(path => {
+    articles.filePath[article.internal.type].split('.').some(path => {
       value = Object.prototype.hasOwnProperty.call(value, path)
         ? value[path]
         : null;
@@ -52,7 +53,7 @@ const Footer = ({post}) => {
 }
 
 Footer.propTypes = {
-  post: PropTypes.object.isRequired,
+  article: articleQueryPropTypes.isRequired,
 };
 
 export default Footer;

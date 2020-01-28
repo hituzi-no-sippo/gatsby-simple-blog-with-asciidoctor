@@ -3,9 +3,19 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.72.0
-:revdate: 2020-01-27T14:24:34+0900
-:revremark: Add log that add slug to `og:url` meta in index pages.
+:revnumber: v1.73.0
+:revdate: 2020-01-28T13:27:43+0900
+:revremark: Add the following logs: + \
+            * Delete useles comments. + \
+            * Rename prop from `post` to `article` in `article` component. + \
+            * Change `languageContexts` to `homeUrl` of prop \
+              in `Article` component. + \
+            * Change `location` to `pathname` of prop \
+              in `Layout` component. + \
+            * Collect codes of `RelativePosts` component to one directory. + \
+            * Collect codes of `Layout` component to one directory. + \
+            * Rename file from `${component name}.js` to `index.js`. + \
+            * Update prop types.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -45,7 +55,7 @@ ifndef::env-github[:icons: font]
 :gatsby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         gatsby-transformer-asciidoc^]
-== 0.4.0 (2020-01-27)
+== 0.4.0 (2020-01-28)
 
 === Breaking Changes
 
@@ -115,6 +125,20 @@ ifndef::env-github[:icons: font]
 * `time` => `timeToRead`
 --
 * Collect `LanguageBar` component codes. (close link:{issues-url}/155[#155^])
+* Delete useless comments. (close link:{issues-url}/170[#170^])
+* Rename prop from `post` to `article` in `article` component.
+  (close link:{issues-url}/171[#171^])
+* Change `languageContexts` to `homeUrl` of prop in `Article` component.
+  (close link:{issues-url}/164[#164^])
+* Change `location` to `pathname` of prop in `Layout` component.
+  (close link:{issues-url}/172[#172^])
+* Collect codes of `RelativePosts` component to one directory.
+  (close link:{issues-url}/165[#165^])
+* Collect codes of `Layout` component to one directory.
+  (close link:{issues-url}/166[#166^])
+* Rename file from `${component name}.js` to `index.js`.
+  (close link:{issues-url}/167[#167^])
+* Update prop types. (close link:{issues-url}/168[#168^])
 
 === Docs
 
