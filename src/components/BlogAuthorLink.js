@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { author } from 'config'
 
 const BlogAuthorLink = ({children}) => {
-  return typeof author.url === 'string'
+  return /^http/.test(author.url)
     ? <a href={author.url}
         target="_blank"
         rel="author external noopener noreferrer">

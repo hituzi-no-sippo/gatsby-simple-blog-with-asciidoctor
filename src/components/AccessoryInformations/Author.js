@@ -14,14 +14,11 @@ const Author = ({name, url, twitter}) => {
     }
 
     const href = (() => {
-      const isValid  = (article, blog) =>
-        typeof article === 'string' && article !== blog
-
-      if (isValid(url, blogAuthor.url)) {
+      if (/^http/.test(url) && url !== blogAuthor.url) {
         return url;
       }
 
-      if (isValid(twitter, blogAuthor.twitter)) {
+      if (typeof twitter === 'string' && twitter !== blogAuthor.twitter) {
         return `https://twitter.com/${twitter}`
       }
 
