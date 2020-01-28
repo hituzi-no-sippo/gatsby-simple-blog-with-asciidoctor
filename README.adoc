@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.40.0
-:revdate: 2020-01-25T20:48:12+0900
-:revremark: Organize section positions
+:revnumber: v1.40.1
+:revdate: 2020-01-28T18:31:02+0900
+:revremark: Fix How to use section.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -584,12 +584,12 @@ eslint supported.
 
 == How to use
 
-[source, bash]
+[source, bash, subs="attributes"]
 ----
-npm install -g gatsby-cli
-
-gatsby new my-blog-folder {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
+git clone {repository-url} my-blog-folder
 cd my-blog-folder
+yarn
+yarn dev
 ----
 
 == How to deploy by Circle-CI in Medium.com

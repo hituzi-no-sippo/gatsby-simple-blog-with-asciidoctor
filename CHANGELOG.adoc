@@ -3,19 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.73.0
-:revdate: 2020-01-28T13:27:43+0900
-:revremark: Add the following logs: + \
-            * Delete useles comments. + \
-            * Rename prop from `post` to `article` in `article` component. + \
-            * Change `languageContexts` to `homeUrl` of prop \
-              in `Article` component. + \
-            * Change `location` to `pathname` of prop \
-              in `Layout` component. + \
-            * Collect codes of `RelativePosts` component to one directory. + \
-            * Collect codes of `Layout` component to one directory. + \
-            * Rename file from `${component name}.js` to `index.js`. + \
-            * Update prop types.
+:revnumber: v1.74.0
+:revdate: 2020-01-28T16:16:28+0900
+:revremark: Add log that fix How to use section in README.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -145,6 +135,8 @@ ifndef::env-github[:icons: font]
 * fix typo `pageAttributes.description` to `pageAttributes.disqus` in README.
   (close link:{issues-url}/125[#125^])
 * Organize section positions in README. (close link:{issues-url}/162[#162^])
+* Fix How to use section positions in README.
+  (close link:{issues-url}/174[#174^])
 
 === Chore
 
