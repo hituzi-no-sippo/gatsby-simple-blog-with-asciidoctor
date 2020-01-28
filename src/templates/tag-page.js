@@ -43,6 +43,7 @@ const TagPageTemplate = ({ pageContext, data, location }) => {
               dateStr={node.revision.date}
               timeToRead={node.timeToRead}
               title={title}
+              excerpt={node.document.description}
               id={node.id}
               showDisqus={node.pageAttributes.disqus !== false}
               author={{
@@ -76,6 +77,7 @@ TagPageTemplate.propTypes = {
           node: PropTypes.shape({
             document: PropTypes.shape({
               title: PropTypes.string.isRequired,
+              description: PropTypes.string,
             }).isRequired,
             fields: PropTypes.shape({
               slug: PropTypes.string.isRequired,
@@ -115,6 +117,7 @@ export const pageQuery = graphql`
           }
           document {
             title
+            description
           }
           revision {
             date

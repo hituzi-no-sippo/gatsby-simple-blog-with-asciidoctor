@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.40.2
-:revdate: 2020-01-28T18:32:23+0900
-:revremark: Fix twitter account url
+:revnumber: v1.41.0
+:revdate: 2020-01-28T19:01:01+0900
+:revremark: Add Tag Page section.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -537,6 +537,10 @@ Add home link between relative posts in article page.
 === Tag List position
 
 Change position in index to under the line starting from update date.
+
+=== Tag Page
+
+Add description of article in tag page.
 
 === Repository link in Footer
 

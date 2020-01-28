@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.76.0
-:revdate: 2020-01-28T19:03:43+0900
-:revremark: Add relation issue #176 \
-            to add profile picture and dispaly article author.
+:revnumber: v1.77.0
+:revdate: 2020-01-28T19:04:18+0900
+:revremark: Add log that add desciription of article in index of tag.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -80,6 +79,7 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/151[#151^], close link:{issues-url}/175[#175^]
    close link:{issues-url}/176[#176^])
 * The slug to `og:url` meta in index pages. (close link:{issues-url}/163[#163^])
+* Desciription of article in index of tag. (close link:{issues-url}/169[#169^])
 
 ==== Update
 
