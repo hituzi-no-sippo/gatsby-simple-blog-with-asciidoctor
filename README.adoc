@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.40.1
-:revdate: 2020-01-28T18:31:02+0900
-:revremark: Fix How to use section.
+:revnumber: v1.40.2
+:revdate: 2020-01-28T18:32:23+0900
+:revremark: Fix twitter account url
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -447,7 +447,7 @@ will be a link.
 |==========================================================
 |twitter|url    |href
 |N      |N      |Not link
-|Y      |N     m|\https://twitter.com/@{page-author-twitter}
+|Y      |N     m|\https://twitter.com/{page-author-twitter}
 |N      |Y   .2+|page-author-url
 |Y      |Y
 |==========================================================
