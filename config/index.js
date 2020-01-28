@@ -21,7 +21,7 @@ const site = {
 
 const supportedLanguages = {
   en: 'English',
-  'ja': '日本語',
+  ja: '日本語',
 };
 
 const repository = {
