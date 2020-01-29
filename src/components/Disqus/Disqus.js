@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { graphql, useStaticQuery } from 'gatsby';
 
-const Disqus = ({ identifier, title, slug, show, Component }) => {
+const Disqus = ({ identifier, title, slug, Component }) => {
   const {
     site: {
       siteMetadata: { siteUrl, disqusShortName },
@@ -21,7 +21,7 @@ const Disqus = ({ identifier, title, slug, show, Component }) => {
     `,
   );
 
-  if (!disqusShortName || !show) {
+  if (!disqusShortName) {
     return null;
   }
 
@@ -46,7 +46,6 @@ Disqus.propTypes = {
   identifier: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  show: PropTypes.bool.isRequired,
   Component: PropTypes.elementType.isRequired,
 };
 

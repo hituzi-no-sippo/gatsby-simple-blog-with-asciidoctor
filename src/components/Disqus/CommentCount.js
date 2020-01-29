@@ -6,7 +6,7 @@ import { CommentCount } from 'disqus-react';
 
 import Disqus from './Disqus';
 
-const  Embed = ({identifier, title, show, slug, prefix }) => {
+const  Embed = ({identifier, title, slug, prefix }) => {
   const CommentCountLink = ({shortname, config}) => {
     return (
       <>
@@ -32,7 +32,6 @@ const  Embed = ({identifier, title, show, slug, prefix }) => {
     <Disqus
       identifier={identifier}
       title={title}
-      show={show}
       slug={slug}
       Component={CommentCountLink}
     />
@@ -43,7 +42,6 @@ Embed.propTypes = {
   identifier: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  show: PropTypes.bool.isRequired,
   prefix: PropTypes.string.isRequired,
 }
 

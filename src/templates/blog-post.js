@@ -83,11 +83,13 @@ function BlogPostTemplate({ data, pageContext, location }) {
         </li>
       </ul>
 
-      <DisqusEmbed
-        identifier={post.id}
-        show={post.pageAttributes.disqus !== false}
-        title={post.document.title}
-        slug={pageContext.slug} />
+      {post.pageAttributes.disqus !== false &&
+        <DisqusEmbed
+          identifier={post.id}
+          title={post.document.title}
+          slug={pageContext.slug}
+        />
+      }
     </Layout>
   );
 }

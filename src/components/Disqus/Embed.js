@@ -5,12 +5,11 @@ import { DiscussionEmbed } from 'disqus-react';
 
 import Disqus from './Disqus';
 
-const  Embed = ({identifier, title, show, slug }) => {
+const Embed = ({identifier, title, slug }) => {
   return (
     <Disqus
       identifier={identifier}
       title={title}
-      show={show}
       slug={slug}
       Component={DiscussionEmbed}
     />
@@ -21,7 +20,6 @@ Embed.propTypes = {
   identifier: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  show: PropTypes.bool.isRequired,
 }
 
 export default Embed;

@@ -14,13 +14,14 @@ const AccessoryInformations = ({dateStr, timeToRead, disqus, author}) => {
     <>
       <Author {...author} />
       {formatDate(dateStr) + separatorMark + formatReadingTime(timeToRead)}
-      <DisqusCommentCount
-        identifier={disqus.id}
-        title={disqus.title}
-        slug={disqus.slug}
-        show={disqus.show}
-        prefix={separatorMark}
-      />
+      {disqus.show &&
+        <DisqusCommentCount
+          identifier={disqus.id}
+          title={disqus.title}
+          slug={disqus.slug}
+          prefix={separatorMark}
+        />
+      }
     </>
   );
 };

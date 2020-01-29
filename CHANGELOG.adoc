@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.77.0
-:revdate: 2020-01-28T19:04:18+0900
-:revremark: Add log that add desciription of article in index of tag.
+:revnumber: v1.78.0
+:revdate: 2020-01-29T15:53:26+0900
+:revremark: Add log that delete `show` of prop in `Disqus` component.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -45,7 +45,7 @@ ifndef::env-github[:icons: font]
 :gatsby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         gatsby-transformer-asciidoc^]
-== 0.4.0 (2020-01-28)
+== 0.4.0 (2020-01-29)
 
 === Breaking Changes
 
@@ -134,6 +134,8 @@ ifndef::env-github[:icons: font]
 * Rename file from `${component name}.js` to `index.js`.
   (close link:{issues-url}/167[#167^])
 * Update prop types. (close link:{issues-url}/168[#168^])
+* Delete `show` of prop in `Disqus` component.
+  (close link:{issues-url}/177[#177^], link:{issues-url}/133[#133^])
 
 === Docs
 

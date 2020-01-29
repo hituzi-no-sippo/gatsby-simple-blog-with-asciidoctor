@@ -67,6 +67,7 @@ Layout.propTypes = {
   children: PropTypes.arrayOf(PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
+    PropTypes.bool,
   ])).isRequired,
   pathname: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
