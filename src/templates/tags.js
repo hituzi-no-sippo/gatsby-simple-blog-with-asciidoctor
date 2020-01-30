@@ -54,6 +54,12 @@ const TagsPage = ({
 
 TagsPage.propTypes = {
   data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        lang: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
     allAsciidoc: PropTypes.shape({
       group: PropTypes.arrayOf(
         PropTypes.shape({
@@ -61,12 +67,6 @@ TagsPage.propTypes = {
           totalCount: PropTypes.number.isRequired,
         }).isRequired,
       ).isRequired,
-    }).isRequired,
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        lang: PropTypes.string.isRequired,
-      }).isRequired,
     }).isRequired,
   }).isRequired,
   location: locationPropTypes.isRequired,

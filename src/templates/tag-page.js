@@ -75,12 +75,25 @@ TagPageTemplate.propTypes = {
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            timeToRead: PropTypes.number.isRequired,
             document: PropTypes.shape({
               title: PropTypes.string.isRequired,
               description: PropTypes.string,
             }).isRequired,
+            author: PropTypes.shape({
+              fullName: PropTypes.string.isRequired,
+            }).isRequired,
             fields: PropTypes.shape({
               slug: PropTypes.string.isRequired,
+            }).isRequired,
+            revision: PropTypes.shape({
+              date: PropTypes.string.isRequired,
+            }).isRequired,
+            pageAttributes: PropTypes.shape({
+              disqus: PropTypes.bool,
+              author_twitter: PropTypes.string,
+              author_url: PropTypes.string,
             }).isRequired,
           }).isRequired,
         }).isRequired,
