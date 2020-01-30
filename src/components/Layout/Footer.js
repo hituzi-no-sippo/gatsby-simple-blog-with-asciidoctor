@@ -14,7 +14,7 @@ function Footer() {
       }}
     >
       <p>
-        Built with{' '}
+        Built with&nbsp;
         <a
           href={repository.url}
           target="_blank"

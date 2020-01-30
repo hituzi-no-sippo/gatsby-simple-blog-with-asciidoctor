@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.41.0
-:revdate: 2020-01-28T19:01:01+0900
-:revremark: Add Tag Page section.
+:revnumber: v1.42.0
+:revdate: 2020-01-29T17:34:22+0900
+:revremark: Update Footer section.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -542,8 +542,12 @@ Change position in index to under the line starting from update date.
 
 Add description of article in tag page.
 
-=== Repository link in Footer
+=== Footer
 
+.Text
+Update `Made of` to `Built with`.
+
+.Repository Link
 Used `repository` in `config/index.js`
 Doesn't displays link, if `url` is `undefined` or `displaysLink` is `false`.
 
