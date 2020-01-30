@@ -77,15 +77,15 @@ TagPageTemplate.propTypes = {
           node: PropTypes.shape({
             id: PropTypes.string.isRequired,
             timeToRead: PropTypes.number.isRequired,
-            document: PropTypes.shape({
-              title: PropTypes.string.isRequired,
-              description: PropTypes.string,
+            fields: PropTypes.shape({
+              slug: PropTypes.string.isRequired,
             }).isRequired,
             author: PropTypes.shape({
               fullName: PropTypes.string.isRequired,
             }).isRequired,
-            fields: PropTypes.shape({
-              slug: PropTypes.string.isRequired,
+            document: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+              description: PropTypes.string,
             }).isRequired,
             revision: PropTypes.shape({
               date: PropTypes.string.isRequired,
