@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.80.0
-:revdate: 2020-01-30T11:56:27+0900
-:revremark: Add log that fix `&#39;` to `'` in ensligh 404 message.
+:revnumber: v1.81.0
+:revdate: 2020-01-30T22:38:42+0900
+:revremark: Add log that set asciidoc attributes.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -45,7 +45,7 @@ ifndef::env-github[:icons: font]
 :gatsby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         gatsby-transformer-asciidoc^]
-== 0.4.0 (2020-01-29)
+== 0.4.0 (2020-01-30)
 
 === Breaking Changes
 
@@ -57,6 +57,7 @@ ifndef::env-github[:icons: font]
   Change default value of `enablesEmptyAttribute` to `false`.
 * Set article author name and E-mail to default asciidoc attributes.
   (close link:{issues-url}/149[#149^])
+* Set asciidoc attributes. (close link:{issues-url}/181[#181^])
 
 === Features
 

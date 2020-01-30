@@ -3,6 +3,26 @@ attributes:
   values:
     page-disqus@: true
 
+    doctype: article
+    showtitle: false
+
+    toc@: auto
+    toclevels@: 2
+    sectids@: ''
+    sectlinks@: ''
+    sectanchors@: ''
+    idprefix@: ''
+    idseparator@: '-'
+    '!sectnums@': null
+    sectnumlevels@: 3
+    '!example-caption@': null
+    '!figure-caption@': null
+    '!table-caption@': null
+    '!listing-caption@': null
+    xrefstyle@: full
+    icons@: font
+    experimental@: ''
+
   options:
     paths:
       dir-path-from-project: from.project.dir

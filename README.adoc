@@ -4,7 +4,7 @@
 :author: {author-name}
 :!email: {author-email}
 :revnumber: v1.42.0
-:revdate: 2020-01-29T17:34:22+0900
+:revdate: 2020-01-30T22:33:29+0900
 :revremark: Update Footer section.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
@@ -258,7 +258,7 @@ link:http://en.wikipedia.org/wiki/Salted_duck_egg[salted duck eggs, window=_blan
 2+h|Display text
 
 |gatsby-remark-prismjs
-|None. I want it too.
+|None. I want it too. link:{repository-url}/issues/180[#180^]
 
 |gatsby-remark-smartypants
 |None.
@@ -285,6 +285,119 @@ gatsby-source-filesystem^] is used so that the next files are not generated.
 * In `_includes` directory
 * `README.adoc`
 * `CHANGELOG.adoc`
+
+==== Set Attributes
+
+[%collapsible]
+====
+
+.Empty and Not set
+[cols=2, options="headers, autowidth"]
+|======================
+|Value    |Attribute
+|Empty   m|`showtitle`
+|Not set m|`!showtitle`
+|======================
+
+[discrete]
+===== Can not overwirte
+
+:doctype-link: link:{asciidoctor-user-manual-url}/#document-types[ \
+                    doctype^]
+:showtitle-link: link:{asciidoctor-user-manual-url}/#document-title-visibility[ \
+                      showtitle^]
+[cols=2, options="headers, autowidth"]
+|=========================
+|Attribute        |Value
+|{doctype-link}   |article
+|{showtitle-link} |Not set
+|=========================
+
+[discrete]
+===== Can be overwirtten
+
+The attributes of the page have priority.
+
+:toc-link: link:{asciidoctor-user-manual-url}/#manual-placement[ \
+                toc^]
+:toclevels-link: link:{asciidoctor-user-manual-url}/#user-toc-levels[ \
+                      toclevels^]
+.TOC
+[cols=2, options="headers, autowidth"]
+|=======================
+|Attribute        |Value
+|{toc-link}       |auto
+|{toclevels-link} |2
+|=======================
+
+:sectids-link: link:{asciidoctor-user-manual-url}/#auto-generated-ids[ \
+                      sectids^]
+:sectlinks-link: link:{asciidoctor-user-manual-url}/#links[ \
+                      sectlinks^]
+:sectanchors-link: link:{asciidoctor-user-manual-url}/#anchors[ \
+                        sectanchors^]
+:idprefix-link: link:{asciidoctor-user-manual-url}/#auto-generated-ids[ \
+                     idprfix^]
+:idseparator-link: link:{asciidoctor-user-manual-url}/#auto-generated-ids[ \
+                        idseparator^]
+.ID
+[cols=2, options="headers, autowidth"]
+|============================
+|Attribute             |Value
+|{sectids-link}     .4+|Empty
+|{sectlinks-link}
+|{sectanchors-link}
+|{idprefix-link}
+|{idseparator-link}    |-
+|============================
+
+:sectnums-link: link:{asciidoctor-user-manual-url}/#numbering[ \
+                      sectnums^]
+:sectnumlevels-link: link:{asciidoctor-user-manual-url}/#numbering-depth[ \
+                      sectnumlevels^]
+.Section
+[cols=2, options="headers, autowidth"]
+|=============================
+|Attribute            |Value
+|{sectnums-link}      |Not set
+|{sectnumlevels-link} |3
+|=============================
+
+:caption-description-url: {asciidoctor-user-manual-url}#customizing-labels
+:example-caption-link: link:{caption-description-url}[ \
+                            example-caption^]
+:figure-caption-link: link:{caption-description-url}[ \
+                           figure-caption^]
+:table-caption-link: link:{caption-description-url}[ \
+                           table-caption^]
+:listing-caption-link: link:{caption-description-url}[ \
+                            listing-caption^]
+.Caption
+[cols=2, options="headers, autowidth"]
+|===============================
+|Attribute                 |Value
+|{example-caption-link} .4+|Empty
+|{figure-caption-link}
+|{table-caption-link}
+|{listing-caption-link}
+|===============================
+
+:icons-link: link:{asciidoctor-user-manual-url}/#admonition-icons[ \
+                  icons^]
+:xrefstyle-link: link:{asciidoctor-user-manual-url}#customizing-the-cross-reference-text[ \
+                      xrefstyle^]
+:experimental-link: link:{asciidoctor-user-manual-url}#user-interface-macros[ \
+                         experimental^]
+.The Others
+|===========================
+|Attribute           |Value
+|{icons-link}        |font
+|{xrefstyle-link}    |full
+|{experimental-link} |Emptye
+|===========================
+
+// collapsible block close
+====
 
 === Asciidoctor Support to CSS
 
