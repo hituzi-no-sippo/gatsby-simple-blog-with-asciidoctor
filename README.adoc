@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.42.0
-:revdate: 2020-01-30T22:33:29+0900
-:revremark: Update Footer section.
+:revnumber: v1.43.0
+:revdate: 2020-01-31T01:06:44+0900
+:revremark: Add section that Set Attributes.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
