@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import minimatch from 'minimatch';
 
@@ -41,13 +42,24 @@ const Footer = ({article}) => {
   const articlesDir = `${articles.isOtherRepositroy ? 'https://github.com' : repository.url
     }/${articles.dir}`;
 
+  const GitHubLink = ({slug, text}) =>
+    <a href={`${articlesDir}/${slug}/master/${filePath}`}
+      target="_blank"
+      rel="external noopener noreferrer">
+      {text}
+    </a>
+
+  GitHubLink.propTypes = {
+    slug: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }
+
   return (
     <p>
-      <a href={`${articlesDir}/edit/master/${filePath}`}
-        target="_blank"
-        rel="noopener noreferrer">
-        Edit on GitHub
-      </a>
+      <GitHubLink slug="edit" text="Edit" />
+      &nbsp;•&nbsp;
+      <GitHubLink slug="commits" text="View history" />
+      &nbsp; in GitHub.
     </p>
   );
 }

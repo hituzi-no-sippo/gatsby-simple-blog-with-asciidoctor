@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.43.0
-:revdate: 2020-01-31T01:06:44+0900
-:revremark: Add section that Set Attributes.
+:revnumber: v1.44.0
+:revdate: 2020-02-04T14:05:53+0900
+:revremark: Add description of link that view history in GitHub.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -404,15 +404,15 @@ The attributes of the page have priority.
 Use this link:{github-url}/hitsuji-no-shippo/article-css-for-asciidoc/tree/30575534810dc487b6df82ba755943863340a271[
 git repository^].
 
-=== Link to edit article on GitHub
+=== Link that Edit / View history in GitHub
 
-You can add link to edit on GitHub into article footer. To add a link,
+You can add GitHub link into article footer. To add a link,
 you need to set `repository` and `articles` in `config/index.js`.
 The link is not displayed in the following cases.
 
 .Cases
 * `articles.dir` is `undefined`.
-* Field of `articles.filePath` doesn't exist.
+* The field of `articles.filePath` doesn't exist.
 * `articles.isOtherRepositroy` is `false` and
   `repository.url` is `undefined`.
 * Match with `articles.ignore` option.
@@ -456,7 +456,7 @@ articles: {
 |true
 |{github-url}
 
-.2+|/${articles.dir}/edit/master/${node[filePath]}
+.2+|/${articles.dir}/{edit \| commits}/master/${node[filePath]}
 
 |false
 |${repository.url}

@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.82.0
-:revdate: 2020-02-04T13:52:16+0900
-:revremark: Add log that \
-            remove `tFollowTwitterDescription` key in `config/locales/en.js`.
+:revnumber: v1.83.0
+:revdate: 2020-02-04T14:18:13+0900
+:revremark: Add log that Add link that view history in GitHub.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -187,6 +186,8 @@ ifndef::env-github[:icons: font]
 * `og:url` in meta. (close link:{issues-url}/115[#115])
 * rss support. (close link:{issues-url}/117[#117])
 * Link to tag list in index. (close link:{issues-url}/122[#122])
+* Link that view history in GitHub. (close link:{issues-url}/184[#184])
+  Into article footer.
 
 ==== Update
 
