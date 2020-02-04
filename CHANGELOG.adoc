@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.81.0
-:revdate: 2020-01-30T22:38:42+0900
-:revremark: Add log that set asciidoc attributes.
+:revnumber: v1.82.0
+:revdate: 2020-02-04T13:52:16+0900
+:revremark: Add log that \
+            remove `tFollowTwitterDescription` key in `config/locales/en.js`.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -140,6 +141,8 @@ ifndef::env-github[:icons: font]
 * Update prop types. (close link:{issues-url}/168[#168^])
 * Delete `show` of prop in `Disqus` component.
   (close link:{issues-url}/177[#177^], link:{issues-url}/133[#133^])
+* Remove `tFollowTwitterDescription` key in `config/locales/en.js`.
+  (close link:{issues-url}/183[#183^])
 
 === Docs
 

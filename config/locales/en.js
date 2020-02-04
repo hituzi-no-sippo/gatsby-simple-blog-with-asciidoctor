@@ -1,7 +1,6 @@
 module.exports = {
   tHome: 'Home',
   tRelativePosts: 'Relative Posts',
-  tFollowTwitterDescription: 'You should follow him on Twitter',
   tTags: 'Tags',
   tIndTitle: 'All posts',
   taIndKeywords: [`blog`, `gatsby`, `javascript`, `react`],
