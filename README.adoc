@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.44.0
-:revdate: 2020-02-04T14:05:53+0900
-:revremark: Add description of link that view history in GitHub.
+:revnumber: v1.44.1
+:revdate: 2020-02-07T14:26:48+0900
+:revremark: Fix first column style of table to header.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -93,7 +93,7 @@ disqus: true
 |===
 
 .Change fields
-[cols=2, options="headers, autowidth"]
+[cols=2, options="header, autowidth"]
 |===
 |Before (Markdown)
 |After (Asciidoc)
@@ -133,7 +133,7 @@ endif::env-github[]
 
 :asciidoctor-user-manual-url: https://asciidoctor.org/docs/user-manual
 .Deleted Plugins
-[cols="d,a", options="headers, autowidth"]
+[cols="d,a", options="header, autowidth"]
 |===
 |Name
 |Alternative
@@ -292,7 +292,7 @@ gatsby-source-filesystem^] is used so that the next files are not generated.
 ====
 
 .Empty and Not set
-[cols=2, options="headers, autowidth"]
+[cols=2, options="header, autowidth"]
 |======================
 |Value    |Attribute
 |Empty   m|`showtitle`
@@ -306,7 +306,7 @@ gatsby-source-filesystem^] is used so that the next files are not generated.
                     doctype^]
 :showtitle-link: link:{asciidoctor-user-manual-url}/#document-title-visibility[ \
                       showtitle^]
-[cols=2, options="headers, autowidth"]
+[cols=2, options="header, autowidth"]
 |=========================
 |Attribute        |Value
 |{doctype-link}   |article
@@ -323,7 +323,7 @@ The attributes of the page have priority.
 :toclevels-link: link:{asciidoctor-user-manual-url}/#user-toc-levels[ \
                       toclevels^]
 .TOC
-[cols=2, options="headers, autowidth"]
+[cols=2, options="header, autowidth"]
 |=======================
 |Attribute        |Value
 |{toc-link}       |auto
@@ -341,7 +341,7 @@ The attributes of the page have priority.
 :idseparator-link: link:{asciidoctor-user-manual-url}/#auto-generated-ids[ \
                         idseparator^]
 .ID
-[cols=2, options="headers, autowidth"]
+[cols=2, options="header, autowidth"]
 |============================
 |Attribute             |Value
 |{sectids-link}     .4+|Empty
@@ -356,7 +356,7 @@ The attributes of the page have priority.
 :sectnumlevels-link: link:{asciidoctor-user-manual-url}/#numbering-depth[ \
                       sectnumlevels^]
 .Section
-[cols=2, options="headers, autowidth"]
+[cols=2, options="header, autowidth"]
 |=============================
 |Attribute            |Value
 |{sectnums-link}      |Not set
@@ -373,7 +373,7 @@ The attributes of the page have priority.
 :listing-caption-link: link:{caption-description-url}[ \
                             listing-caption^]
 .Caption
-[cols=2, options="headers, autowidth"]
+[cols=2, options="header, autowidth"]
 |===============================
 |Attribute                 |Value
 |{example-caption-link} .4+|Empty
@@ -447,7 +447,7 @@ articles: {
 <1> Articles directory path from gatsby project root.
 
 .url
-[cols="m,2*d", options="headers, autowidth]
+[cols="m,2*d", options="header, autowidth]
 |===
 |isOtherRepositroy
 |URL to articles directory
@@ -515,7 +515,7 @@ Change value of the author name from `site.author` to `author.name` in
 `config/index.js`. The `authro` values are used as the default attributes in
 Asciidoc.
 
-[cols=4, options="headers, autowidht"]
+[cols=4, options="header, autowidht"]
 |============================================================
 |Key           |siteMetadata   |Asciidoc Attribute  |Required
 |name          |author         |author              |Yes
@@ -608,7 +608,7 @@ January  20, 2019:: January  20, 2019
     In the case of `7`, it is determined as follows.
 +
 --
-[cols=2, options="headers, autowidth"]
+[cols=2, options="header, autowidth"]
 |===================
 |Difficult      |New
 |an hour ago .4+|Yes
@@ -768,7 +768,7 @@ This project is licensed under the terms of the link:/LICENSE[MIT license].
 :font-awesome-github-repo-url: {github-url}/FortAwesome/Font-Awesome
 :dova-s-url: https://dova-s.jp
 :evericons-url: http://www.evericons.com
-[cols="d,d,a", options="headers, autowidth"]
+[cols="d,d,a", options="header, autowidth"]
 |===
 |Material
 |LICENSE

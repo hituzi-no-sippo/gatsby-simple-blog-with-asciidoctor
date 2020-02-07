@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.83.0
-:revdate: 2020-02-04T14:18:13+0900
-:revremark: Add log that Add link that view history in GitHub.
+:revnumber: v1.84.0
+:revdate: 2020-02-07T14:27:36+0900
+:revremark: Add log that fix first column style of table to header.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -45,7 +45,7 @@ ifndef::env-github[:icons: font]
 :gatsby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         gatsby-transformer-asciidoc^]
-== 0.4.0 (2020-01-30)
+== 0.4.0 (2020-02-07)
 
 === Breaking Changes
 
@@ -145,11 +145,15 @@ ifndef::env-github[:icons: font]
 
 === Docs
 
-* fix typo `pageAttributes.description` to `pageAttributes.disqus` in README.
+==== README
+
+* fix typo `pageAttributes.description` to `pageAttributes.disqus`.
   (close link:{issues-url}/125[#125^])
-* Organize section positions in README. (close link:{issues-url}/162[#162^])
-* Fix How to use section positions in README.
-  (close link:{issues-url}/174[#174^])
+* Organize section positions. (close link:{issues-url}/162[#162^])
+* Fix How to use section positions. (close link:{issues-url}/174[#174^])
+* Fix first column style of table to header.
+  (close link:{issues-url}/185[#185^])
+
 
 === Chore
 
