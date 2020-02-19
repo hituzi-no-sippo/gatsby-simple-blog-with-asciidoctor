@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.87.0
-:revdate: 2020-02-19T13:15:10+0900
-:revremark: Add relation issue #188 to set asciidoc attributes.
+:revnumber: v1.88.0
+:revdate: 2020-02-19T13:33:35+0900
+:revremark: Add log that block title color in dark theme.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -97,6 +97,7 @@ ifndef::env-github[:icons: font]
 * `Made of` to `Built with` of text in footer.
   (close link:{issues-url}/178[#178^])
 * Demo site url. (close link:{issues-url}/186[#186^])
+* Block title color in dark theme. (close link:{issues-url}/189[#189^])
 
 
 === Fix
