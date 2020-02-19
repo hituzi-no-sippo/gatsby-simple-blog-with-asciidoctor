@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.45.0
-:revdate: 2020-02-19T10:36:48+0900
-:revremark: Update demo site url
+:revnumber: v1.46.0
+:revdate: 2020-02-19T11:03:36+0900
+:revremark: Update asciidoctor examples link.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -45,7 +45,7 @@ image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d
 :demo-url: https://gatsby-simple-blog-with-asciidoctor-demo.netlify.com
 .Demo
 * link:{demo-url}[Home^]
-* link:{demo-url}/asciidoc-examples/[Asciidoc Examples^].
+* link:{demo-url}/asciidoctor-examples/[Asciidoctor Examples^].
 
 :github-url: https://github.com
 :repository-url: {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor

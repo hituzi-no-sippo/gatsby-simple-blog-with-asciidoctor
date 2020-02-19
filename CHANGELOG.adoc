@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.85.0
-:revdate: 2020-02-19T10:38:48+0900
-:revremark: Add log that update demo site url.
+:revnumber: v1.86.0
+:revdate: 2020-02-19T11:02:51+0900
+:revremark: Add log that update asciidoctor examples article.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -45,6 +45,7 @@ ifndef::env-github[:icons: font]
 :gatsby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         gatsby-transformer-asciidoc^]
+:sample-posts-for-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/sample-posts-with-asciidoc
 == 0.4.0 (2020-02-19)
 
 === Breaking Changes
@@ -95,6 +96,7 @@ ifndef::env-github[:icons: font]
 * `Made of` to `Built with` of text in footer.
   (close link:{issues-url}/178[#178^])
 * Demo site url. (close link:{issues-url}/186[#186^])
+
 
 === Fix
 
@@ -154,6 +156,14 @@ ifndef::env-github[:icons: font]
 * Fix How to use section positions. (close link:{issues-url}/174[#174^])
 * Fix first column style of table to header.
   (close link:{issues-url}/185[#185^])
+
+==== Sample Posts
+
+* link:{sample-posts-for-asciidoc-url}/issues/16[Asciidcotor examples article].
+  (close link:{issues-url}/187[#187^])
+  ** Move custome mark list.
+  ** Add wrap literal.
+  ** Fix title.
 
 
 === Chore
@@ -226,17 +236,16 @@ ifndef::env-github[:icons: font]
 
 === Docs
 
-:sample-articles-fro-asciidoctor-url: {hitsuji-no-shippo-github-profile-url}/sample-articles-for-asciidoctor
 * Add netlify status icon in README. (close link:{issues-url}/77[#77])
 * Add deploy to netlify icon in README. (close link:{issues-url}/78[#78])
 * Fix link for {gatsby-transformer-asciidoc-link}.
   (close link:{issues-url}/80[#80])
 * Make submodule from sample articles. (close link:{issues-url}/83[#83]) +
-  link:{sample-articles-fro-asciidoctor-url}/tree/bb4b82a2bf8817b7545cdf6f1b7e81cacb957a26[
+  link:{sample-posts-for-asciidoc-url}/tree/bb4b82a2bf8817b7545cdf6f1b7e81cacb957a26[
        submodule^]
 * Delete unnecessary image in sample articles.
   (close link:{issues-url}/87[#87]) +
-  link:{sample-articles-fro-asciidoctor-url}/commit/c56784f4acacec01c789c97499afbae651b0484a[
+  link:{sample-posts-for-asciidoc-url}/commit/c56784f4acacec01c789c97499afbae651b0484a[
         Relatin commit in submodule]
 * Fix description for repository link. (close link:{issues-url}/99[#99])
 
