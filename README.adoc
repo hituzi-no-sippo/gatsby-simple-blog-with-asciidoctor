@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.44.1
-:revdate: 2020-02-07T14:26:48+0900
-:revremark: Fix first column style of table to header.
+:revnumber: v1.45.0
+:revdate: 2020-02-19T10:36:48+0900
+:revremark: Update demo site url
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -42,7 +42,7 @@ ifndef::env-github[:icons: font]
 image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d/deploy-status[
       Netlify Status, link={netlify-app-url}/sites/lucid-bell-34419c/deploys]
 
-:demo-url: https://lucid-bell-34419c.netlify.com
+:demo-url: https://gatsby-simple-blog-with-asciidoctor-demo.netlify.com
 .Demo
 * link:{demo-url}[Home^]
 * link:{demo-url}/asciidoc-examples/[Asciidoc Examples^].

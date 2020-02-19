@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.84.0
-:revdate: 2020-02-07T14:27:36+0900
-:revremark: Add log that fix first column style of table to header.
+:revnumber: v1.85.0
+:revdate: 2020-02-19T10:38:48+0900
+:revremark: Add log that update demo site url.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -45,7 +45,7 @@ ifndef::env-github[:icons: font]
 :gatsby-transformer-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/gatsby-transformer-asciidoc
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         gatsby-transformer-asciidoc^]
-== 0.4.0 (2020-02-07)
+== 0.4.0 (2020-02-19)
 
 === Breaking Changes
 
@@ -94,6 +94,7 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/138[#138^])
 * `Made of` to `Built with` of text in footer.
   (close link:{issues-url}/178[#178^])
+* Demo site url. (close link:{issues-url}/186[#186^])
 
 === Fix
 

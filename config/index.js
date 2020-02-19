@@ -9,7 +9,8 @@ const site = {
   pathPrefix: '/',
   title: 'Gatsby Starter Blog',
   description: 'A starter blog with asciidoctor.',
-  siteUrl: 'https://lucid-bell-34419c.netlify.com',  // demo site url
+  // demo site url
+  siteUrl: 'https://gatsby-simple-blog-with-asciidoctor-demo.netlify.com',
   social : {
     twitter: author.twitter,
   },
