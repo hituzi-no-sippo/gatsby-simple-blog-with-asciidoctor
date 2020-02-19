@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.86.0
-:revdate: 2020-02-19T11:02:51+0900
-:revremark: Add log that update asciidoctor examples article.
+:revnumber: v1.87.0
+:revdate: 2020-02-19T13:15:10+0900
+:revremark: Add relation issue #188 to set asciidoc attributes.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -58,7 +58,8 @@ ifndef::env-github[:icons: font]
   Change default value of `enablesEmptyAttribute` to `false`.
 * Set article author name and E-mail to default asciidoc attributes.
   (close link:{issues-url}/149[#149^])
-* Set asciidoc attributes. (close link:{issues-url}/181[#181^])
+* Set asciidoc attributes. (
+  close link:{issues-url}/181[#181^], close link:{issues-url}/188[#188^])
 
 === Features
 

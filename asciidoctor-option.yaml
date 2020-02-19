@@ -22,6 +22,7 @@ attributes:
     xrefstyle@: full
     icons@: font
     experimental@: ''
+    '!prewrap@': null
 
   options:
     paths:
