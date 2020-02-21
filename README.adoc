@@ -3,11 +3,12 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.46.3
-:revdate: 2020-02-22T08:42:51+0900
-:revremark: Fix netlify status url.
+:revnumber: v1.46.4
+:revdate: 2020-02-22T08:44:32+0900
+:revremark: Replace gatsby-simple-blog-with-asciidoctor to \
+            `{doctitle}` attribute
 :doctype: article
-:description: gatsby-simple-blog-with-asciidoctor README
+:description: {doctitle} README
 :title:
 :title-separtor: :
 :showtitle:
@@ -42,7 +43,7 @@ ifndef::env-github[:icons: font]
 image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d/deploy-status[
   Netlify Status, link={netlify-app-url}/sites/{doctitle}-demo/deploys]
 
-:demo-url: https://gatsby-simple-blog-with-asciidoctor-demo.netlify.com
+:demo-url: https://{doctitle}-demo.netlify.com
 .Demo
 * link:{demo-url}[
   Home^]
@@ -50,7 +51,7 @@ image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d
   Asciidoctor Examples^].
 
 :github-url: https://github.com
-:repository-url: {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
+:repository-url: {github-url}/hitsuji-no-shippo/{doctitle}
 image:https://www.netlify.com/img/deploy/button.svg[
   Deploy to Netlify, link={netlify-app-url}/start/deploy?repository={repository-url}]
 
