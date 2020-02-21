@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.88.0
-:revdate: 2020-02-19T13:33:35+0900
-:revremark: Add log that block title color in dark theme.
+:revnumber: v1.89.0
+:revdate: 2020-02-21T17:09:18+0900
+:revremark: Add log that fix tag link.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -104,6 +104,7 @@ ifndef::env-github[:icons: font]
 
 * npm script. (close link:{issues-url}/161[#161^])
 * `&#39;` to `'` in ensligh 404 message. (close link:{issues-url}/179[#179^])
+* tag link. (close link:{issues-url}/190[#190^])
 
 === Refactor
 

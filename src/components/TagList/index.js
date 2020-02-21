@@ -3,6 +3,8 @@ import './TagList.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { kebabCase } from 'utils/helpers';
+
 import Tag from '../Tag';
 
 function TagList({ tags, baseUrl, ...restProps }) {
@@ -10,7 +12,7 @@ function TagList({ tags, baseUrl, ...restProps }) {
     <ul className="tag-ul" {...restProps}>
       {tags.map(text => (
         <li key={text}>
-          <Tag text={text} url={`${baseUrl}/${text}`} />
+          <Tag text={text} url={`${baseUrl}/${kebabCase(text)}/`} />
         </li>
       ))}
     </ul>
