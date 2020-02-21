@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.46.1
-:revdate: 2020-02-21T22:41:52+0900
-:revremark: Fix `sectids`, `idprefix`, `idseparator` attribute links.
+:revnumber: v1.46.2
+:revdate: 2020-02-21T23:25:00+0900
+:revremark: Add `target="_blank"` to links.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -40,25 +40,27 @@ ifndef::env-github[:icons: font]
 :netlify-app-url: https://app.netlify.com
 
 image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d/deploy-status[
-      Netlify Status, link={netlify-app-url}/sites/lucid-bell-34419c/deploys]
+  Netlify Status, link={netlify-app-url}/sites/lucid-bell-34419c/deploys]
 
 :demo-url: https://gatsby-simple-blog-with-asciidoctor-demo.netlify.com
 .Demo
-* link:{demo-url}[Home^]
-* link:{demo-url}/asciidoctor-examples/[Asciidoctor Examples^].
+* link:{demo-url}[
+  Home^]
+* link:{demo-url}/asciidoctor-examples/[
+  Asciidoctor Examples^].
 
 :github-url: https://github.com
 :repository-url: {github-url}/hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor
 image:https://www.netlify.com/img/deploy/button.svg[
-      Deploy to Netlify, link={netlify-app-url}/start/deploy?repository={repository-url}]
+  Deploy to Netlify, link={netlify-app-url}/start/deploy?repository={repository-url}]
 
 :base-repository-link: link:{github-url}/thundermiracle/gatsby-simple-blog/tree/d8537730b37fb08a2171a29ac9c5be3d6458b0bc[ \
-                            thundermiracle/gatsby-simple-blog 2019-09-14]
+  thundermiracle/gatsby-simple-blog 2019-09-14^]
 == Diffrences from {base-repository-link}
 
 :gatsby-transformer-asciidoc-url: {github-url}/hitsuji-no-shippo/gatsby-transformer-asciidoc/tree/v0.12.0
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
-                                        @hitsji_no_shippo/gatsby-transformer-asciidoc]
+  @hitsji_no_shippo/gatsby-transformer-asciidoc^]
 === Change to create article from markdown to asciidoc
 
 Create articles using asciidoc file. The files are transformed with
@@ -148,10 +150,12 @@ endif::env-github[]
 |
 
 .Display Images
-* {asciidoctor-user-manual-url}/#images[Images]
-* {asciidoctor-user-manual-url}/#setting-the-location-of-images[Setting the Location of Images]
+* {asciidoctor-user-manual-url}/#images[
+  Images^]
+* {asciidoctor-user-manual-url}/#setting-the-location-of-images[
+  Setting the Location of Images^]
 * link:{gatsby-transformer-asciidoc-url}#set-imagesdir[
-  Set imagesdir: @hitsuji_no_shippo/gatsby-transformer-asciidoc]
+  Set imagesdir: @hitsuji_no_shippo/gatsby-transformer-asciidoc^]
 ifdef::env-github[]
 +
 --
@@ -194,8 +198,10 @@ ifndef::env-github[]
 endif::env-github[]
 
 .Size & Link
-* {asciidoctor-user-manual-url}/#sizing-images[Size Images]
-* {asciidoctor-user-manual-url}/#summary-2[link]
+* {asciidoctor-user-manual-url}/#sizing-images[
+  Size Images^]
+* {asciidoctor-user-manual-url}/#summary-2[
+  link^]
 +
 --
 .Example
@@ -208,22 +214,26 @@ image:{url}[alt text, link={link-url}]
 
 |gatsby-remark-autolink-headers
 |
-
 :auto-generated-ids-url: {asciidoctor-user-manual-url}/#auto-generated-ids
-.link:{asciidoctor-user-manual-url}/#sections-summary[Sections Attributes Summary]
-* link:{auto-generated-ids-url}[`sectids` attribute]
-* link:{auto-generated-ids-url}[`idprefix` attribute]
-* link:{auto-generated-ids-url}[`idseparator` attribute]
-* link:{asciidoctor-user-manual-url}/#links[`sectanchors` attribute]
-* link:{asciidoctor-user-manual-url}/#anchors[`sectanchors` attributes]
-
-
+:block-title-link: link:{asciidoctor-user-manual-url}/#sections-summary[ \
+  Sections Attributes Summary^]
+.{block-title-link}
+* link:{auto-generated-ids-url}[
+  `sectids` attribute^]
+* link:{auto-generated-ids-url}[
+  `idprefix` attribute^]
+* link:{auto-generated-ids-url}[
+  `idseparator` attribute^]
+* link:{asciidoctor-user-manual-url}/#links[
+  `sectanchors` attribute^]
+* link:{asciidoctor-user-manual-url}/#anchors[
+  `sectanchors` attributes^]
 
 2+h|External materials
 
 |gatsby-remark-external-links
 |link:{asciidoctor-user-manual-url}/#link-macro-attributes[
-      window attribute in link macro.]
+  window attribute in link macro.^]
 
 .Macro examples
 [source, Asciidoc]
@@ -252,7 +262,7 @@ link:http://en.wikipedia.org/wiki/Salted_duck_egg[salted duck eggs, window=_blan
 
 |gatsby-remark-responsive-iframe
 |link:{asciidoctor-user-manual-url}/#youtube-and-vimeo-videos[
-       Youtube and vive can be embedded.]
+  Youtube and vive can be embedded.^]
 
 
 2+h|Display text
@@ -272,9 +282,9 @@ Therefore, the alternative may be wrong.
 
 .Change gatsby-plugin-i18n
 link:{github-url}/angeloocana/gatsby-plugin-i18n/tree/master/packages/gatsby-plugin-i18n[
-gatsby-plugin-i18n] doesn't support asciidoc. Therefore,it was changed to
+gatsby-plugin-i18n^] doesn't support asciidoc. Therefore,it was changed to
 link:{github-url}/hitsuji-no-shippo/gatsby-plugin-i18n/tree/add-support-for-other-lightweight-markup/packages/gatsby-plugin-i18n[
-@hitsuji_no_shippo/gatsby-plugin-i18n] that supports Asciidoc.
+@hitsuji_no_shippo/gatsby-plugin-i18n^] that supports Asciidoc.
 
 ==== Ignore `_includes` directory and README, CHANGELOG
 
@@ -303,9 +313,9 @@ gatsby-source-filesystem^] is used so that the next files are not generated.
 ===== Can not overwirte
 
 :doctype-link: link:{asciidoctor-user-manual-url}/#document-types[ \
-                    doctype^]
+  doctype^]
 :showtitle-link: link:{asciidoctor-user-manual-url}/#document-title-visibility[ \
-                      showtitle^]
+  showtitle^]
 [cols=2, options="header, autowidth"]
 |=========================
 |Attribute        |Value
@@ -319,9 +329,9 @@ gatsby-source-filesystem^] is used so that the next files are not generated.
 The attributes of the page have priority.
 
 :toc-link: link:{asciidoctor-user-manual-url}/#manual-placement[ \
-                toc^]
+  toc^]
 :toclevels-link: link:{asciidoctor-user-manual-url}/#user-toc-levels[ \
-                      toclevels^]
+  toclevels^]
 .TOC
 [cols=2, options="header, autowidth"]
 |=======================
@@ -331,15 +341,15 @@ The attributes of the page have priority.
 |=======================
 
 :sectids-link: link:{asciidoctor-user-manual-url}/#auto-generated-ids[ \
-                      sectids^]
+  sectids^]
 :sectlinks-link: link:{asciidoctor-user-manual-url}/#links[ \
-                      sectlinks^]
+  sectlinks^]
 :sectanchors-link: link:{asciidoctor-user-manual-url}/#anchors[ \
-                        sectanchors^]
+  sectanchors^]
 :idprefix-link: link:{asciidoctor-user-manual-url}/#auto-generated-ids[ \
-                     idprfix^]
+  idprfix^]
 :idseparator-link: link:{asciidoctor-user-manual-url}/#auto-generated-ids[ \
-                        idseparator^]
+  idseparator^]
 .ID
 [cols=2, options="header, autowidth"]
 |============================
@@ -352,9 +362,9 @@ The attributes of the page have priority.
 |============================
 
 :sectnums-link: link:{asciidoctor-user-manual-url}/#numbering[ \
-                      sectnums^]
+  sectnums^]
 :sectnumlevels-link: link:{asciidoctor-user-manual-url}/#numbering-depth[ \
-                      sectnumlevels^]
+  sectnumlevels^]
 .Section
 [cols=2, options="header, autowidth"]
 |=============================
@@ -365,13 +375,13 @@ The attributes of the page have priority.
 
 :caption-description-url: {asciidoctor-user-manual-url}#customizing-labels
 :example-caption-link: link:{caption-description-url}[ \
-                            example-caption^]
+  example-caption^]
 :figure-caption-link: link:{caption-description-url}[ \
-                           figure-caption^]
+  figure-caption^]
 :table-caption-link: link:{caption-description-url}[ \
-                           table-caption^]
+  table-caption^]
 :listing-caption-link: link:{caption-description-url}[ \
-                            listing-caption^]
+  listing-caption^]
 .Caption
 [cols=2, options="header, autowidth"]
 |===============================
@@ -383,11 +393,11 @@ The attributes of the page have priority.
 |===============================
 
 :icons-link: link:{asciidoctor-user-manual-url}/#admonition-icons[ \
-                  icons^]
+  icons^]
 :xrefstyle-link: link:{asciidoctor-user-manual-url}#customizing-the-cross-reference-text[ \
-                      xrefstyle^]
+  xrefstyle^]
 :experimental-link: link:{asciidoctor-user-manual-url}#user-interface-macros[ \
-                         experimental^]
+  experimental^]
 .The Others
 |===========================
 |Attribute           |Value
@@ -490,6 +500,7 @@ articles: {
 }
 ----
 
+
 === Links in Bio
 
 .Change points
@@ -525,10 +536,10 @@ Asciidoc.
 |shouldDisplay |Not use        |Not use             |No
 |============================================================
 
-:attributes-priority-description-link: link:{asciidoctor-user-manual-url}/#altering-the-attribute-assignment-precedence[ \
-                                            Page attributes take precedence^]
 [NOTE]
 ====
+:attributes-priority-description-link: link:{asciidoctor-user-manual-url}/#altering-the-attribute-assignment-precedence[ \
+  Page attributes take precedence^]
 .{attributes-priority-description-link}
 Page attributes take precedence because `@` is added to the end of the
 default asciidco attributes.
@@ -585,7 +596,7 @@ const dateDisplay = {
 }
 ----
 :moment-token-url: link:https://momentjs.com/docs/#/parsing/string-format/[ \
-                        token]
+  token^]
 <1> String using {moment-token-url}.
     In the case of `LL`, the date dispaly is as follows:
 +
@@ -667,14 +678,13 @@ Doesn't displays link, if `url` is `undefined` or `displaysLink` is `false`.
 .Default values
 [horizontal]
 url         :: {repository-url}
-name        :: gatsby-simple-blog-with-asciidoctor
+name        :: {doctitle}
 displaysLink:: true
 
 === Change element of blog entry
 
-Change to
-link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article[
-`article`]
+Change to link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article[
+`article`^].
 
 === SEO
 
@@ -716,7 +726,7 @@ yarn dev
 == How to deploy by Circle-CI in Medium.com
 
 link:https://medium.com/@thundermiracle/deploy-static-sites-to-netlify-by-circle-ci-ab51a0b59b73?source=friends_link&sk=095db82e2f8e8ef91d03a171f217e340[
-Medium.com -- Deploy Static Sites to Netlify by Circle-CI]
+Medium.com -- Deploy Static Sites to Netlify by Circle-CI^]
 
 == Configuration
 
@@ -742,7 +752,7 @@ Display language link in every post.
 +
 * overreacted design +
   link:https://overreacted.io/[
-  overreacted.io] lookings
+  overreacted.io^] lookings
 * Tags +
   Display articles in same tag.
 * Breadcrumbs +
@@ -760,53 +770,56 @@ Use disqus.com to enable comment.
 
 === This project
 
-This project is licensed under the terms of the link:/LICENSE[MIT license].
+This project is licensed under the terms of the link:/LICENSE[
+MIT license^].
 
 === Materials used
 
-:cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[CC0 1.0]
+:cc0-10-link: link:https://creativecommons.org/publicdomain/zero/1.0[ \
+  CC0 1.0^]
 :font-awesome-github-repo-url: {github-url}/FortAwesome/Font-Awesome
 :dova-s-url: https://dova-s.jp
 :evericons-url: http://www.evericons.com
-[cols="d,d,a", options="header, autowidth"]
+[cols="2*d,a", options="header, autowidth"]
 |===
 |Material
 |LICENSE
 |path
 
 |link:https://visualhunt.com/photo2/170504/[
-      Profile picture]
+ Profile picture^]
 |{cc0-10-link}
 |`content/assets/profile-pic.jpg`
 
 |link:{evericons-url}[
-      Language icon]
+ Language icon^]
 |{cc0-10-link}
 |`src/components/LangButton/IconLanguage.js`
 
 |link:{evericons-url}[
-      Theme icons]
+ Theme icons^]
 |{cc0-10-link}
 |
  * `src/components/Layout/ReadModeToggle/IconSun.js`
  * `src/components/Layout/ReadModeToggle/IconMoon.js`
 
 Resized from 24x24 to 16x16.
+
 |link:{evericons-url}[
-      Scroll up icon]
+ Scroll up icon^]
 |{cc0-10-link}
 |`src/components/Layout/ScrollUp.js`
 
 |link:{font-awesome-github-repo-url}[
-      Admonition icons]
+ Admonition icons^]
 |link:{font-awesome-github-repo-url}/#license[
-      CC BY 4.0 License]
+ CC BY 4.0 License^]
 |link:{font-awesome-github-repo-url}[
-      FortAwesome/Font-Awesome]
+ FortAwesome/Font-Awesome^]
 
 |link:{dova-s-url}/bgm/play5513.html[
-      Moon La]
+ Moon La^]
 |link:{dova-s-url}/_contents/license/[
-      SOUND LICENSE]
+ SOUND LICENSE^]
 |`static/audios/moon_la.mp3`
 |===
