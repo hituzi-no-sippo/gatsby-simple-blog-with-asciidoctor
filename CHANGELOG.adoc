@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.89.0
-:revdate: 2020-02-21T17:09:18+0900
-:revremark: Add log that fix tag link.
+:revnumber: v1.90.0
+:revdate: 2020-02-21T22:44:57+0900
+:revremark: Add log that \
+            fix `sectids`, `idprefix`, `idseparator` attribute links in README.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -159,6 +160,8 @@ ifndef::env-github[:icons: font]
 * Fix How to use section positions. (close link:{issues-url}/174[#174^])
 * Fix first column style of table to header.
   (close link:{issues-url}/185[#185^])
+* Fix `sectids`, `idprefix`, `idseparator` attribute links.
+  (close link:{issues-url}/191[#191^])
 
 ==== Sample Posts
 

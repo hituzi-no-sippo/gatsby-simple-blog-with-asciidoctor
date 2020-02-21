@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.46.0
-:revdate: 2020-02-19T11:03:36+0900
-:revremark: Update asciidoctor examples link.
+:revnumber: v1.46.1
+:revdate: 2020-02-21T22:41:52+0900
+:revremark: Fix `sectids`, `idprefix`, `idseparator` attribute links.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor README
 :title:
@@ -32,7 +32,7 @@ ifdef::env-github[]
 endif::[]
 ifndef::env-github[:icons: font]
 // Copyright
-:copyright-template: Copyright (c) 2019
+:copyright-template: Copyright (c) 2020
 :copyright: {copyright-template} {author-name}
 // Page Attributes
 :page-creation-date: 2019-12-03T15:47:28+0900
@@ -211,9 +211,9 @@ image:{url}[alt text, link={link-url}]
 
 :auto-generated-ids-url: {asciidoctor-user-manual-url}/#auto-generated-ids
 .link:{asciidoctor-user-manual-url}/#sections-summary[Sections Attributes Summary]
-* link:auto-generated-ids-url[`sectids` attribute]
-* link:auto-generated-ids-url[`idprefix` attribute]
-* link:auto-generated-ids-url[`idseparator` attribute]
+* link:{auto-generated-ids-url}[`sectids` attribute]
+* link:{auto-generated-ids-url}[`idprefix` attribute]
+* link:{auto-generated-ids-url}[`idseparator` attribute]
 * link:{asciidoctor-user-manual-url}/#links[`sectanchors` attribute]
 * link:{asciidoctor-user-manual-url}/#anchors[`sectanchors` attributes]
 
