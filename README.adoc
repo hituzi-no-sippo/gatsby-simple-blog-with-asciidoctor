@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.47.0
-:revdate: 2020-02-23T14:52:39+0900
-:revremark: add warning of netlify build command.
+:revnumber: v1.48.0
+:revdate: 2020-02-23T15:17:52+0900
+:revremark: add Articles Management section
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -50,7 +50,8 @@ image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d
   Asciidoctor Examples^].
 
 :github-url: https://github.com
-:repository-url: {github-url}/hitsuji-no-shippo/{doctitle}
+:github-profile-url: {github-url}/hitsuji-no-shippo
+:repository-url: {github-profile-url}/{doctitle}
 image:https://www.netlify.com/img/deploy/button.svg[
   Deploy to Netlify, link={netlify-app-url}/start/deploy?repository={repository-url}]
 
@@ -419,6 +420,19 @@ The attributes of the page have priority.
 Use this link:{github-url}/hitsuji-no-shippo/article-css-for-asciidoc/tree/30575534810dc487b6df82ba755943863340a271[
 git repository^].
 
+=== Articles Management
+
+There are two ways to articles management.
+
+:sample-articles-repository-name: sample-posts-with-asciidoc
+* Another repository (Default) +
+  Clone articles with npm scripts `clone-articles`.
+  The derault and sample articles repository is link:{github-profile-url}/{sample-articles-repository-name}[
+  hitsuji-no-shippo/{sample-articles-repository-name}^].
+
+* Same repository +
+  Need to delete npm script `clone-articles` and `content/blog` in `.gitignore`
+
 === Link that Edit / View history in GitHub
 
 You can add GitHub link into article footer. To add a link,
@@ -434,7 +448,7 @@ The link is not displayed in the following cases.
 
 ==== How to make url
 
-.Articles is other repository (submodule)
+.Articles is other repository
 [source, JavaScript]
 ----
 articles: {
@@ -447,7 +461,7 @@ articles: {
 
 [CAUTION]
 ====
-Nested submodules are not supported.
+Submodules are not supported.
 ====
 
 .Articles is same repository

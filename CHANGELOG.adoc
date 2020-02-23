@@ -3,9 +3,11 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.91.0
-:revdate: 2020-02-23T14:52:13+0900
-:revremark: Add log that add warning of netlify build command.
+:revnumber: v1.92.0
+:revdate: 2020-02-23T15:14:57+0900
+:revremark: Add log that \
+            change the way articles are cloned from another repository \
+            from git-submodule to npm-script.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -58,8 +60,10 @@ ifndef::env-github[:icons: font]
   Change default value of `enablesEmptyAttribute` to `false`.
 * Set article author name and E-mail to default asciidoc attributes.
   (close link:{issues-url}/149[#149^])
-* Set asciidoc attributes. (
-  close link:{issues-url}/181[#181^], close link:{issues-url}/188[#188^])
+* Set asciidoc attributes.
+  (close link:{issues-url}/181[#181^], close link:{issues-url}/188[#188^])
+* Change the way articles are cloned from another repository
+  from git-submodule to npm-script. (close link:{issues-url}/196[#196^])
 
 === Features
 

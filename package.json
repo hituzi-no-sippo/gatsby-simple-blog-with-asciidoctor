@@ -83,16 +83,18 @@
     "url": "github:hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor"
   },
   "scripts": {
+    "clone-articles": "ARTICLES_DIR='content/blog'; if [ ! -d $ARTICLES_DIR ]; then git clone https://github.com/hitsuji-no-shippo/sample-posts-with-asciidoc.git $ARTICLES_DIR; cd $ARTICLES_DIR; git submodule update --init --recursive; fi",
     "submodule": "git submodule update --init --recursive",
-    "build": "yarn run submodule && gatsby build",
+    "setup": "yarn run clone-articles && yarn run submodule",
+    "build": "yarn run setup && gatsby build",
     "build:gh": "gatsby build --prefix-paths",
-    "dev": "yarn run submodule && gatsby develop",
+    "dev": "yarn run setup && gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "yarn run dev",
     "serve": "gatsby serve",
     "eslint": "eslint .",
     "jest": "jest",
-    "test": "yarn run submodule && cross-env NODE_ENV=test yarn run eslint && cross-env NODE_ENV=test yarn run jest"
+    "test": "yarn run setup && cross-env NODE_ENV=test yarn run eslint && cross-env NODE_ENV=test yarn run jest"
   },
   "husky": {
     "hooks": {

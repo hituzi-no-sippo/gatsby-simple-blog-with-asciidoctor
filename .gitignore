@@ -135,3 +135,6 @@ public
 
 # TernJS port file
 .tern-port
+
+# Articles
+content/blog/
