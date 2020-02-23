@@ -9,7 +9,7 @@ import { articleQuery as articleQueryPropTypes, } from 'utils/propTypes';
 
 const Footer = ({article}) => {
   if (!(articles.dir && articles.filePath
-      && (repository.url || articles.isOtherRepositroy))) {
+      && (repository.url || articles.isAnotherRepository))) {
     return null;
   }
 
@@ -39,7 +39,7 @@ const Footer = ({article}) => {
     return null;
   }
 
-  const articlesDir = `${articles.isOtherRepositroy ? 'https://github.com' : repository.url
+  const articlesDir = `${articles.isAnotherRepository ? 'https://github.com' : repository.url
     }/${articles.dir}`;
 
   const GitHubLink = ({slug, text}) =>

@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.48.0
-:revdate: 2020-02-23T15:17:52+0900
-:revremark: add Articles Management section
+:revnumber: v1.49.0
+:revdate: 2020-02-23T15:31:20+0900
+:revremark: Fix other to another.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -442,18 +442,18 @@ The link is not displayed in the following cases.
 .Cases
 * `articles.dir` is `undefined`.
 * The field of `articles.filePath` doesn't exist.
-* `articles.isOtherRepositroy` is `false` and
+* `articles.isAnotherRepositroy` is `false` and
   `repository.url` is `undefined`.
 * Match with `articles.ignore` option.
 
 ==== How to make url
 
-.Articles is other repository
+.Articles is another repository
 [source, JavaScript]
 ----
 articles: {
   dir: 'hitsuji-no-shippo/sample-articles-for-asciidoctor',  // <1>
-  isOtherRepositroy: true
+  isAnotherRepositroy: true
   filePath: { Asciidoc: 'paths.from.source.full' },
 }
 ----
@@ -469,7 +469,7 @@ Submodules are not supported.
 ----
 articles: {
   dir: 'content/blog',  // <1>
-  isOtherRepositroy: false
+  isAnotherRepositroy: false
   filePath: { Asciidoc: 'paths.from.source.full' },
 }
 ----
@@ -478,7 +478,7 @@ articles: {
 .url
 [cols="m,2*d", options="header, autowidth]
 |===
-|isOtherRepositroy
+|isAnotherRepositroy
 |URL to articles directory
 |Mutual
 
