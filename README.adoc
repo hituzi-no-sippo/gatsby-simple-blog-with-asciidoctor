@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.46.4
-:revdate: 2020-02-22T08:44:32+0900
-:revremark: Replace gatsby-simple-blog-with-asciidoctor to \
-            `{doctitle}` attribute
+:revnumber: v1.47.0
+:revdate: 2020-02-23T14:52:39+0900
+:revremark: add warning of netlify build command.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -54,6 +53,11 @@ image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d
 :repository-url: {github-url}/hitsuji-no-shippo/{doctitle}
 image:https://www.netlify.com/img/deploy/button.svg[
   Deploy to Netlify, link={netlify-app-url}/start/deploy?repository={repository-url}]
+
+[WARNING]
+====
+Change the netlify build command from `gatsby build` to `yarn build`.
+====
 
 :base-repository-link: link:{github-url}/thundermiracle/gatsby-simple-blog/tree/d8537730b37fb08a2171a29ac9c5be3d6458b0bc[ \
   thundermiracle/gatsby-simple-blog 2019-09-14^]
