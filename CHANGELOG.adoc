@@ -3,11 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.93.0
-:revdate: 2020-02-23T15:32:05+0900
-:revremark: Add log that \
-            rename `articles.isOtherRepositroy` to `articles.isAnotherRepository`
-            in config.
+:revnumber: v1.94.0
+:revdate: 2020-02-23T22:39:26+0900
+:revremark: Add log that Update CI of CircleCI.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -183,6 +181,7 @@ ifndef::env-github[:icons: font]
 * Change url for submodule of sample articles.
   (close link:{issues-url}/123[#123])
 * Fix copyright in Hello World article. (close link:{issues-url}/152[#152])
+* Update CI of CircleCI. (close link:{issues-url}/198[#198^])
 
 
 == 0.3.0 (2020-01-11)
