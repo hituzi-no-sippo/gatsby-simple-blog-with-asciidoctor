@@ -35,7 +35,7 @@ const articles = {
   dir: 'hitsuji-no-shippo/sample-posts-with-asciidoc',
   isAnotherRepository: true,
   filePath: { Asciidoc: 'paths.from.source.full' },
-  ignore: ['asciidoc-examples/**/*.adoc'],
+  ignore: ['asciidoctor-examples/**/*.adoc'],
 };
 
 const linksInBio = {
