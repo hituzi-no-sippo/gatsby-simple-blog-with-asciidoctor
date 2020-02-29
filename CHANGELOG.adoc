@@ -3,9 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.97.0
-:revdate: 2020-02-29T16:36:59+0900
-:revremark: Add log that add gatsby-plugin-cache-links.
+:revnumber: v1.97.1
+:revdate: 2020-02-29T16:57:39+0900
+:revremark: Add log that use environment variables to determine which \
+            articles repository to clone
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -105,7 +106,6 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/138[#138^])
 * `Made of` to `Built with` of text in footer.
   (close link:{issues-url}/178[#178^])
-* Demo site url. (close link:{issues-url}/186[#186^])
 * Block title color in dark theme. (close link:{issues-url}/189[#189^])
 
 
@@ -177,6 +177,7 @@ ifndef::env-github[:icons: font]
 
 ==== Demo
 
+* Demo site url. (close link:{issues-url}/186[#186^])
 * link:{sample-posts-for-asciidoc-url}/issues/16[Asciidcotor examples article].
   (close link:{issues-url}/187[#187^])
   ** Move custome mark list.
