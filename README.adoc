@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.49.0
-:revdate: 2020-02-23T15:31:20+0900
-:revremark: Fix other to another.
+:revnumber: v1.50.0
+:revdate: 2020-02-29T16:01:55+0900
+:revremark: Add Delete `./deploy` Directory section.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -60,7 +60,8 @@ image:https://www.netlify.com/img/deploy/button.svg[
 Change the netlify build command from `gatsby build` to `yarn build`.
 ====
 
-:base-repository-link: link:{github-url}/thundermiracle/gatsby-simple-blog/tree/d8537730b37fb08a2171a29ac9c5be3d6458b0bc[ \
+:base-repository-link-template: link:{github-url}/thundermiracle/gatsby-simple-blog/tree/d8537730b37fb08a2171a29ac9c5be3d6458b0bc
+:base-repository-link: {base-repository-link-template}[ \
   thundermiracle/gatsby-simple-blog 2019-09-14^]
 == Diffrences from {base-repository-link}
 
@@ -723,8 +724,11 @@ Change to link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article
   `siteMetadata.social.twitter`.
 ====
 --
-+
 
+== Delete `./deploy` Directory
+
+Delete {base-repository-link-template}/deploy[
+./deploy^].
 
 == Description
 

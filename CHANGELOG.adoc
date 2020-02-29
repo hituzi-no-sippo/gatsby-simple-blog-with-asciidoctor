@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.94.0
-:revdate: 2020-02-23T22:39:26+0900
-:revremark: Add log that Update CI of CircleCI.
+:revnumber: v1.95.0
+:revdate: 2020-02-29T16:07:25+0900
+:revremark: Add log that delete `./deploy` directory.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -46,7 +46,7 @@ ifndef::env-github[:icons: font]
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         gatsby-transformer-asciidoc^]
 :sample-posts-for-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/sample-posts-with-asciidoc
-== 0.4.0 (2020-02-23)
+== 0.4.0 (2020-02-29)
 
 === Breaking Changes
 
@@ -64,6 +64,7 @@ ifndef::env-github[:icons: font]
   from git-submodule to npm-script. (close link:{issues-url}/196[#196^])
 * Rename `articles.isOtherRepositroy` to `articles.isAnotherRepository`
   in config. (close link:{issues-url}/197[#197^])
+* Delete `./deploy` directory. (close link:{issues-url}/205[#205^])
 
 === Features
 
