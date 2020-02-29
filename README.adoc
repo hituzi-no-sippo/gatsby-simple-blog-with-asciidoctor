@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch docs/update-demo-and-README v1.0.0 (Base v1.50.0)
-:revdate: 2020-02-29T16:17:41+0900
-:revremark: Make image link opne to new window.
+:revnumber: Branch docs/update-demo-and-README v1.0.1 (Base v1.50.0)
+:revdate: 2020-02-29T16:21:21+0900
+:revremark: The table of delete plugins is easier to see.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -145,14 +145,15 @@ read.*
 endif::env-github[]
 
 :asciidoctor-user-manual-url: https://asciidoctor.org/docs/user-manual
-.Deleted Plugins
+===== Deleted Plugins
+
+====== Link to Material
+
+.Local Material
 [cols="d,a", options="header, autowidth"]
 |===
 |Name
 |Alternative
-
-2+h|Link to materials
-2+h|Local materials
 
 |gatsby-remark-copy-linked-files
 |None
@@ -239,8 +240,13 @@ image:{url}[alt text, link={link-url}]
   `sectanchors` attribute^]
 * link:{asciidoctor-user-manual-url}/#anchors[
   `sectanchors` attributes^]
+|===
 
-2+h|External materials
+.External Material
+[cols="d,a", options="header, autowidth"]
+|===
+|Name
+|Alternative
 
 |gatsby-remark-external-links
 |link:{asciidoctor-user-manual-url}/#link-macro-attributes[
@@ -274,9 +280,14 @@ link:http://en.wikipedia.org/wiki/Salted_duck_egg[salted duck eggs, window=_blan
 |gatsby-remark-responsive-iframe
 |link:{asciidoctor-user-manual-url}/#youtube-and-vimeo-videos[
   Youtube and vive can be embedded.^]
+|===
 
+====== Display Text
 
-2+h|Display text
+[cols="d,a", options="header, autowidth"]
+|===
+|Name
+|Alternative
 
 |gatsby-remark-prismjs
 |None. I want it too. link:{repository-url}/issues/180[#180^]
@@ -290,6 +301,8 @@ link:http://en.wikipedia.org/wiki/Salted_duck_egg[salted duck eggs, window=_blan
 I don't know much about the plugins above.
 Therefore, the alternative may be wrong.
 ====
+
+===== Change plugin
 
 .Change gatsby-plugin-i18n
 link:{github-url}/angeloocana/gatsby-plugin-i18n/tree/master/packages/gatsby-plugin-i18n[
