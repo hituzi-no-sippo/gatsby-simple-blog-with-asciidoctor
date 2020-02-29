@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.50.0
-:revdate: 2020-02-29T16:01:55+0900
-:revremark: Add Delete `./deploy` Directory section.
+:revnumber: Branch docs/update-demo-and-README v1.0.0 (Base v1.50.0)
+:revdate: 2020-02-29T16:17:41+0900
+:revremark: Make image link opne to new window.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -40,7 +40,9 @@ ifndef::env-github[:icons: font]
 :netlify-app-url: https://app.netlify.com
 
 image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d/deploy-status[
-  Netlify Status, link={netlify-app-url}/sites/{doctitle}-demo/deploys]
+  Netlify Status,
+  link={netlify-app-url}/sites/{doctitle}-demo/deploys,
+  window=_blank]
 
 :demo-url: https://{doctitle}-demo.netlify.com
 .Demo
@@ -53,7 +55,9 @@ image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d
 :github-profile-url: {github-url}/hitsuji-no-shippo
 :repository-url: {github-profile-url}/{doctitle}
 image:https://www.netlify.com/img/deploy/button.svg[
-  Deploy to Netlify, link={netlify-app-url}/start/deploy?repository={repository-url}]
+  Deploy to Netlify,
+  link={netlify-app-url}/start/deploy?repository={repository-url},
+  window=_blank]
 
 [WARNING]
 ====

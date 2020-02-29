@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: Branch docs/update-demo-and-README v1.0.0 (Base v1.95.0)
-:revdate: 2020-02-29T16:14:31+0900
-:revremark: Add log that Make `linksInBio` use `author` in `cofig/index.js`.
+:revnumber: Branch docs/update-demo-and-README v1.1.0 (Base v1.95.0)
+:revdate: 2020-02-29T16:17:08+0900
+:revremark: Add log that make image link open to a new window in README.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -167,6 +167,7 @@ ifndef::env-github[:icons: font]
 * Fix `sectids`, `idprefix`, `idseparator` attribute links.
   (close link:{issues-url}/191[#191^])
 * Add warning of netlify build command. (close link:{issues-url}/195[#195^])
+* Make image link open to a new window. (close link:{issues-url}/203[#203^])
 
 ==== Demo
 
