@@ -3,13 +3,14 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.53.0
-:revdate: 2020-02-29T21:40:51+0900
-:revremark: Change the method to determine clone url of articles repositroy.
+:revnumber: v1.54.0
+:revdate: 2020-03-01T01:09:22+0900
+:revremark: Add section that Add GitHub Actions.
 :doctype: article
 :description: {doctitle} README
 :title:
 :title-separtor: :
+:experimental:
 :showtitle:
 :!sectnums:
 :sectids:
@@ -38,7 +39,14 @@ ifndef::env-github[:icons: font]
 :page-creation-date: 2019-12-03T15:47:28+0900
 // Variables
 :netlify-app-url: https://app.netlify.com
+:github-url: https://github.com
+:github-profile-url: {github-url}/hitsuji-no-shippo
+:repository-url: {github-profile-url}/{doctitle}
 
+image:{repository-url}/workflows/netlify-deploy/badge.svg[
+  GitHub Actions Status,
+  link={repository-url}/actions?query=workflow%3Anetlify-deploy,
+  window=_blank]
 image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d/deploy-status[
   Netlify Status,
   link={netlify-app-url}/sites/{doctitle}-demo/deploys,
@@ -51,9 +59,6 @@ image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d
 * link:{demo-url}/asciidoctor-examples/[
   Asciidoctor Examples^].
 
-:github-url: https://github.com
-:github-profile-url: {github-url}/hitsuji-no-shippo
-:repository-url: {github-profile-url}/{doctitle}
 image:https://www.netlify.com/img/deploy/button.svg[
   Deploy to Netlify,
   link={netlify-app-url}/start/deploy?repository={repository-url},
@@ -71,6 +76,11 @@ image:https://www.netlify.com/img/deploy/button.svg[
 build command:: `yarn build`
 environment variable:: Add `$ARTICLES_REPOSITORY`.
                        The value is {sample-articles-repository-link}.
+====
+
+[IMPORTANT]
+====
+I'm an English leanear. Issues with README fixes are also welcome.
 ====
 
 :base-repository-link-template: link:{github-url}/thundermiracle/gatsby-simple-blog/tree/d8537730b37fb08a2171a29ac9c5be3d6458b0bc
@@ -747,10 +757,45 @@ Change to link:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article
 ====
 --
 
-== Delete `./deploy` Directory
+=== Add GitHub Actions
+
+:netlify-deploy-workflow-link-template: link:/.github/workflows/netlify-deploy.yml
+:netlify-link: link:https://www.netlify.com[ \
+  Netlify^]
+:netlify-authentication-url: https://docs.netlify.com/cli/get-started#authentication
+:github-actions-docs-link-template: link:https://help.github.com/en/actions
+
+Add a {netlify-deploy-workflow-link-template}[
+workflow^] to {netlify-link} to deploy.
+The workflow trigger is {github-actions-docs-link-template}/reference/events-that-trigger-workflows#push-event-push[
+commit pushed^].
+
+==== Secrets
+
+.Must set secrets
+[horizontal]
+NETLIFY_AUTH_TOKEN::
+  link:{netlify-authentication-url}[
+  How to obtain a token^].
+NETLIFY_SITE_ID::
+  link:{netlify-authentication-url}[
+  site id in Site information, displayed by click
+  menu:Deploy site[Site settings or Settings > Site details]^].
+
+{github-actions-docs-link-template}/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets[
+How to creating encrypted secrets^].
+
+==== Deploy Message
+
+Netlify deploy message is commit message that triggerd.
+If the commit message cant't be fetched,
+the message is `commit sha is ${commit SHA}`.
+
+=== Delete `./deploy` Directory
 
 Delete {base-repository-link-template}/deploy[
 ./deploy^].
+
 
 == Description
 

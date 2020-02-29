@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.99.0
-:revdate: 2020-02-29T20:56:26+0900
-:revremark: Add log that use environment variables to determine which \
-            articles repository to clone.
+:revnumber: v1.100.0
+:revdate: 2020-03-01T01:02:29+0900
+:revremark: Add log that add GitHub Action of deploy to Netlify.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -47,7 +46,7 @@ ifndef::env-github[:icons: font]
 :gatsby-transformer-asciidoc-link: link:{gatsby-transformer-asciidoc-url}[ \
                                         gatsby-transformer-asciidoc^]
 :sample-posts-for-asciidoc-url: {hitsuji-no-shippo-github-profile-url}/sample-posts-with-asciidoc
-== 0.4.0 (2020-02-29)
+== 0.4.0 (2020-03-01)
 
 === Breaking Changes
 
@@ -95,6 +94,7 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/199[#199^]) +
   Use link:{github-url}/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-catch-links[
   gatsby-plugin-catch-links^].
+* GitHub Action of deploy to Netlify. (close link:{issues-url}/201[#201^])
 
 ==== Update
 

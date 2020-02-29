@@ -1,0 +1,116 @@
+name: netlify-deploy
+
+on: push
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Cache Node.js modules
+      uses: actions/cache@v1
+      with:
+        path: ./node_modules
+        key: ${{ runner.OS }}-npm-${{ hashFiles('**/yarn.lock') }}
+    - name: Install dependencies
+      run: yarn --frozen-lockfile
+    - name: test
+      run: yarn test
+      env:
+        ARTICLES_REPOSITORY: hitsuji-no-shippo/sample-posts-with-asciidoc
+        CI: true
+
+  build:
+    needs: test
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Cache Node.js modules
+      uses: actions/cache@v1
+      with:
+        path: ./node_modules
+        key: ${{ runner.OS }}-npm-${{ hashFiles('**/yarn.lock') }}
+    - name: Install dependencies
+      run: yarn --frozen-lockfile
+    - name: build
+      run: yarn build
+      env:
+        ARTICLES_REPOSITORY: hitsuji-no-shippo/sample-posts-with-asciidoc
+        CI: true
+    - name: Upload public
+      if: matrix.node-version == '12.x'
+      uses: actions/upload-artifact@v1
+      with:
+        name: public
+        path: public
+
+
+  deploy:
+    needs: [test, build]
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - name: Validate netlify environment variable
+      run: |
+        if [[ ! (${NETLIFY_AUTH_TOKEN} && ${NETLIFY_SITE_ID}) ]]; then
+          echo \
+            "secrets.NETLIFY_AUTH_TOKEN or secrets.NETLIFY_SITE_ID is unset." >&2
+          exit 1
+        fi
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+    - name: Declare COMNMIT_MESSAGE environment variable
+      run: |
+        declare -r commit_message=$(
+          curl https://api.github.com/repos/$GITHUB_REPOSITORY/git/commits/$GITHUB_SHA \
+          --connect-timeout 180 \
+          | jq -r .message)
+        echo "::set-env name=COMMIT_MESSAGE::$(echo ${commit_message})"
+    - name: Declare DEPLOY_MESSAGE environment variable
+      run: |
+        declare -r deploy_message=$(
+          [[ "${COMMIT_MESSAGE}" = "" || "${COMMIT_MESSAGE}" = "Not Found" ]] \
+          && echo "commit SHA is ${GITHUB_SHA}" || echo "${COMMIT_MESSAGE}")
+        echo "::set-env name=DEPLOY_MESSAGE::$(echo ${deploy_message})"
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Download public
+      uses: actions/download-artifact@v1
+      with:
+        name: public
+    - name: Netlify Deploy
+      run: |
+        yarn add netlify-cli
+        yarn netlify deploy -p -d=./public -m="${DEPLOY_MESSAGE}"
+      timeout-minutes: 15
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
