@@ -45,6 +45,7 @@ module.exports = {
         name: `assets`,
       },
     },
+    'gatsby-plugin-catch-links',
     {
       resolve: `@hitsuji_no_shippo/gatsby-transformer-asciidoc`,
       options: {

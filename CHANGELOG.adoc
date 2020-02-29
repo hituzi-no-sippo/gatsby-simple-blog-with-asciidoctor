@@ -3,13 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.96.0
-:revdate: 2020-02-29T16:35:07+0900
-:revremark: Add the following logs: + \
-            * Make `linksInBio` use `author` in `cofig/index.js`. + \
-            * Make image link open to a new window.  + \
-            * Make the table of delete plugins easy to see.
-:revremark: Add log that make the table of delete plugins easy to see.
+:revnumber: v1.97.0
+:revdate: 2020-02-29T16:36:59+0900
+:revremark: Add log that add gatsby-plugin-cache-links.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -92,6 +88,10 @@ ifndef::env-github[:icons: font]
    close link:{issues-url}/176[#176^])
 * The slug to `og:url` meta in index pages. (close link:{issues-url}/163[#163^])
 * Desciription of article in index of tag. (close link:{issues-url}/169[#169^])
+* Replace local link behavior in article with gatsby-link.
+  (close link:{issues-url}/199[#199^]) +
+  Use link:{github-url}/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-catch-links[
+  gatsby-plugin-catch-links^].
 
 ==== Update
 

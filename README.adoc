@@ -3,11 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.50.1
-:revdate: 2020-02-29T16:34:17+0900
-:revremark: Add the following logs: + \
-            * Make image link opne to new window + \
-            * The table of delete plugins is easier to see.
+:revnumber: v1.51.0
+:revdate: 2020-02-29T16:36:22+0900
+:revremark: Add section of Replace Local Link behavior in Articles.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -312,9 +310,10 @@ gatsby-plugin-i18n^] doesn't support asciidoc. Therefore,it was changed to
 link:{github-url}/hitsuji-no-shippo/gatsby-plugin-i18n/tree/add-support-for-other-lightweight-markup/packages/gatsby-plugin-i18n[
 @hitsuji_no_shippo/gatsby-plugin-i18n^] that supports Asciidoc.
 
+:official-gatsby-pluings-dir-github-url: {github-url}/gatsbyjs/gatsby/tree/master/packages
 ==== Ignore `_includes` directory and README, CHANGELOG
 
-The `ignore` option in link:{github-url}/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem[
+The `ignore` option in link:{official-gatsby-pluings-dir-github-url}/gatsby-source-filesystem[
 gatsby-source-filesystem^] is used so that the next files are not generated.
 
 .Ignore ascidoc files
@@ -583,6 +582,14 @@ Asciidoc.
 Page attributes take precedence because `@` is added to the end of the
 default asciidco attributes.
 ====
+
+=== Replace Local Link behavior in Articles
+
+:gatsby-link-api-docs-link-template: link:https://www.gatsbyjs.org/docs/gatsby-link/
+Use link:{official-gatsby-pluings-dir-github-url}/gatsby-plugin-catch-links[
+gatsby-plugin-catch-links^] to replace local link behavior in articles with {gatsby-link-api-docs-link-template}/#how-to-use-gatsby-link[
+gatsby-link^] and {gatsby-link-api-docs-link-template}/#how-to-use-the-navigate-helper-function[
+navigation^] to improve performance.
 
 === Profile Picture Link
 
