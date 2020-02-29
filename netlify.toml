@@ -1,3 +1,6 @@
 [build]
   command = "yarn build"
   publish = "public/"
+
+[build.environment]
+  ARTICLES_REPOSITORY = "hitsuji-no-shippo/sample-articles-for-asciidoctor"

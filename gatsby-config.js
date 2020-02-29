@@ -10,6 +10,7 @@ const {
     lang = 'en',
     googleTrackingId: trackingId,
   },
+  repository,
 } = require('./config');
 const supportedLanguages = require('./config').supportedLanguages;
 
@@ -20,6 +21,10 @@ module.exports = {
     author: author.name,
     description,
     siteUrl,
+    articlesDirectoryUrl: process.env.ARTICLES_REPOSITORY
+      ? `${process.env.GIT_HOST || 'https://github.com'
+         }/${process.env.ARTICLES_REPOSITORY}`
+      : `${repository.url}/content/blog`,
     social: {
       twitter: author.twitter || '',
     },

@@ -34,8 +34,6 @@ const repository = {
 }
 
 const articles = {
-  dir: 'hitsuji-no-shippo/sample-posts-with-asciidoc',
-  isAnotherRepository: true,
   filePath: { Asciidoc: 'paths.from.source.full' },
   ignore: ['asciidoctor-examples/**/*.adoc'],
 };

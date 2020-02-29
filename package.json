@@ -84,7 +84,7 @@
     "url": "github:hitsuji-no-shippo/gatsby-simple-blog-with-asciidoctor"
   },
   "scripts": {
-    "clone-articles": "ARTICLES_DIR='content/blog'; if [ ! -d $ARTICLES_DIR ]; then git clone https://github.com/hitsuji-no-shippo/sample-posts-with-asciidoc.git $ARTICLES_DIR; cd $ARTICLES_DIR; git submodule update --init --recursive; fi",
+    "clone-articles": "bash ./setup/clone-articles.sh",
     "submodule": "git submodule update --init --recursive",
     "setup": "yarn run clone-articles && yarn run submodule",
     "build": "yarn run setup && gatsby build",

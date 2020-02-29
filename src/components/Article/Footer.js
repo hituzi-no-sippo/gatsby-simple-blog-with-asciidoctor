@@ -1,22 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import minimatch from 'minimatch';
 
-import { repository, articles } from 'config'
+import { articles as articlesConfig } from 'config'
 
 import { articleQuery as articleQueryPropTypes, } from 'utils/propTypes';
 
 const Footer = ({article}) => {
-  if (!(articles.dir && articles.filePath
-      && (repository.url || articles.isAnotherRepository))) {
+
+  const { site: { siteMetadata: { articlesDirectoryUrl } } } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            articlesDirectoryUrl
+          }
+        }
+      }
+    `,
+  );
+
+  if (!(/github.com/.test(articlesDirectoryUrl) && articlesConfig.filePath)) {
     return null;
   }
 
   const filePath = (() => {
     let value = article;
 
-    articles.filePath[article.internal.type].split('.').some(path => {
+    articlesConfig.filePath[article.internal.type].split('.').some(path => {
       value = Object.prototype.hasOwnProperty.call(value, path)
         ? value[path]
         : null;
@@ -31,19 +44,16 @@ const Footer = ({article}) => {
     return null;
   }
 
-  const ignores = articles.ignore
-    ? articles.ignore.some(pattern => minimatch(filePath, pattern))
+  const ignores = articlesConfig.ignore
+    ? articlesConfig.ignore.some(pattern => minimatch(filePath, pattern))
     : false;
 
   if (ignores) {
     return null;
   }
 
-  const articlesDir = `${articles.isAnotherRepository ? 'https://github.com' : repository.url
-    }/${articles.dir}`;
-
   const GitHubLink = ({slug, text}) =>
-    <a href={`${articlesDir}/${slug}/master/${filePath}`}
+    <a href={`${articlesDirectoryUrl}/${slug}/master/${filePath}`}
       target="_blank"
       rel="external noopener noreferrer">
       {text}

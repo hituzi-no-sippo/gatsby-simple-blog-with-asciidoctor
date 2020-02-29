@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.52.0
-:revdate: 2020-02-29T20:34:38+0900
-:revremark: Update netlify build command message.
+:revnumber: v1.53.0
+:revdate: 2020-02-29T21:40:51+0900
+:revremark: Change the method to determine clone url of articles repositroy.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -59,10 +59,18 @@ image:https://www.netlify.com/img/deploy/button.svg[
   link={netlify-app-url}/start/deploy?repository={repository-url},
   window=_blank]
 
+:sample-articles-repository-name: sample-posts-with-asciidoc
+:sample-articles-repository-link: link:{github-profile-url}/{sample-articles-repository-name}[ \
+  hitsuji-no-shippo/{sample-articles-repository-name}^]
 [NOTE]
 ====
-The netlify build command is changed to `yarn build` with link:./netlify.toml[
-netlify.toml^].
+:netlify-link: link:./netlify.toml[ \
+  netlify.toml^]
+.Change netliby config with {netlify-link}
+[horizontal]
+build command:: `yarn build`
+environment variable:: Add `$ARTICLES_REPOSITORY`.
+                       The value is {sample-articles-repository-link}.
 ====
 
 :base-repository-link-template: link:{github-url}/thundermiracle/gatsby-simple-blog/tree/d8537730b37fb08a2171a29ac9c5be3d6458b0bc
@@ -440,18 +448,30 @@ The attributes of the page have priority.
 Use this link:{github-url}/hitsuji-no-shippo/article-css-for-asciidoc/tree/30575534810dc487b6df82ba755943863340a271[
 git repository^].
 
+:repository-url-string-template: ${GIT_HOST}/${ARTICLES_REPOSITORY}
 === Articles Management
 
 There are two ways to articles management.
 
-:sample-articles-repository-name: sample-posts-with-asciidoc
-* Another repository (Default) +
-  Clone articles with npm scripts `clone-articles`.
-  The derault and sample articles repository is link:{github-profile-url}/{sample-articles-repository-name}[
-  hitsuji-no-shippo/{sample-articles-repository-name}^].
+==== Another Repository (Default)
 
-* Same repository +
-  Need to delete npm script `clone-articles` and `content/blog` in `.gitignore`
+If there is not `content/blog`, clone articles with link:./setup/clone-articles.sh[
+setup/clone-articles.sh^]. *If there is `content/blog` directory, do not clone.*
+
+The clone repository is `{repository-url-string-template}` with
+*environment variables*. When using another repository as an articles,
+be sure to set `$ARTICLES_REPOSITORY`. `$GIT_HOST` is not required.
+If unset, it will be `{github-url}`.
+
+.For link:{demo-url}[demo^]
+[horizontal]
+GIT_HOST           :: unset (i.e. `{github-url}`)
+ARTICLES_REPOSITORY:: {sample-articles-repository-link}
+
+==== Same Repository
+
+Place the articles directory as `content/blog`. You do not need to set
+environment variables.
 
 === Link that Edit / View history in GitHub
 
@@ -460,56 +480,31 @@ you need to set `repository` and `articles` in `config/index.js`.
 The link is not displayed in the following cases.
 
 .Cases
-* `articles.dir` is `undefined`.
+* `{repository-url-string-template}` is doesn't contained `github.com`.
+* `articles.filePath` doesn't exist.
 * The field of `articles.filePath` doesn't exist.
-* `articles.isAnotherRepositroy` is `false` and
-  `repository.url` is `undefined`.
 * Match with `articles.ignore` option.
 
-==== How to make url
+.How to make url
+[cols=3, options="header, autowidth]
+|===
+|`$ARTICLES_REPOSITORY`
+|URL to articles directory
+|Common
 
-.Articles is another repository
-[source, JavaScript]
-----
-articles: {
-  dir: 'hitsuji-no-shippo/sample-articles-for-asciidoctor',  // <1>
-  isAnotherRepositroy: true
-  filePath: { Asciidoc: 'paths.from.source.full' },
-}
-----
-<1> Repositroy name in GitHub.
+|set
+|`{repository-url-string-template}`
+
+.2+|`/${articles.dir}/{edit \| commits}/master/${node[filePath]}`
+
+|unset
+|`${repository.url}/content/blog`
+|===
 
 [CAUTION]
 ====
 Submodules are not supported.
 ====
-
-.Articles is same repository
-[source, JavaScript]
-----
-articles: {
-  dir: 'content/blog',  // <1>
-  isAnotherRepositroy: false
-  filePath: { Asciidoc: 'paths.from.source.full' },
-}
-----
-<1> Articles directory path from gatsby project root.
-
-.url
-[cols="m,2*d", options="header, autowidth]
-|===
-|isAnotherRepositroy
-|URL to articles directory
-|Mutual
-
-|true
-|{github-url}
-
-.2+|/${articles.dir}/{edit \| commits}/master/${node[filePath]}
-
-|false
-|${repository.url}
-|===
 
 ==== `filePath`
 

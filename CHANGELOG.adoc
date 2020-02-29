@@ -3,10 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.98.0
-:revdate: 2020-02-29T20:44:41+0900
-:revremark: Add log that change default netlify build command to `yarn build` \
-            with `netlify.toml`.
+:revnumber: v1.99.0
+:revdate: 2020-02-29T20:56:26+0900
+:revremark: Add log that use environment variables to determine which \
+            articles repository to clone.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -66,6 +66,8 @@ ifndef::env-github[:icons: font]
 * Rename `articles.isOtherRepositroy` to `articles.isAnotherRepository`
   in config. (close link:{issues-url}/197[#197^])
 * Delete `./deploy` directory. (close link:{issues-url}/205[#205^])
+* Use environment variables to determine which articles repository to clone.
+  (close link:{issues-url}/202[#202^])
 
 === Features
 
