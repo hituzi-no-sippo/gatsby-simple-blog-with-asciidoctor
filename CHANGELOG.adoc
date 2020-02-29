@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.95.0
-:revdate: 2020-02-29T16:07:25+0900
-:revremark: Add log that delete `./deploy` directory.
+:revnumber: Branch docs/update-demo-and-README v1.0.0 (Base v1.95.0)
+:revdate: 2020-02-29T16:14:31+0900
+:revremark: Add log that Make `linksInBio` use `author` in `cofig/index.js`.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -168,13 +168,15 @@ ifndef::env-github[:icons: font]
   (close link:{issues-url}/191[#191^])
 * Add warning of netlify build command. (close link:{issues-url}/195[#195^])
 
-==== Sample Posts
+==== Demo
 
 * link:{sample-posts-for-asciidoc-url}/issues/16[Asciidcotor examples article].
   (close link:{issues-url}/187[#187^])
   ** Move custome mark list.
   ** Add wrap literal.
   ** Fix title.
+* Make `linksInBio` use `author` in `cofig/index.js`.
+  (close link:{issues-url}/204[#204^])
 
 
 === Chore
