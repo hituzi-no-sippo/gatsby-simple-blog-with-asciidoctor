@@ -1,7 +1,9 @@
+const GITHUB_PROFILE_URL = 'https://github.com/hitsuji-no-shippo';
+
 const author = {
   name: 'hitsuji no shippo',
   email: 'xxx@yyy.zzz',
-  url: 'https://github.com/hitsuji-no-shippo',
+  url: GITHUB_PROFILE_URL,
   twitter: 'hns_equal_st',
 }
 
@@ -39,8 +41,8 @@ const articles = {
 };
 
 const linksInBio = {
-  twitter: 'https://twitter.com/hns_equal_st',
-  GitHub: 'https://github.com/hitsuji-no-shippo',
+  twitter: `https://twitter.com/${author.twitter}`,
+  GitHub: GITHUB_PROFILE_URL,
 }
 
 const dateDisplay = {

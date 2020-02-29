@@ -3,9 +3,11 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.50.0
-:revdate: 2020-02-29T16:01:55+0900
-:revremark: Add Delete `./deploy` Directory section.
+:revnumber: v1.50.1
+:revdate: 2020-02-29T16:34:17+0900
+:revremark: Add the following logs: + \
+            * Make image link opne to new window + \
+            * The table of delete plugins is easier to see.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -40,7 +42,9 @@ ifndef::env-github[:icons: font]
 :netlify-app-url: https://app.netlify.com
 
 image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d/deploy-status[
-  Netlify Status, link={netlify-app-url}/sites/{doctitle}-demo/deploys]
+  Netlify Status,
+  link={netlify-app-url}/sites/{doctitle}-demo/deploys,
+  window=_blank]
 
 :demo-url: https://{doctitle}-demo.netlify.com
 .Demo
@@ -53,7 +57,9 @@ image:https://api.netlify.com/api/v1/badges/af30cfc5-5131-43e1-b999-287c7355114d
 :github-profile-url: {github-url}/hitsuji-no-shippo
 :repository-url: {github-profile-url}/{doctitle}
 image:https://www.netlify.com/img/deploy/button.svg[
-  Deploy to Netlify, link={netlify-app-url}/start/deploy?repository={repository-url}]
+  Deploy to Netlify,
+  link={netlify-app-url}/start/deploy?repository={repository-url},
+  window=_blank]
 
 [WARNING]
 ====
@@ -141,14 +147,15 @@ read.*
 endif::env-github[]
 
 :asciidoctor-user-manual-url: https://asciidoctor.org/docs/user-manual
-.Deleted Plugins
+===== Deleted Plugins
+
+====== Link to Material
+
+.Local Material
 [cols="d,a", options="header, autowidth"]
 |===
 |Name
 |Alternative
-
-2+h|Link to materials
-2+h|Local materials
 
 |gatsby-remark-copy-linked-files
 |None
@@ -235,8 +242,13 @@ image:{url}[alt text, link={link-url}]
   `sectanchors` attribute^]
 * link:{asciidoctor-user-manual-url}/#anchors[
   `sectanchors` attributes^]
+|===
 
-2+h|External materials
+.External Material
+[cols="d,a", options="header, autowidth"]
+|===
+|Name
+|Alternative
 
 |gatsby-remark-external-links
 |link:{asciidoctor-user-manual-url}/#link-macro-attributes[
@@ -270,9 +282,14 @@ link:http://en.wikipedia.org/wiki/Salted_duck_egg[salted duck eggs, window=_blan
 |gatsby-remark-responsive-iframe
 |link:{asciidoctor-user-manual-url}/#youtube-and-vimeo-videos[
   Youtube and vive can be embedded.^]
+|===
 
+====== Display Text
 
-2+h|Display text
+[cols="d,a", options="header, autowidth"]
+|===
+|Name
+|Alternative
 
 |gatsby-remark-prismjs
 |None. I want it too. link:{repository-url}/issues/180[#180^]
@@ -286,6 +303,8 @@ link:http://en.wikipedia.org/wiki/Salted_duck_egg[salted duck eggs, window=_blan
 I don't know much about the plugins above.
 Therefore, the alternative may be wrong.
 ====
+
+===== Change plugin
 
 .Change gatsby-plugin-i18n
 link:{github-url}/angeloocana/gatsby-plugin-i18n/tree/master/packages/gatsby-plugin-i18n[

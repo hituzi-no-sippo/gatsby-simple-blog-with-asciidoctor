@@ -3,9 +3,13 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.95.0
-:revdate: 2020-02-29T16:07:25+0900
-:revremark: Add log that delete `./deploy` directory.
+:revnumber: v1.96.0
+:revdate: 2020-02-29T16:35:07+0900
+:revremark: Add the following logs: + \
+            * Make `linksInBio` use `author` in `cofig/index.js`. + \
+            * Make image link open to a new window.  + \
+            * Make the table of delete plugins easy to see.
+:revremark: Add log that make the table of delete plugins easy to see.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -167,14 +171,19 @@ ifndef::env-github[:icons: font]
 * Fix `sectids`, `idprefix`, `idseparator` attribute links.
   (close link:{issues-url}/191[#191^])
 * Add warning of netlify build command. (close link:{issues-url}/195[#195^])
+* Make image link open to a new window. (close link:{issues-url}/203[#203^])
+* Make the table of delete plugins easy to see.
+  (close link:{issues-url}/200[#200^])
 
-==== Sample Posts
+==== Demo
 
 * link:{sample-posts-for-asciidoc-url}/issues/16[Asciidcotor examples article].
   (close link:{issues-url}/187[#187^])
   ** Move custome mark list.
   ** Add wrap literal.
   ** Fix title.
+* Make `linksInBio` use `author` in `cofig/index.js`.
+  (close link:{issues-url}/204[#204^])
 
 
 === Chore
