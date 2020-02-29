@@ -3,10 +3,10 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.97.1
-:revdate: 2020-02-29T16:57:39+0900
-:revremark: Add log that use environment variables to determine which \
-            articles repository to clone
+:revnumber: v1.98.0
+:revdate: 2020-02-29T20:44:41+0900
+:revremark: Add log that change default netlify build command to `yarn build` \
+            with `netlify.toml`.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -114,6 +114,8 @@ ifndef::env-github[:icons: font]
 * npm script. (close link:{issues-url}/161[#161^])
 * `&#39;` to `'` in ensligh 404 message. (close link:{issues-url}/179[#179^])
 * tag link. (close link:{issues-url}/190[#190^])
+* Change default netlify build command to `yarn build` with `netlify.toml`.
+  (close link:{issues-url}/207[#207^])
 
 === Refactor
 

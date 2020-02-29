@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.51.0
-:revdate: 2020-02-29T16:36:22+0900
-:revremark: Add section of Replace Local Link behavior in Articles.
+:revnumber: v1.52.0
+:revdate: 2020-02-29T20:34:38+0900
+:revremark: Update netlify build command message.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -59,9 +59,10 @@ image:https://www.netlify.com/img/deploy/button.svg[
   link={netlify-app-url}/start/deploy?repository={repository-url},
   window=_blank]
 
-[WARNING]
+[NOTE]
 ====
-Change the netlify build command from `gatsby build` to `yarn build`.
+The netlify build command is changed to `yarn build` with link:./netlify.toml[
+netlify.toml^].
 ====
 
 :base-repository-link-template: link:{github-url}/thundermiracle/gatsby-simple-blog/tree/d8537730b37fb08a2171a29ac9c5be3d6458b0bc
