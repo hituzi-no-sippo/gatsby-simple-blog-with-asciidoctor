@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.54.0
-:revdate: 2020-03-01T01:09:22+0900
-:revremark: Add section that Add GitHub Actions.
+:revnumber: v1.55.0
+:revdate: 2020-03-01T15:57:25+0900
+:revremark: Add derivative list.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -82,6 +82,21 @@ environment variable:: Add `$ARTICLES_REPOSITORY`.
 ====
 I'm an English leanear. Issues with README fixes are also welcome.
 ====
+
+[TIP]
+====
+:gatsby-blog-with-asciidoctor-link: link:{github-profile-url}/gatsby-blog-with-asciidoctor[ \
+  hitsuji-no-shipo/gatsby-blog-with-asciidoctor^]
+:gatsby-blog-for-hns-link: link:{github-profile-url}/gatsby-blog-for-hns[ \
+  hitsuji-no-shipo/gatsby-blog-for-hns^]
+:blog-with-gatsby-link: link:{github-profile-url}/blog-with-gatsby[ \
+  hitsuji-no-shipo/blog-with-gatsby^]
+.Derivative list
+{gatsby-blog-with-asciidoctor-link}:: Add pages support.
+{gatsby-blog-for-hns-link}:: Display revision number and remark.
+{blog-with-gatsby-link}:: Maek config link to another repository.
+====
+
 
 :base-repository-link-template: link:{github-url}/thundermiracle/gatsby-simple-blog/tree/d8537730b37fb08a2171a29ac9c5be3d6458b0bc
 :base-repository-link: {base-repository-link-template}[ \

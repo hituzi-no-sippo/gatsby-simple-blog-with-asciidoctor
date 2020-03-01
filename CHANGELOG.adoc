@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.100.0
-:revdate: 2020-03-01T01:02:29+0900
-:revremark: Add log that add GitHub Action of deploy to Netlify.
+:revnumber: v1.101.0
+:revdate: 2020-03-01T15:57:19+0900
+:revremark: Add log that add derivative list in README.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -178,6 +178,7 @@ ifndef::env-github[:icons: font]
 * Make image link open to a new window. (close link:{issues-url}/203[#203^])
 * Make the table of delete plugins easy to see.
   (close link:{issues-url}/200[#200^])
+* Add derivative list. (close link:{issues-url}/182[#182^])
 
 ==== Demo
 
