@@ -3,10 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.102.0
-:revdate: 2020-03-03T10:12:26+0900
-:revremark: Add log that \
-            fix url of aricle-css-for-asciidoc repository linkin README.
+:revnumber: v1.103.0
+:revdate: 2020-03-03T11:12:25+0900
+:revremark: Add log that update how to use in README.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -55,6 +54,7 @@ ifndef::env-github[:icons: font]
 
 * Fix url of aricle-css-for-asciidoc repository link.
   (link:{issues-url}/189[#189^])
+* Update How to use. (close link:{issues-url}/208[#208^])
 
 
 == 0.4.0 (2020-03-01)

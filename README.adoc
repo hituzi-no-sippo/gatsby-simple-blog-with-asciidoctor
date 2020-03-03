@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.55.1
-:revdate: 2020-03-03T10:20:42+0900
-:revremark: Fix url of hitsuji-no-shippo/article-css-for-asciidoc.
+:revnumber: v1.56.0
+:revdate: 2020-03-03T11:12:14+0900
+:revremark: Update How to use section.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -64,9 +64,9 @@ image:https://www.netlify.com/img/deploy/button.svg[
   link={netlify-app-url}/start/deploy?repository={repository-url},
   window=_blank]
 
-:sample-articles-repository-name: sample-posts-with-asciidoc
-:sample-articles-repository-link: link:{github-profile-url}/{sample-articles-repository-name}[ \
-  hitsuji-no-shippo/{sample-articles-repository-name}^]
+:sample-articles-repository-name: hitsuji-no-shippo/sample-posts-with-asciidoc
+:sample-articles-repository-link: link:{github-url}/{sample-articles-repository-name}[ \
+  {sample-articles-repository-name}^]
 [NOTE]
 ====
 :netlify-link: link:./netlify.toml[ \
@@ -468,9 +468,10 @@ The attributes of the page have priority.
 // collapsible block close
 ====
 
+:article-css-for-asciidoc-url: {github-profile-url}/article-css-for-asciidoc
 === Asciidoctor Support to CSS
 
-Use this link:{github-profile-url}/article-css-for-asciidoc/tree/e62009e621bfd7ebefbf59d4edced9d8307deeb6[
+Use this link:{article-css-for-asciidoc-url}/tree/e62009e621bfd7ebefbf59d4edced9d8307deeb6[
 git repository^].
 
 :repository-url-string-template: ${GIT_HOST}/${ARTICLES_REPOSITORY}
@@ -820,13 +821,86 @@ eslint supported.
 
 == How to use
 
+=== Use gatsby new
+
+. Install the Gatsby CLI.
++
+--
 [source, bash, subs="attributes"]
 ----
-git clone {repository-url} my-blog-folder
-cd my-blog-folder
-yarn
-yarn dev
+npm install -g gatsby-cli
 ----
+--
+. Create a Gatsby site.
++
+--
+[source, bash, subs="attributes"]
+----
+gatsby new {doctitle} {repository-url}
+cd {doctitle}
+----
+--
+. Clone articles repository. +
+  Read xref:articles-management[] for details.
++
+--
+:declare-articles-repository-script: declare -x ARTICLES_REPOSITORY={sample-articles-repository-name}
+[source, bash, subs="attributes"]
+----
+{declare-articles-repository-script}
+npm run clone-articles
+----
+--
+. Clone CSS. +
+  Read xref:asciidoctor-support-to-css[] for details.
++
+--
+[source, bash, subs="attributes"]
+----
+git clone {article-css-for-asciidoc-url} src/components/Article/LightweightMarkup/scss
+----
+--
+. Start the site in `develop` mode.
++
+--
+[source, bash, subs="attributes"]
+----
+gatsby develop
+----
+--
+. Open the source code and start editing! +
+  Your site is now running at link:http://localhost:8000[^]. +
+  Open the `{doctitle}` directory in your code editor of choice and edit
+  `content/blog/hello-world/index.adoc`. Save your changes,
+  and the browser will update in real time!
++
+[NOTE]
+====
+You'll also see a second link: link:http://localhost:8000/___graphql[^].
+This is a tool you can use to experiment
+with querying your data. Learn more about using this tool in the link:https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql[
+Gatsby tutorial^].
+====
+
+=== Use git clone
+
+[source, bash, subs="attributes"]
+----
+git clone {repository-url} {doctitle}
+cd {doctitle}
+yarn
+{declare-articles-repository-script}
+yarn dev  // <1>
+----
+<1> {blank}
++
+--
+.The following three commands are run.
+. `yarn run clone-articles`
+. `yarn run submodule` (Clone CSS)
+. `gatsby develop`
+--
+
 
 == How to deploy by Circle-CI in Medium.com
 
