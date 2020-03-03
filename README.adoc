@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.55.0
-:revdate: 2020-03-01T15:57:25+0900
-:revremark: Add derivative list.
+:revnumber: v1.55.1
+:revdate: 2020-03-03T10:20:42+0900
+:revremark: Fix url of hitsuji-no-shippo/article-css-for-asciidoc.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -470,7 +470,7 @@ The attributes of the page have priority.
 
 === Asciidoctor Support to CSS
 
-Use this link:{github-url}/hitsuji-no-shippo/article-css-for-asciidoc/tree/30575534810dc487b6df82ba755943863340a271[
+Use this link:{github-profile-url}/article-css-for-asciidoc/tree/e62009e621bfd7ebefbf59d4edced9d8307deeb6[
 git repository^].
 
 :repository-url-string-template: ${GIT_HOST}/${ARTICLES_REPOSITORY}
