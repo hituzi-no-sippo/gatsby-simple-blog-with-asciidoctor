@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.56.0
-:revdate: 2020-03-03T11:12:14+0900
-:revremark: Update How to use section.
+:revnumber: v1.56.1
+:revdate: 2020-03-19T10:33:54+0900
+:revremark: Fix clone method of articles scss in case using gatsby new command.
 :doctype: article
 :description: {doctitle} README
 :title:
@@ -851,13 +851,16 @@ cd {doctitle}
 npm run clone-articles
 ----
 --
-. Clone CSS. +
+. Add CSS to git submodules. +
   Read xref:asciidoctor-support-to-css[] for details.
 +
 --
+:articles-scss-dir-path: src/components/Article/LightweightMarkup/scss
 [source, bash, subs="attributes"]
 ----
-git clone {article-css-for-asciidoc-url} src/components/Article/LightweightMarkup/scss
+rm -rf {articles-scss-dir-path}
+git submodule add https://github.com/hitsuji-no-shippo/article-css-for-asciidoc.git {articles-scss-dir-path}
+git commit --amend --no-edit
 ----
 --
 . Start the site in `develop` mode.
