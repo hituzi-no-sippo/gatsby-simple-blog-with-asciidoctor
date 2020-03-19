@@ -3,9 +3,9 @@
 :!author-email:
 :author: {author-name}
 :!email: {author-email}
-:revnumber: v1.103.0
-:revdate: 2020-03-03T11:12:25+0900
-:revremark: Add log that update how to use in README.
+:revnumber: v1.104.0
+:revdate: 2020-03-19T10:41:01+0900
+:revremark: Add log that fix ignore files of git and eslint.
 :doctype: article
 :description: gatsby-simple-blog-with-asciidoctor Change Log
 :title:
@@ -55,6 +55,10 @@ ifndef::env-github[:icons: font]
 * Fix url of aricle-css-for-asciidoc repository link.
   (link:{issues-url}/189[#189^])
 * Update How to use. (close link:{issues-url}/208[#208^])
+
+==== Chore
+
+* fix ignore files of git and eslint. (link:{issues-url}/210[#210^])
 
 
 == 0.4.0 (2020-03-01)
